@@ -25,7 +25,7 @@ Shader "Hidden/X-PostProcessing/IrisBlurV2"
 	
 	float IrisMask(float2 uv)
 	{
-		float2 center = uv * 2.0 - 1.0 + _Offset; // [0,1] -> [-1,1]  , 1MAD
+		float2 center = uv * 2.0 - 1.0 + _Offset; // [0,1] -> [-1,1] 
 		return dot(center, center) * _AreaSize;
 	}
 	
