@@ -1,0 +1,182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
+  m_Name: X-PostProcessing ExampleProfiles
+  m_EditorClassIdentifier: 
+  settings:
+  - {fileID: 114811271554320798}
+  - {fileID: 114724888899494118}
+  - {fileID: 114963614594370276}
+  - {fileID: 114417544700008348}
+  - {fileID: 114365642992012064}
+  - {fileID: 114881628477261990}
+--- !u!114 &114365642992012064
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6fc311bab7f3714daba3e248900eb31, type: 3}
+  m_Name: TiltShiftBlurV2
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  blurRadius:
+    overrideState: 1
+    value: 1.34
+  iteration:
+    overrideState: 1
+    value: 36
+  centerOffset:
+    overrideState: 1
+    value: 0
+  areaSize:
+    overrideState: 1
+    value: 1
+  areaSmooth:
+    overrideState: 1
+    value: 1.2
+  showPreview:
+    overrideState: 1
+    value: 0
+--- !u!114 &114417544700008348
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172b63b63bfdad04dbe149542c33a495, type: 3}
+  m_Name: GrainyBlur
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  BlurRadius:
+    overrideState: 0
+    value: 5
+  Iteration:
+    overrideState: 1
+    value: 4
+  RTDownScaling:
+    overrideState: 1
+    value: 1
+--- !u!114 &114724888899494118
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 078dd948866cdbc45847016fec126b10, type: 3}
+  m_Name: DualGaussianBlur
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  BlurRadius:
+    overrideState: 1
+    value: 2.7
+  Iteration:
+    overrideState: 1
+    value: 4
+  RTDownScaling:
+    overrideState: 1
+    value: 2.66
+--- !u!114 &114811271554320798
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ae5393ade3f4847ab851805bcf1777, type: 3}
+  m_Name: BokehBlur
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  blurRadius:
+    overrideState: 1
+    value: 1
+  iteration:
+    overrideState: 1
+    value: 32
+  RTDownScaling:
+    overrideState: 1
+    value: 2
+--- !u!114 &114881628477261990
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3bbc5404f2acf4a9963784dd2159af, type: 3}
+  m_Name: IrisBlurV2
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  blurRadius:
+    overrideState: 1
+    value: 1.43
+  iteration:
+    overrideState: 1
+    value: 30
+  centerOffsetX:
+    overrideState: 1
+    value: 0
+  centerOffsetY:
+    overrideState: 1
+    value: 0
+  areaSize:
+    overrideState: 1
+    value: 8
+  showPreview:
+    overrideState: 1
+    value: 0
+--- !u!114 &114963614594370276
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb8901486ed154489954ac45ed02d02, type: 3}
+  m_Name: DualKawaseBlur
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  BlurRadius:
+    overrideState: 1
+    value: 2.8
+  Iteration:
+    overrideState: 1
+    value: 3
+  RTDownScaling:
+    overrideState: 1
+    value: 2

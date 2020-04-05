@@ -1,0 +1,27 @@
+Nature Starter Kit
+
+Free Unity art package.
+
+The package contains a handful of objects to start creating outdoor scenes, including a simple grass texture, 4 rocks and a tree.
+
+The provided materials are compatible with Unity's tree generator tool, so you can easily create your own beautiful trees and bushes.
+
+For more quality packs, follow Shapes on:
+
+Facebook
+https://www.facebook.com/shapesassets/
+
+Twitter
+https://twitter.com/shapesassets
+
+Publisher page
+https://www.assetstore.unity3d.com/en/#!/publisher/3292
+
+The contents of this pack can be used in commercial products. 
+
+
+Art Director
+Andras Nagy
+
+Technical Director
+Zsolt Torok
