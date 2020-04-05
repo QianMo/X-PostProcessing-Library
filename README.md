@@ -35,9 +35,13 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
     - [Tent Blur](Assets/X-PostProcessing/Effects/TentBlur)
 
 
-More Effect Soon to come.
+More effect soon to come.
 
+# Usage
 
+The new effect should be available for a post processing profile with different injection points，just like:
+
+- `Add effect... > X-PostProcessing > Check an effect`
 
 
 
