@@ -41,7 +41,7 @@ More effect soon to come.
 
 The new effect should be available for a post processing profile with different injection points，just like:
 
-- `Add effect... > X-PostProcessing > Check an effect`
+- `Add effect... > X-PostProcessing > Choose an effect`
 
 
 
