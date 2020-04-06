@@ -2,15 +2,15 @@
 # Gaussian Blur
 
 ## Source Code List
-- [Shader Code](Shader/DualGaussianBlur.shader)
-- [C# Code](DualGaussianBlur.cs)
-- [Editor Code](Editor/DualGaussianBlurEditor.cs)
+- [Shader Code](Shader/GaussianBlur.shader)
+- [C# Code](GaussianBlur.cs)
+- [Editor Code](Editor/GaussianBlurEditor.cs)
 
 
 ## Property
-![](../../../../Media/Blur/DualGaussianBlur/DualGaussianBlurProperty.png)
+![](../../../../Media/Blur/GaussianBlur/GaussianBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/DualGaussianBlur/DualGaussianBlur.png)
+![](../../../../Media/Blur/GaussianBlur/GaussianBlur.png)
 
-![](../../../../Media/Blur/DualGaussianBlur/DualGaussianBlur.gif)
+![](../../../../Media/Blur/GaussianBlur/GaussianBlur.gif)
