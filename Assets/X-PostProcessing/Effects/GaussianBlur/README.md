@@ -1,8 +1,9 @@
 
 # Gaussian Blur
 
-- [Shader Code](Shader/GaussianBlur.shader)
-- [C# Code](GaussianBlur.cs)
+- [【Shader Code】](Shader/GaussianBlur.shader)
+- [【C# Code】](GaussianBlur.cs)
+- [【Editor Code】](Editor/GaussianBlurEditor.cs)
 
 ## Property
 ![](../../../../Media/Blur/GaussianBlur/GaussianBlur_.png)
