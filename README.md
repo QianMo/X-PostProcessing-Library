@@ -36,7 +36,7 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
 You have two main ways to install X-PostProcessing Library :
 
 - Clone or download this repository , open with Unity Engine Editor and enjoy.
-- Place the [X-PostProcessing](Assets/X-PostProcessing) folder anyw here in your project, and make sure that Post Processing Stack v2 is in the project as well.
+- Place the [X-PostProcessing](Assets/X-PostProcessing) folder anywhere in your project, make sure that Post Processing Stack v2 is in the project as well, and enjoy.
 
 
 
