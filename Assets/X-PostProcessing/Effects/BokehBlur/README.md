@@ -10,6 +10,6 @@
 ![](../../../../Media/Blur/BokehBlur/BokehBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/BokehBlur/BokehBlur.png)
+![](../../../../Media/Blur/BokehBlur/BokehBlur.jpg)
 
 ![](../../../../Media/Blur/BokehBlur/BokehBlur.gif)

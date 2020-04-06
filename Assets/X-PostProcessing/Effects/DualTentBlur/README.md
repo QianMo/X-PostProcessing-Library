@@ -11,6 +11,6 @@
 ![](../../../../Media/Blur/DualTentBlur/DualTentBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/DualTentBlur/DualTentBlur.png)
+![](../../../../Media/Blur/DualTentBlur/DualTentBlur.jpg)
 
 ![](../../../../Media/Blur/DualTentBlur/DualTentBlur.gif)

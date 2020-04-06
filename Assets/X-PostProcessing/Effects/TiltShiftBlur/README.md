@@ -11,6 +11,6 @@
 ![](../../../../Media/Blur/TiltShiftBlur/TiltShiftBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/TiltShiftBlur/TiltShiftBlur.png)
+![](../../../../Media/Blur/TiltShiftBlur/TiltShiftBlur.jpg)
 
 ![](../../../../Media/Blur/TiltShiftBlur/TiltShiftBlur.gif)

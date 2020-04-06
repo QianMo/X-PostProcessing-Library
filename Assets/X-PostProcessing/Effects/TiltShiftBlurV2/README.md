@@ -13,4 +13,6 @@
 ## Gallery
 ![](../../../../Media/Blur/TiltShiftBlurV2/TiltShiftBlurV2.png)
 
-![](../../../../Media/Blur/TiltShiftBlurV2/TiltShiftBlurV2.gif)
+![](../../../../Media/Blur/TiltShiftBlurV2/TiltShiftBlurV2-1.gif)
+
+![](../../../../Media/Blur/TiltShiftBlurV2/TiltShiftBlurV2-2.gif)

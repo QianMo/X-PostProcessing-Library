@@ -11,6 +11,6 @@
 ![](../../../../Media/Blur/DualGaussianBlur/DualGaussianBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/DualGaussianBlur/DualGaussianBlur.png)
+![](../../../../Media/Blur/DualGaussianBlur/DualGaussianBlur.jpg)
 
 ![](../../../../Media/Blur/DualGaussianBlur/DualGaussianBlur.gif)

@@ -11,6 +11,6 @@
 ![](../../../../Media/Blur/DualBoxBlur/DualBoxBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/DualBoxBlur/DualBoxBlur.png)
+![](../../../../Media/Blur/DualBoxBlur/DualBoxBlur.jpg)
 
 ![](../../../../Media/Blur/DualBoxBlur/DualBoxBlur.gif)

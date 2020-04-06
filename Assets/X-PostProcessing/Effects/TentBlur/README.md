@@ -11,6 +11,6 @@
 ![](../../../../Media/Blur/TentBlur/TentBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/TentBlur/TentBlur.png)
+![](../../../../Media/Blur/TentBlur/TentBlur.jpg)
 
 ![](../../../../Media/Blur/TentBlur/TentBlur.gif)

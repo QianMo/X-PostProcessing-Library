@@ -10,6 +10,6 @@
 ![](../../../../Media/Blur/IrisBlur/IrisBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/IrisBlur/IrisBlur.png)
+![](../../../../Media/Blur/IrisBlur/IrisBlur.jpg)
 
 ![](../../../../Media/Blur/IrisBlur/IrisBlur.gif)
