@@ -1,0 +1,15 @@
+{
+  "name": "QianMo.Rendering.XPostProcessing",
+  "version": "0.6.0",
+  "displayName": "X-PostProcessing Libray",
+  "description": "High Quality Post Processing Library For Unity Post Processing Stack v2/LWRP/URP/HDRP",
+  "unity": "2017.4",
+ "keywords": [
+    "PostProcessing"
+  ],
+  "author": {
+    "name": "QianMo",
+    "email": "happylifemxy@163.com"
+  },
+  "dependencies": {}
+}
