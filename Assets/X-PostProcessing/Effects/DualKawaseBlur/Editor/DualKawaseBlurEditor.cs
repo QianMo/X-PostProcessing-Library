@@ -37,7 +37,6 @@ namespace XPostProcessing
 
         public override void OnInspectorGUI()
         {
-            EditorUtilities.DrawHeaderLabel("Core Property");
             PropertyField(BlurRadius);
             PropertyField(Iteration);
             PropertyField(RTDownScaling);
