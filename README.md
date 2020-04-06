@@ -30,6 +30,29 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
 
 
 
+
+# Installation
+You have two main ways to install X-PostProcessing Library :
+
+- Clone or download this repository and open it with Unity Engine Editor.
+- Place the [X-PostProcessing](Assets/X-PostProcessing) folder anywhere in your project, and make sure that Post Processing Stack v2 is in the project as well.
+
+
+
+# Usage
+
+The new effect should be available for a post processing profile with different injection points，just like:
+
+- `Add effect... > X-PostProcessing > Choose an effect`
+
+# Environment Require
+
+Unity 2017.2+  is recommended
+
+For older versions of Unity (5.6 and 2017.1) you should use version [Post-processing Stack v2 2.1.8](https://github.com/Unity-Technologies/PostProcessing/tree/bec8546fc498db388cedadd14021cc7006338cc4).
+
+
+
 # Content
 
 - Blur Effects
@@ -53,14 +76,5 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
 
 
 More effect soon to come.
-
-# Usage
-
-The new effect should be available for a post processing profile with different injection points，just like:
-
-- `Add effect... > X-PostProcessing > Choose an effect`
-
-
-
 
  
