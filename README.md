@@ -32,10 +32,11 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
 
 
 # Installation
+
 You have two main ways to install X-PostProcessing Library :
 
-- Clone or download this repository and open it with Unity Engine Editor.
-- Place the [X-PostProcessing](Assets/X-PostProcessing) folder anywhere in your project, and make sure that Post Processing Stack v2 is in the project as well.
+- Clone or download this repository , open with Unity Engine Editor and enjoy.
+- Place the [X-PostProcessing](Assets/X-PostProcessing) folder anyw here in your project, and make sure that Post Processing Stack v2 is in the project as well.
 
 
 
@@ -44,6 +45,7 @@ You have two main ways to install X-PostProcessing Library :
 The new effect should be available for a post processing profile with different injection points，just like:
 
 - `Add effect... > X-PostProcessing > Choose an effect`
+
 
 # Environment Require
 
