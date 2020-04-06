@@ -2,6 +2,19 @@
 
 
 ![](Media/XPL-Title.jpg)
+# X-PostProcessing-Library
+<p align="center">
+	<a href="https://github.com/QianMo/X-PostProcessing-Library/issues">
+		<img alt="GitHub issues" src="https://img.shields.io/github/issues/QianMo/X-PostProcessing-Library">
+	</a>
+	<a href="https://github.com/QianMo/X-PostProcessing-Library/pulls">
+		<img alt="GitHub pull requests" src ="https://img.shields.io/github/issues-pr/QianMo/X-PostProcessing-Library" />
+	</a>
+	<a href="https://github.com/QianMo/X-PostProcessing-Library/blob/master/LICENSE.md">
+		<img alt="GitHub license" src ="https://img.shields.io/github/license/QianMo/X-PostProcessing-Library" />
+	</a>
+	<img alt="GitHub last commit" src ="https://img.shields.io/github/last-commit/QianMo/X-PostProcessing-Library" />
+</p>
 
 **X-PostProcessing-Library (XPL)** is a high quality post processing library for for Unity Post Processing Stack v2/LWRP/URP/HDRP
 
