@@ -28,33 +28,6 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
 
 
 
-
-
-
-# Installation
-
-You have two main ways to install X-PostProcessing Library :
-
-- Clone or download this repository , open with Unity Engine Editor and enjoy.
-- Place the [X-PostProcessing](Assets/X-PostProcessing) folder anywhere in your project, make sure that Post Processing Stack v2 is in the project as well, and enjoy.
-
-
-
-# Usage
-
-The new effect should be available for a post processing profile with different injection points，just like:
-
-- `Add effect... > X-PostProcessing > Choose an effect`
-
-
-# Environment
-
-- Unity 2017.2+  is recommended.
-
-- if you use older versions of Unity (5.6 and 2017.1) , you should use replace [this folder](https://github.com/QianMo/X-PostProcessing-Library/tree/master/Assets/PostProcessing-2) with [pps v2 2.1.8](https://github.com/Unity-Technologies/PostProcessing/tree/bec8546fc498db388cedadd14021cc7006338cc4).
-
-
-
 # Content
 
 - Blur Effects
@@ -84,4 +57,30 @@ The new effect should be available for a post processing profile with different 
 - ...
 
 More effects and LWRP/URP/HDRP version will arrive soon.
+
+
+# Installation
+
+You have two main ways to install X-PostProcessing Library :
+
+- Clone or download this repository , open with Unity Engine Editor and enjoy.
+- Place the [X-PostProcessing](Assets/X-PostProcessing) folder anywhere in your project, make sure that Post Processing Stack v2 is in the project as well, and enjoy.
+
+
+
+# Usage
+
+The new effect should be available for a post processing profile with different injection points，just like:
+
+- `Add effect... > X-PostProcessing > Choose an effect`
+
+
+# Environment
+
+- Unity 2017.2+  is recommended.
+
+- if you use older versions of Unity (5.6 and 2017.1) , you should use replace [this folder](https://github.com/QianMo/X-PostProcessing-Library/tree/master/Assets/PostProcessing-2) with [pps v2 2.1.8](https://github.com/Unity-Technologies/PostProcessing/tree/bec8546fc498db388cedadd14021cc7006338cc4).
+
+
+
  
