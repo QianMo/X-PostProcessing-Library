@@ -1,7 +1,7 @@
 
 
 
-![](Media/XPL-Title.jpg)
+
 # X-PostProcessing Library
 <p>
 <a href="https://github.com/QianMo/X-PostProcessing-Library/issues">
@@ -15,6 +15,8 @@
 </a>
 <img alt="GitHub last commit" src ="https://img.shields.io/github/last-commit/QianMo/X-PostProcessing-Library" />
 </p>
+
+![](Media/XPL-Title.jpg)
 
 **X-PostProcessing Library (XPL)** is a high quality post processing library for for Unity Post Processing Stack v2/LWRP/URP/HDRP
 
