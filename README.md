@@ -60,6 +60,7 @@ The new effect should be available for a post processing profile with different 
 - Blur Effects
     - [Gaussian Blur](Assets/X-PostProcessing/Effects/GaussianBlur)
     - [Box Blur](Assets/X-PostProcessing/Effects/BoxBlur)
+    - [Tent Blur](Assets/X-PostProcessing/Effects/TentBlur)
     - [Kawase Blur](Assets/X-PostProcessing/Effects/KawaseBlur)
     - [Dual Kawase Blur](Assets/X-PostProcessing/Effects/DualKawaseBlur)
     - [Dual Gaussian Blur](Assets/X-PostProcessing/Effects/DualGaussianBlur)
@@ -74,14 +75,13 @@ The new effect should be available for a post processing profile with different 
     - [Radial Blur](Assets/X-PostProcessing/Effects/RadialBlur)
     - [Radial Blur V2](Assets/X-PostProcessing/Effects/RadialBlurV2)
     - [Directional Blur](Assets/X-PostProcessing/Effects/DirectionalBlur)
-    - [Tent Blur](Assets/X-PostProcessing/Effects/TentBlur)
 - Color Adjustment Effects
 - Pixelate Effects
 - Glitch Effects
 - Stylized Effects
 - Painting Effects
 - Image Processing Effects
-- Even more
+- ...
 
 More effects and LWRP/URP/HDRP version will arrive soon.
  
