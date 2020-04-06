@@ -33,7 +33,6 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
 # Content
 
 - Blur Effects
-
     - [Gaussian Blur](Assets/X-PostProcessing/Effects/GaussianBlur)
     - [Box Blur](Assets/X-PostProcessing/Effects/BoxBlur)
     - [Kawase Blur](Assets/X-PostProcessing/Effects/KawaseBlur)
