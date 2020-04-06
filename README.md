@@ -4,16 +4,10 @@
 ![](Media/XPL-Title.jpg)
 <p>
     <img alt="GitHub package.json version" src ="https://img.shields.io/github/package-json/v/QianMo/X-PostProcessing-Library" />
-<a href="https://github.com/QianMo/X-PostProcessing-Library/issues">
-    <img alt="GitHub issues" src="https://img.shields.io/github/issues/QianMo/X-PostProcessing-Library">
-</a>
-<a href="https://github.com/QianMo/X-PostProcessing-Library/pulls">
-    <img alt="GitHub pull requests" src ="https://img.shields.io/github/issues-pr/QianMo/X-PostProcessing-Library" />
-</a>
 <a href="https://github.com/QianMo/X-PostProcessing-Library/blob/master/LICENSE.md">
     <img alt="GitHub license" src ="https://img.shields.io/github/license/QianMo/X-PostProcessing-Library" />
 </a>
-<img alt="GitHub last commit" src ="https://img.shields.io/github/last-commit/QianMo/X-PostProcessing-Library" />
+    <img alt="GitHub last commit" src ="https://img.shields.io/github/last-commit/QianMo/X-PostProcessing-Library" />
 </p>
 
 
