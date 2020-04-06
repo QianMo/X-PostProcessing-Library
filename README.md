@@ -47,11 +47,11 @@ The new effect should be available for a post processing profile with different 
 - `Add effect... > X-PostProcessing > Choose an effect`
 
 
-# Environment Require
+# Environment
 
-Unity 2017.2+  is recommended
+- Unity 2017.2+  is recommended.
 
-For older versions of Unity (5.6 and 2017.1) you should use version [Post-processing Stack v2 2.1.8](https://github.com/Unity-Technologies/PostProcessing/tree/bec8546fc498db388cedadd14021cc7006338cc4).
+- if you use older versions of Unity (5.6 and 2017.1) you should use replace [this folder](https://github.com/QianMo/X-PostProcessing-Library/tree/master/Assets/PostProcessing-2) with [pps v2 2.1.8](https://github.com/Unity-Technologies/PostProcessing/tree/bec8546fc498db388cedadd14021cc7006338cc4).
 
 
 
