@@ -75,12 +75,12 @@ The new effect should be available for a post processing profile with different 
     - [Radial Blur V2](Assets/X-PostProcessing/Effects/RadialBlurV2)
     - [Directional Blur](Assets/X-PostProcessing/Effects/DirectionalBlur)
     - [Tent Blur](Assets/X-PostProcessing/Effects/TentBlur)
-- Color Adjustment
-- Pixelate
-- Glitch
-- Stylized
-- Painting
-- ImageProcessing
+- Color Adjustment Effects
+- Pixelate Effects
+- Glitch Effects
+- Stylized Effects
+- Painting Effects
+- Image Processing Effects
 - Even more
 
 More effects and LWRP/URP/HDRP version will arrive soon.
