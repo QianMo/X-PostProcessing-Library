@@ -1,15 +1,14 @@
 
 # Gaussian Blur
+![](../../../../Media/Blur/GaussianBlur/GaussianBlur.png)
 
+## Source Code List
 - [【Shader Code】](Shader/GaussianBlur.shader)
 - [【C# Code】](GaussianBlur.cs)
 - [【Editor Code】](Editor/GaussianBlurEditor.cs)
 
 ## Property
 ![](../../../../Media/Blur/GaussianBlur/GaussianBlur_.png)
-
-## Rendering screenshot
-![](../../../../Media/Blur/GaussianBlur/GaussianBlur.png)
 
 
 ## Rendering Process
