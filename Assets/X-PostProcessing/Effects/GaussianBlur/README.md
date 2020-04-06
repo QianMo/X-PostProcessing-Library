@@ -13,7 +13,7 @@
 
 ## Rendering Process
 
-![](../../../../Media/Blur/GaussianBlur-1.gif)
+![](../../../../Media/Blur/GaussianBlur/GaussianBlur-1.gif)
 
 ## Change blur radius
-![](../../../../Media/Blur/GaussianBlur-2.gif)
+![](../../../../Media/Blur/GaussianBlur/GaussianBlur-2.gif)
