@@ -17,4 +17,4 @@
 *.RTF	 diff=astextplain
 
 *.shader linguist-language=shaderlab 
-*.cginc linguist-language=shaderlab 
+*.cginc linguist-language=shaderlab
