@@ -2,13 +2,13 @@
 # Gaussian Blur
 
 ## Source Code List
-- [【Shader Code】](Shader/GaussianBlur.shader)
-- [【C# Code】](GaussianBlur.cs)
-- [【Editor Code】](Editor/GaussianBlurEditor.cs)
+- [Shader Code](Shader/DirectionalBlur.shader)
+- [C# Code](DirectionalBlur.cs)
+- [Editor Code](Editor/DirectionalBlurEditor.cs)
 
 
-![](../../../../Media/Blur/GaussianBlur/GaussianBlur.png)
+![](../../../../Media/Blur/DirectionalBlur/DirectionalBlur.png)
 
 
 ## Change blur radius
-![](../../../../Media/Blur/GaussianBlur/GaussianBlur-2.gif)
+![](../../../../Media/Blur/DirectionalBlur/DirectionalBlur-2.gif)
