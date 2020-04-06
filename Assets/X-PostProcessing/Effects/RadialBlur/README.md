@@ -1,16 +1,16 @@
 
-# Gaussian Blur
+# Radial Blur
 
 ## Source Code List
-- [Shader Code](Shader/GaussianBlur.shader)
-- [C# Code](GaussianBlur.cs)
-- [Editor Code](Editor/GaussianBlurEditor.cs)
+- [Shader Code](Shader/RadialBlur.shader)
+- [C# Code](RadialBlur.cs)
+- [Editor Code](Editor/RadialBlurEditor.cs)
 
 
 ## Property
-![](../../../../Media/Blur/GaussianBlur/GaussianBlurProperty.png)
+![](../../../../Media/Blur/RadialBlur/RadialBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/GaussianBlur/GaussianBlur.png)
+![](../../../../Media/Blur/RadialBlur/RadialBlur.png)
 
-![](../../../../Media/Blur/GaussianBlur/GaussianBlur.gif)
+![](../../../../Media/Blur/RadialBlur/RadialBlur.gif)

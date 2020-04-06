@@ -1,16 +1,16 @@
 
-# Gaussian Blur
+# Tilt Shift Blur
 
 ## Source Code List
-- [Shader Code](Shader/GaussianBlur.shader)
-- [C# Code](GaussianBlur.cs)
-- [Editor Code](Editor/GaussianBlurEditor.cs)
+- [Shader Code](Shader/TiltShiftBlur.shader)
+- [C# Code](TiltShiftBlur.cs)
+- [Editor Code](Editor/TiltShiftBlurEditor.cs)
 
 
 ## Property
-![](../../../../Media/Blur/GaussianBlur/GaussianBlurProperty.png)
+![](../../../../Media/Blur/TiltShiftBlur/TiltShiftBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/GaussianBlur/GaussianBlur.png)
+![](../../../../Media/Blur/TiltShiftBlur/TiltShiftBlur.png)
 
-![](../../../../Media/Blur/GaussianBlur/GaussianBlur.gif)
+![](../../../../Media/Blur/TiltShiftBlur/TiltShiftBlur.gif)

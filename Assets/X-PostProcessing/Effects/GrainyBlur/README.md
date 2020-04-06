@@ -1,16 +1,16 @@
 
-# Gaussian Blur
+# Grainy Blur
 
 ## Source Code List
-- [Shader Code](Shader/GaussianBlur.shader)
-- [C# Code](GaussianBlur.cs)
-- [Editor Code](Editor/GaussianBlurEditor.cs)
+- [Shader Code](Shader/GrainyBlur.shader)
+- [C# Code](GrainyBlur.cs)
+- [Editor Code](Editor/GrainyBlurEditor.cs)
 
 
 ## Property
-![](../../../../Media/Blur/GaussianBlur/GaussianBlurProperty.png)
+![](../../../../Media/Blur/GrainyBlur/GrainyBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/GaussianBlur/GaussianBlur.png)
+![](../../../../Media/Blur/GrainyBlur/GrainyBlur.png)
 
-![](../../../../Media/Blur/GaussianBlur/GaussianBlur.gif)
+![](../../../../Media/Blur/GrainyBlur/GrainyBlur.gif)

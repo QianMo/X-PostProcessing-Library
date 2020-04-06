@@ -1,5 +1,5 @@
 
-# Gaussian Blur
+# Directional Blur
 
 ## Source Code List
 - [Shader Code](Shader/DirectionalBlur.shader)

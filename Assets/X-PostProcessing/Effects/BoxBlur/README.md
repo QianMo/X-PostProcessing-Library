@@ -1,5 +1,5 @@
 
-# Gaussian Blur
+# Box Blur
 
 ## Source Code List
 - [Shader Code](Shader/BoxBlur.shader)

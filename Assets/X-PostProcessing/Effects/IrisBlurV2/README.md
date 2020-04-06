@@ -1,16 +1,16 @@
 
-# Gaussian Blur
+# Iris Blur V2
 
 ## Source Code List
-- [Shader Code](Shader/GaussianBlur.shader)
-- [C# Code](GaussianBlur.cs)
-- [Editor Code](Editor/GaussianBlurEditor.cs)
+- [Shader Code](Shader/IrisBlurV2.shader)
+- [C# Code](IrisBlurV2.cs)
+- [Editor Code](Editor/IrisBlurV2Editor.cs)
 
 
 ## Property
-![](../../../../Media/Blur/GaussianBlur/GaussianBlurProperty.png)
+![](../../../../Media/Blur/IrisBlurV2/IrisBlurV2Property.png)
 
 ## Gallery
-![](../../../../Media/Blur/GaussianBlur/GaussianBlur.png)
+![](../../../../Media/Blur/IrisBlurV2/IrisBlurV2.png)
 
-![](../../../../Media/Blur/GaussianBlur/GaussianBlur.gif)
+![](../../../../Media/Blur/IrisBlurV2/IrisBlurV2.gif)

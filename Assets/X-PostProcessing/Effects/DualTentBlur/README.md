@@ -1,16 +1,16 @@
 
-# Gaussian Blur
+# Dual Tent Blur
 
 ## Source Code List
-- [Shader Code](Shader/GaussianBlur.shader)
-- [C# Code](GaussianBlur.cs)
-- [Editor Code](Editor/GaussianBlurEditor.cs)
+- [Shader Code](Shader/DualTentBlur.shader)
+- [C# Code](DualTentBlur.cs)
+- [Editor Code](Editor/DualTentBlurEditor.cs)
 
 
 ## Property
-![](../../../../Media/Blur/GaussianBlur/GaussianBlurProperty.png)
+![](../../../../Media/Blur/DualTentBlur/DualTentBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/GaussianBlur/GaussianBlur.png)
+![](../../../../Media/Blur/DualTentBlur/DualTentBlur.png)
 
-![](../../../../Media/Blur/GaussianBlur/GaussianBlur.gif)
+![](../../../../Media/Blur/DualTentBlur/DualTentBlur.gif)
