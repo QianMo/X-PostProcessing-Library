@@ -13,7 +13,6 @@
 <a href="https://github.com/QianMo/X-PostProcessing-Library/blob/master/LICENSE">
     <img alt="GitHub license" src ="https://img.shields.io/github/license/QianMo/X-PostProcessing-Library" />
 </a>
-    <img alt="GitHub last commit" src ="https://img.shields.io/github/last-commit/QianMo/X-PostProcessing-Library" />
 </p>
 
 X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后处理库，旨在提供业界主流的高品质后处理特效的完整解决方案。目前已完美支持Unity Post-processing Stack v2，后续也将提供对Unity引擎URP/LWRP/HDRP的兼容支持。
