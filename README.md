@@ -1,7 +1,8 @@
 
 
 
-![](Media/XPL-Title.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/XPL-Title.jpg)
+
 <p>
 <a href="https://github.com/QianMo/X-PostProcessing-Library/blob/master/LICENSE">
     <img alt="GitHub license" src ="https://img.shields.io/github/license/QianMo/X-PostProcessing-Library" />
