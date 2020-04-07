@@ -8,11 +8,11 @@
 
 
 ## Property
-![](../../../../Media/Blur/TiltShiftBlurV2/TiltShiftBlurV2Property.png)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/TiltShiftBlurV2/TiltShiftBlurV2Property.png)
 
 ## Gallery
-![](../../../../Media/Blur/TiltShiftBlurV2/TiltShiftBlurV2.png)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/TiltShiftBlurV2/TiltShiftBlurV2.png)
 
-![](../../../../Media/Blur/TiltShiftBlurV2/TiltShiftBlurV2-1.gif)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/TiltShiftBlurV2/TiltShiftBlurV2-1.gif)
 
-![](../../../../Media/Blur/TiltShiftBlurV2/TiltShiftBlurV2-2.gif)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/TiltShiftBlurV2/TiltShiftBlurV2-2.gif)

@@ -8,9 +8,9 @@
 
 
 ## Property
-![](../../../../Media/Blur/DualKawaseBlur/DualKawaseBlurProperty.png)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/DualKawaseBlur/DualKawaseBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/DualKawaseBlur/DualKawaseBlur.png)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/DualKawaseBlur/DualKawaseBlur.png)
 
-![](../../../../Media/Blur/DualKawaseBlur/DualKawaseBlur.gif)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/DualKawaseBlur/DualKawaseBlur.gif)

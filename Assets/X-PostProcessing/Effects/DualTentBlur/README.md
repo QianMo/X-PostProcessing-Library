@@ -8,9 +8,9 @@
 
 
 ## Property
-![](../../../../Media/Blur/DualTentBlur/DualTentBlurProperty.png)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/DualTentBlur/DualTentBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/DualTentBlur/DualTentBlur.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/DualTentBlur/DualTentBlur.jpg)
 
-![](../../../../Media/Blur/DualTentBlur/DualTentBlur.gif)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/DualTentBlur/DualTentBlur.gif)

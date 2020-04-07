@@ -7,9 +7,9 @@
 - [Editor Code](Editor/BokehBlurEditor.cs)
 
 ## Property
-![](../../../../Media/Blur/BokehBlur/BokehBlurProperty.png)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/BokehBlur/BokehBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/BokehBlur/BokehBlur.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/BokehBlur/BokehBlur.jpg)
 
-![](../../../../Media/Blur/BokehBlur/BokehBlur.gif)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/BokehBlur/BokehBlur.gif)
