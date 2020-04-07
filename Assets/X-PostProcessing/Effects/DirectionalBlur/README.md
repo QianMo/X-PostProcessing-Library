@@ -8,11 +8,11 @@
 
 
 ## Property
-![](../../../../Media/Blur/DirectionalBlur/DirectionalBlurProperty.png)
+![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/DirectionalBlur/DirectionalBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/DirectionalBlur/DirectionalBlur.png)
+![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/DirectionalBlur/DirectionalBlur.png)
 
-![](../../../../Media/Blur/DirectionalBlur/DirectionalBlur-1.gif)
+![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/DirectionalBlur/DirectionalBlur-1.gif)
 
-![](../../../../Media/Blur/DirectionalBlur/DirectionalBlur-2.gif)
+![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/DirectionalBlur/DirectionalBlur-2.gif)

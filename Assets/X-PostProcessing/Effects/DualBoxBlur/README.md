@@ -8,9 +8,9 @@
 
 
 ## Property
-![](../../../../Media/Blur/DualBoxBlur/DualBoxBlurProperty.png)
+![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/DualBoxBlur/DualBoxBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/DualBoxBlur/DualBoxBlur.jpg)
+![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/DualBoxBlur/DualBoxBlur.jpg)
 
-![](../../../../Media/Blur/DualBoxBlur/DualBoxBlur.gif)
+![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/DualBoxBlur/DualBoxBlur.gif)

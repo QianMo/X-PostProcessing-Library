@@ -8,9 +8,9 @@
 
 
 ## Property
-![](../../../../Media/Blur/KawaseBlur/KawaseBlurProperty.png)
+![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/KawaseBlur/KawaseBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/KawaseBlur/KawaseBlur.png)
+![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/KawaseBlur/KawaseBlur.png)
 
-![](../../../../Media/Blur/KawaseBlur/KawaseBlur.gif)
+![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/KawaseBlur/KawaseBlur.gif)

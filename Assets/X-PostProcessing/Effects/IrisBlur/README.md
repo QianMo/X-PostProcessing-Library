@@ -7,9 +7,9 @@
 
 
 ## Property
-![](../../../../Media/Blur/IrisBlur/IrisBlurProperty.png)
+![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/IrisBlur/IrisBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/IrisBlur/IrisBlur.jpg)
+![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/IrisBlur/IrisBlur.jpg)
 
-![](../../../../Media/Blur/IrisBlur/IrisBlur.gif)
+![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/IrisBlur/IrisBlur.gif)
