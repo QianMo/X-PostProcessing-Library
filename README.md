@@ -22,7 +22,7 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
 
 
 
-<div align=center><img src="https://github.com/QianMo/X-PostProcessing-Library/blob/master/Media/title-rendering.jpg"/> </div>
+<div align=center><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/title-rendering.jpg"/> </div>
 
 
 
