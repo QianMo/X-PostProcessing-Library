@@ -8,9 +8,9 @@
 
 
 ## Property
-![](../../../../Media/Blur/BoxBlur/BoxBlurProperty.png)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/BoxBlur/BoxBlurProperty.png)
 
 ## Gallery
-![](../../../../Media/Blur/BoxBlur/BoxBlur.png)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/BoxBlur/BoxBlur.png)
 
-![](../../../../Media/Blur/BoxBlur/BoxBlur.gif)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/BoxBlur/BoxBlur.gif)
