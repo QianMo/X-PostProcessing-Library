@@ -8,9 +8,9 @@
 
 
 ## Property
-![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/TiltShiftBlur/TiltShiftBlurProperty.png)
+![](../../../../Media/Blur/TiltShiftBlur/TiltShiftBlurProperty.png)
 
 ## Gallery
-![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/TiltShiftBlur/TiltShiftBlur.jpg)
+![](../../../../Media/Blur/TiltShiftBlur/TiltShiftBlur.jpg)
 
-![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/TiltShiftBlur/TiltShiftBlur.gif)
+![](../../../../Media/Blur/TiltShiftBlur/TiltShiftBlur.gif)

@@ -8,9 +8,9 @@
 
 
 ## Property
-![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/DualGaussianBlur/DualGaussianBlurProperty.png)
+![](../../../../Media/Blur/DualGaussianBlur/DualGaussianBlurProperty.png)
 
 ## Gallery
-![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/DualGaussianBlur/DualGaussianBlur.jpg)
+![](../../../../Media/Blur/DualGaussianBlur/DualGaussianBlur.jpg)
 
-![](https://github.com/QianMo/X-PostProcessing-Gallery/tree/master/Media/Blur/DualGaussianBlur/DualGaussianBlur.gif)
+![](../../../../Media/Blur/DualGaussianBlur/DualGaussianBlur.gif)
