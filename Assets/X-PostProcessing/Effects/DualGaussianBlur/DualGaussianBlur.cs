@@ -64,9 +64,9 @@ namespace XPostProcessing
 
         static class ShaderIDs
         {
-            internal static readonly int blurOffset = Shader.PropertyToID("_BlurOffset");
-            internal static readonly int bufferRT1 = Shader.PropertyToID("_BufferRT1");
-            internal static readonly int bufferRT2 = Shader.PropertyToID("_BufferRT2");
+            internal static readonly int BlurOffset = Shader.PropertyToID("_BlurOffset");
+            internal static readonly int BufferRT1 = Shader.PropertyToID("_BufferRT1");
+            internal static readonly int BufferRT2 = Shader.PropertyToID("_BufferRT2");
         }
 
 
@@ -90,8 +90,8 @@ namespace XPostProcessing
             int tw = (int)(context.screenWidth / settings.RTDownScaling);
             int th = (int)(context.screenHeight / settings.RTDownScaling);
 
-            Vector4 blurOffset = new Vector4(settings.BlurRadius / (float)context.screenWidth, settings.BlurRadius / (float)context.screenHeight, 0, 0);
-            sheet.properties.SetVector(ShaderIDs.blurOffset, blurOffset);
+            Vector4 BlurOffset = new Vector4(settings.BlurRadius / (float)context.screenWidth, settings.BlurRadius / (float)context.screenHeight, 0, 0);
+            sheet.properties.SetVector(ShaderIDs.BlurOffset, BlurOffset);
             // Downsample
             RenderTargetIdentifier lastDown = context.source;
             for (int i = 0; i < settings.Iteration; i++)
@@ -107,11 +107,11 @@ namespace XPostProcessing
                 context.GetScreenSpaceTemporaryRT(cmd, mipUpH, 0, context.sourceFormat, RenderTextureReadWrite.Default, FilterMode.Bilinear, tw, th);
 
                 // horizontal blur
-                sheet.properties.SetVector(ShaderIDs.blurOffset, new Vector4(settings.BlurRadius / context.screenWidth, 0, 0, 0));
+                sheet.properties.SetVector(ShaderIDs.BlurOffset, new Vector4(settings.BlurRadius / context.screenWidth, 0, 0, 0));
                 context.command.BlitFullscreenTriangle(lastDown, mipDowH, sheet, 0);
 
                 // vertical blur
-                sheet.properties.SetVector(ShaderIDs.blurOffset, new Vector4(0, settings.BlurRadius / context.screenHeight, 0, 0));
+                sheet.properties.SetVector(ShaderIDs.BlurOffset, new Vector4(0, settings.BlurRadius / context.screenHeight, 0, 0));
                 context.command.BlitFullscreenTriangle(mipDowH, mipDownV, sheet, 0);
 
                 lastDown = mipDownV;
@@ -128,11 +128,11 @@ namespace XPostProcessing
                 int mipUpH = m_Pyramid[i].up_horizontal;
 
                 // horizontal blur
-                sheet.properties.SetVector(ShaderIDs.blurOffset, new Vector4(settings.BlurRadius / context.screenWidth, 0, 0, 0));
+                sheet.properties.SetVector(ShaderIDs.BlurOffset, new Vector4(settings.BlurRadius / context.screenWidth, 0, 0, 0));
                 context.command.BlitFullscreenTriangle(lastUp, mipUpH, sheet, 0);
 
                 // vertical blur
-                sheet.properties.SetVector(ShaderIDs.blurOffset, new Vector4(0, settings.BlurRadius / context.screenHeight, 0, 0));
+                sheet.properties.SetVector(ShaderIDs.BlurOffset, new Vector4(0, settings.BlurRadius / context.screenHeight, 0, 0));
                 context.command.BlitFullscreenTriangle(mipUpH, mipUpV, sheet, 0);
 
                 lastUp = mipUpV;

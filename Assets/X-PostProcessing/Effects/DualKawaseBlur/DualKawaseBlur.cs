@@ -62,9 +62,9 @@ namespace XPostProcessing
         static class ShaderIDs
         {
 
-            internal static readonly int blurOffset = Shader.PropertyToID("_Offset");
-            internal static readonly int bufferRT1 = Shader.PropertyToID("_BufferRT1");
-            internal static readonly int bufferRT2 = Shader.PropertyToID("_BufferRT2");
+            internal static readonly int BlurOffset = Shader.PropertyToID("_Offset");
+            internal static readonly int BufferRT1 = Shader.PropertyToID("_BufferRT1");
+            internal static readonly int BufferRT2 = Shader.PropertyToID("_BufferRT2");
         }
 
 
@@ -85,7 +85,7 @@ namespace XPostProcessing
             int tw = (int)(context.screenWidth / settings.RTDownScaling);
             int th = (int)(context.screenHeight / settings.RTDownScaling);
        
-            sheet.properties.SetFloat(ShaderIDs.blurOffset, settings.BlurRadius);
+            sheet.properties.SetFloat(ShaderIDs.BlurOffset, settings.BlurRadius);
 
 
             // Downsample

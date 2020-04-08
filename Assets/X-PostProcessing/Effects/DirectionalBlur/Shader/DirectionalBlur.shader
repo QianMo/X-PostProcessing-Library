@@ -11,8 +11,10 @@ Shader "Hidden/X-PostProcessing/DirectionalBlur"
 	#include "../../../Shaders/StdLib.hlsl"
 	#include "../../../Shaders/XPostProcessing.hlsl"
 
-	uniform half _Iteration;
-	uniform half2 _Direction;
+	half3 _Params;	
+
+	#define _Iteration _Params.x
+	#define _Direction _Params.yz
 	
 	half4 DirectionalBlur(VaryingsDefault i)
 	{

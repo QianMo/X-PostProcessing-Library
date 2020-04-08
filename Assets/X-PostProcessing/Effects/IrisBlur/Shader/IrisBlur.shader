@@ -16,8 +16,10 @@ Shader "Hidden/X-PostProcessing/IrisBlur"
 	TEXTURE2D_SAMPLER2D(_BlurredTex, sampler_BlurredTex);
 
 	float4 _BlurredTex_TexelSize;
-	uniform float _BluSize;
-	uniform float _BlurRadius;
+	half2 _Params;	
+
+	#define _BluSize _Params.x
+	#define _BlurRadius _Params.y
 	
 	
 	static const int DiscKernelSampleNum_LQ = 12;

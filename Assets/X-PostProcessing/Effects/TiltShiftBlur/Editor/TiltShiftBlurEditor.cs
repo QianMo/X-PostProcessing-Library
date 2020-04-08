@@ -18,17 +18,17 @@ namespace XPostProcessing
     public sealed class TiltShiftBlurEditor : PostProcessEffectEditor<TiltShiftBlur>
     {
 
-        SerializedParameterOverride qualityLevel;
-        SerializedParameterOverride areaSize;
-        SerializedParameterOverride blurRadius;
+        SerializedParameterOverride QualityLevel;
+        SerializedParameterOverride AreaSize;
+        SerializedParameterOverride BlurRadius;
         SerializedParameterOverride Iteration;
         SerializedParameterOverride RTDownScaling;
 
         public override void OnEnable()
         {
-            qualityLevel = FindParameterOverride(x => x.qualityLevel);
-            areaSize = FindParameterOverride(x => x.areaSize);
-            blurRadius = FindParameterOverride(x => x.blurRadius);
+            QualityLevel = FindParameterOverride(x => x.QualityLevel);
+            AreaSize = FindParameterOverride(x => x.AreaSize);
+            BlurRadius = FindParameterOverride(x => x.BlurRadius);
             Iteration = FindParameterOverride(x => x.Iteration);
             RTDownScaling = FindParameterOverride(x => x.RTDownScaling);
         }
@@ -40,9 +40,9 @@ namespace XPostProcessing
 
         public override void OnInspectorGUI()
         {
-            PropertyField(qualityLevel);
-            PropertyField(areaSize);
-            PropertyField(blurRadius);
+            PropertyField(QualityLevel);
+            PropertyField(AreaSize);
+            PropertyField(BlurRadius);
             PropertyField(Iteration);
             PropertyField(RTDownScaling);
         }

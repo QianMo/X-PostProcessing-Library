@@ -19,16 +19,16 @@ namespace XPostProcessing
     {
 
         [Range(0f, 3f)]
-        public FloatParameter blurRadius = new FloatParameter { value = 1f };
+        public FloatParameter BlurRadius = new FloatParameter { value = 1f };
 
         [Range(8, 128)]
-        public IntParameter iteration = new IntParameter { value = 32 };
+        public IntParameter Iteration = new IntParameter { value = 32 };
 
         [Range(-1f, 1f)]
         public FloatParameter centerOffset = new FloatParameter { value = 0f };
 
         [Range(0f, 20f)]
-        public FloatParameter areaSize = new FloatParameter { value = 1f };
+        public FloatParameter AreaSize = new FloatParameter { value = 1f };
 
         [Range(1f, 20f)]
         public FloatParameter areaSmooth = new FloatParameter { value = 1.2f };
@@ -73,8 +73,8 @@ namespace XPostProcessing
             cmd.BeginSample(PROFILER_TAG);
 
             sheet.properties.SetVector(ShaderIDs.GoldenRot, mGoldenRot);
-            sheet.properties.SetVector(ShaderIDs.Gradient, new Vector3(settings.centerOffset, settings.areaSize, settings.areaSmooth));
-            sheet.properties.SetVector(ShaderIDs.Params, new Vector4(settings.iteration, settings.blurRadius, 1f / context.width, 1f / context.height));
+            sheet.properties.SetVector(ShaderIDs.Gradient, new Vector3(settings.centerOffset, settings.AreaSize, settings.areaSmooth));
+            sheet.properties.SetVector(ShaderIDs.Params, new Vector4(settings.Iteration, settings.BlurRadius, 1f / context.width, 1f / context.height));
 
 
             cmd.BlitFullscreenTriangle(context.source, context.destination, sheet, settings.showPreview ? 1 : 0);

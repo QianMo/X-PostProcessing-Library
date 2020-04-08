@@ -11,10 +11,12 @@ Shader "Hidden/X-PostProcessing/GrainyBlur"
 	#include "../../../Shaders/StdLib.hlsl"
 	#include "../../../Shaders/XPostProcessing.hlsl"
 
-	uniform half _BlurRadius;
-	uniform half _Iteration;
-	uniform half _MainTex_ST;
-	
+	half2 _Params;	
+	half _MainTex_ST;
+
+	#define _BlurRadius _Params.x
+	#define _Iteration _Params.y
+
 	
 	float Rand(float2 n)
 	{

@@ -17,19 +17,19 @@ namespace XPostProcessing
     [PostProcessEditor(typeof(RadialBlurV2))]
     public sealed class RadialBlurV2Editor : PostProcessEffectEditor<RadialBlurV2>
     {
-        SerializedParameterOverride qualityLevel;
-        SerializedParameterOverride blurRadius;
-        SerializedParameterOverride radialCenterX;
-        SerializedParameterOverride radialCenterY;
+        SerializedParameterOverride QualityLevel;
+        SerializedParameterOverride BlurRadius;
+        SerializedParameterOverride RadialCenterX;
+        SerializedParameterOverride RadialCenterY;
 
 
 
         public override void OnEnable()
         {
-            qualityLevel = FindParameterOverride(x => x.qualityLevel);
-            blurRadius = FindParameterOverride(x => x.blurRadius);
-            radialCenterX = FindParameterOverride(x => x.radialCenterX);
-            radialCenterY = FindParameterOverride(x => x.radialCenterY);
+            QualityLevel = FindParameterOverride(x => x.QualityLevel);
+            BlurRadius = FindParameterOverride(x => x.BlurRadius);
+            RadialCenterX = FindParameterOverride(x => x.RadialCenterX);
+            RadialCenterY = FindParameterOverride(x => x.RadialCenterY);
         }
 
         public override string GetDisplayTitle()
@@ -40,12 +40,12 @@ namespace XPostProcessing
         public override void OnInspectorGUI()
         {
 
-            PropertyField(qualityLevel);
-            PropertyField(blurRadius);
+            PropertyField(QualityLevel);
+            PropertyField(BlurRadius);
 
             EditorUtilities.DrawHeaderLabel("Radial Center");
-            PropertyField(radialCenterX);
-            PropertyField(radialCenterY);
+            PropertyField(RadialCenterX);
+            PropertyField(RadialCenterY);
         }
 
     }

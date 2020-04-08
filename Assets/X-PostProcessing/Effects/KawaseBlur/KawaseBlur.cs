@@ -50,8 +50,8 @@ namespace XPostProcessing
         {
             internal static readonly int BlurRadius = Shader.PropertyToID("_Offset");
 
-            internal static readonly int bufferRT1 = Shader.PropertyToID("_BufferRT1");
-            internal static readonly int bufferRT2 = Shader.PropertyToID("_BufferRT2");
+            internal static readonly int BufferRT1 = Shader.PropertyToID("_BufferRT1");
+            internal static readonly int BufferRT2 = Shader.PropertyToID("_BufferRT2");
         }
 
 
@@ -66,28 +66,28 @@ namespace XPostProcessing
 
             int RTWidth = (int)(context.screenWidth / settings.RTDownScaling);
             int RTHeight = (int)(context.screenHeight / settings.RTDownScaling);
-            cmd.GetTemporaryRT(ShaderIDs.bufferRT1, RTWidth, RTHeight, 0, FilterMode.Bilinear);
-            cmd.GetTemporaryRT(ShaderIDs.bufferRT2, RTWidth, RTHeight, 0, FilterMode.Bilinear);
+            cmd.GetTemporaryRT(ShaderIDs.BufferRT1, RTWidth, RTHeight, 0, FilterMode.Bilinear);
+            cmd.GetTemporaryRT(ShaderIDs.BufferRT2, RTWidth, RTHeight, 0, FilterMode.Bilinear);
 
             // downsample screen copy into smaller RT
-            context.command.BlitFullscreenTriangle(context.source, ShaderIDs.bufferRT1);
+            context.command.BlitFullscreenTriangle(context.source, ShaderIDs.BufferRT1);
 
 
             bool needSwitch = true;
             for (int i = 0; i < settings.Iteration; i++)
             {
                 sheet.properties.SetFloat(ShaderIDs.BlurRadius, i / settings.RTDownScaling + settings.BlurRadius);
-                context.command.BlitFullscreenTriangle(needSwitch ? ShaderIDs.bufferRT1 : ShaderIDs.bufferRT2, needSwitch ? ShaderIDs.bufferRT2 : ShaderIDs.bufferRT1, sheet, 0);
+                context.command.BlitFullscreenTriangle(needSwitch ? ShaderIDs.BufferRT1 : ShaderIDs.BufferRT2, needSwitch ? ShaderIDs.BufferRT2 : ShaderIDs.BufferRT1, sheet, 0);
                 needSwitch = !needSwitch;
             }
 
 
             sheet.properties.SetFloat(ShaderIDs.BlurRadius, settings.Iteration / settings.RTDownScaling + settings.BlurRadius);
-            cmd.BlitFullscreenTriangle(needSwitch ? ShaderIDs.bufferRT1 : ShaderIDs.bufferRT2, context.destination, sheet, 0);
+            cmd.BlitFullscreenTriangle(needSwitch ? ShaderIDs.BufferRT1 : ShaderIDs.BufferRT2, context.destination, sheet, 0);
 
             // release
-            cmd.ReleaseTemporaryRT(ShaderIDs.bufferRT1);
-            cmd.ReleaseTemporaryRT(ShaderIDs.bufferRT2);
+            cmd.ReleaseTemporaryRT(ShaderIDs.BufferRT1);
+            cmd.ReleaseTemporaryRT(ShaderIDs.BufferRT2);
             cmd.EndSample(PROFILER_TAG);
         }
     }

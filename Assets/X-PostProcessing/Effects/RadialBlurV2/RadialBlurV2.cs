@@ -32,17 +32,16 @@ namespace XPostProcessing
     [PostProcess(typeof(RadialBlurV2Renderer), PostProcessEvent.AfterStack, "X-PostProcessing/Blur/RadialBlur/RadialBlurV2")]
     public class RadialBlurV2 : PostProcessEffectSettings
     {
-        public RadialBlurQualityParameter qualityLevel = new RadialBlurQualityParameter { value = RadialBlurQuality.RadialBlur_8Tap_Balance };
-
+        public RadialBlurQualityParameter QualityLevel = new RadialBlurQualityParameter { value = RadialBlurQuality.RadialBlur_8Tap_Balance };
 
         [Range(-1.0f, 1.0f)]
-        public FloatParameter blurRadius = new FloatParameter { value = 0.6f };
-
+        public FloatParameter BlurRadius = new FloatParameter { value = 0.6f };
 
         [Range(0f, 1.0f)]
-        public FloatParameter radialCenterX = new FloatParameter { value = 0.5f };
+        public FloatParameter RadialCenterX = new FloatParameter { value = 0.5f };
+        
         [Range(0f, 1.0f)]
-        public FloatParameter radialCenterY = new FloatParameter { value = 0.5f };
+        public FloatParameter RadialCenterY = new FloatParameter { value = 0.5f };
     }
 
     public sealed class RadialBlurV2Renderer : PostProcessEffectRenderer<RadialBlurV2>
@@ -58,6 +57,7 @@ namespace XPostProcessing
         {
             base.Release();
         }
+
         static class ShaderIDs
         {
             internal static readonly int Params = Shader.PropertyToID("_Params");
@@ -69,9 +69,9 @@ namespace XPostProcessing
             PropertySheet sheet = context.propertySheets.Get(shader);
             cmd.BeginSample(PROFILER_TAG);
 
-            sheet.properties.SetVector(ShaderIDs.Params, new Vector3(settings.blurRadius * 0.02f, settings.radialCenterX, settings.radialCenterY));
+            sheet.properties.SetVector(ShaderIDs.Params, new Vector3(settings.BlurRadius * 0.02f, settings.RadialCenterX, settings.RadialCenterY));
 
-            context.command.BlitFullscreenTriangle(context.source, context.destination, sheet, (int)settings.qualityLevel.value);
+            context.command.BlitFullscreenTriangle(context.source, context.destination, sheet, (int)settings.QualityLevel.value);
             cmd.EndSample(PROFILER_TAG);
         }
     }

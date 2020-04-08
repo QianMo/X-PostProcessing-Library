@@ -18,10 +18,10 @@ namespace XPostProcessing
     public sealed class TiltShiftBlurV2Editor : PostProcessEffectEditor<TiltShiftBlurV2>
     {
 
-        SerializedParameterOverride iteration;
-        SerializedParameterOverride blurRadius;
+        SerializedParameterOverride Iteration;
+        SerializedParameterOverride BlurRadius;
         SerializedParameterOverride centerOffset;
-        SerializedParameterOverride areaSize;
+        SerializedParameterOverride AreaSize;
         SerializedParameterOverride areaSmooth;
         SerializedParameterOverride showPreview;
 
@@ -30,10 +30,10 @@ namespace XPostProcessing
         {
             showPreview = FindParameterOverride(x => x.showPreview);
             centerOffset = FindParameterOverride(x => x.centerOffset);
-            areaSize = FindParameterOverride(x => x.areaSize);
+            AreaSize = FindParameterOverride(x => x.AreaSize);
             areaSmooth = FindParameterOverride(x => x.areaSmooth);
-            iteration = FindParameterOverride(x => x.iteration);
-             blurRadius = FindParameterOverride(x => x.blurRadius);
+            Iteration = FindParameterOverride(x => x.Iteration);
+             BlurRadius = FindParameterOverride(x => x.BlurRadius);
         }
 
         public override string GetDisplayTitle()
@@ -45,12 +45,12 @@ namespace XPostProcessing
         {
 
             EditorUtilities.DrawHeaderLabel("Blur Property");
-            PropertyField(blurRadius);
-            PropertyField(iteration);
+            PropertyField(BlurRadius);
+            PropertyField(Iteration);
 
             EditorUtilities.DrawHeaderLabel("Area Property");
             PropertyField(centerOffset);
-            PropertyField(areaSize);
+            PropertyField(AreaSize);
             PropertyField(areaSmooth);
 
             EditorUtilities.DrawHeaderLabel("Debug");

@@ -61,9 +61,9 @@ namespace XPostProcessing
 
         static class ShaderIDs
         {
-            internal static readonly int blurOffset = Shader.PropertyToID("_BlurOffset");
-            internal static readonly int bufferRT1 = Shader.PropertyToID("_BufferRT1");
-            internal static readonly int bufferRT2 = Shader.PropertyToID("_BufferRT2");
+            internal static readonly int BlurOffset = Shader.PropertyToID("_BlurOffset");
+            internal static readonly int BufferRT1 = Shader.PropertyToID("_BufferRT1");
+            internal static readonly int BufferRT2 = Shader.PropertyToID("_BufferRT2");
         }
 
         struct Level
@@ -82,8 +82,8 @@ namespace XPostProcessing
             int tw = (int)(context.screenWidth / settings.RTDownScaling);
             int th = (int)(context.screenHeight / settings.RTDownScaling);
 
-            Vector4 blurOffset = new Vector4(settings.BlurRadius / (float)context.screenWidth, settings.BlurRadius / (float)context.screenHeight, 0, 0);
-            sheet.properties.SetVector(ShaderIDs.blurOffset, blurOffset);
+            Vector4 BlurOffset = new Vector4(settings.BlurRadius / (float)context.screenWidth, settings.BlurRadius / (float)context.screenHeight, 0, 0);
+            sheet.properties.SetVector(ShaderIDs.BlurOffset, BlurOffset);
             // Downsample
             RenderTargetIdentifier lastDown = context.source;
             for (int i = 0; i < settings.Iteration; i++)

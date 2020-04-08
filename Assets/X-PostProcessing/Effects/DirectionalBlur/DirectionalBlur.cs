@@ -51,8 +51,7 @@ namespace XPostProcessing
 
         static class ShaderIDs
         {
-            internal static readonly int Iteration = Shader.PropertyToID("_Iteration");
-            internal static readonly int Direction = Shader.PropertyToID("_Direction");
+            internal static readonly int Params = Shader.PropertyToID("_Params");
             internal static readonly int BufferRT = Shader.PropertyToID("_BufferRT");
         }
 
@@ -74,9 +73,8 @@ namespace XPostProcessing
             }
 
             float sinVal = (Mathf.Sin(settings.Angle) * settings.BlurRadius * 0.05f) / settings.Iteration;
-            float cosVal = (Mathf.Cos(settings.Angle) * settings.BlurRadius * 0.05f) / settings.Iteration;
-            sheet.properties.SetVector(ShaderIDs.Direction, new Vector2(sinVal, cosVal));
-            sheet.properties.SetFloat(ShaderIDs.Iteration, settings.Iteration);
+            float cosVal = (Mathf.Cos(settings.Angle) * settings.BlurRadius * 0.05f) / settings.Iteration;        
+            sheet.properties.SetVector(ShaderIDs.Params, new Vector3(settings.Iteration, sinVal, cosVal));
 
             if (settings.RTDownScaling > 1)
             {

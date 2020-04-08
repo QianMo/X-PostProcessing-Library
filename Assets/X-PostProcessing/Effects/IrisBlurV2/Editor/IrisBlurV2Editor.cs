@@ -20,9 +20,9 @@ namespace XPostProcessing
 
         SerializedParameterOverride centerOffsetX;
         SerializedParameterOverride centerOffsetY;
-        SerializedParameterOverride areaSize;
-        SerializedParameterOverride iteration;
-        SerializedParameterOverride blurRadius;
+        SerializedParameterOverride AreaSize;
+        SerializedParameterOverride Iteration;
+        SerializedParameterOverride BlurRadius;
         SerializedParameterOverride showPreview;
 
 
@@ -31,9 +31,9 @@ namespace XPostProcessing
             showPreview = FindParameterOverride(x => x.showPreview);
             centerOffsetX = FindParameterOverride(x => x.centerOffsetX);
             centerOffsetY = FindParameterOverride(x => x.centerOffsetY);
-            areaSize = FindParameterOverride(x => x.areaSize);
-            iteration = FindParameterOverride(x => x.iteration);
-            blurRadius = FindParameterOverride(x => x.blurRadius);
+            AreaSize = FindParameterOverride(x => x.AreaSize);
+            Iteration = FindParameterOverride(x => x.Iteration);
+            BlurRadius = FindParameterOverride(x => x.BlurRadius);
         }
 
         public override string GetDisplayTitle()
@@ -44,11 +44,11 @@ namespace XPostProcessing
         public override void OnInspectorGUI()
         {
             EditorUtilities.DrawHeaderLabel("Blur Property");
-            PropertyField(blurRadius);
-            PropertyField(iteration);
+            PropertyField(BlurRadius);
+            PropertyField(Iteration);
 
             EditorUtilities.DrawHeaderLabel("Area Property");
-            PropertyField(areaSize);
+            PropertyField(AreaSize);
             PropertyField(centerOffsetX);
             PropertyField(centerOffsetY);
 

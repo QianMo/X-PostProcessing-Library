@@ -33,17 +33,17 @@ MonoBehaviour:
   enabled:
     overrideState: 1
     value: 1
-  blurRadius:
-    overrideState: 1
-    value: 1.34
-  iteration:
-    overrideState: 1
-    value: 36
+  BlurRadius:
+    overrideState: 0
+    value: 1
+  Iteration:
+    overrideState: 0
+    value: 32
   centerOffset:
     overrideState: 1
     value: 0
-  areaSize:
-    overrideState: 1
+  AreaSize:
+    overrideState: 0
     value: 1
   areaSmooth:
     overrideState: 1
@@ -114,11 +114,11 @@ MonoBehaviour:
   enabled:
     overrideState: 1
     value: 1
-  blurRadius:
-    overrideState: 1
+  BlurRadius:
+    overrideState: 0
     value: 1
-  iteration:
-    overrideState: 1
+  Iteration:
+    overrideState: 0
     value: 32
   RTDownScaling:
     overrideState: 1
@@ -138,20 +138,20 @@ MonoBehaviour:
   enabled:
     overrideState: 1
     value: 1
-  blurRadius:
-    overrideState: 1
-    value: 1.43
-  iteration:
-    overrideState: 1
-    value: 30
+  BlurRadius:
+    overrideState: 0
+    value: 1
+  Iteration:
+    overrideState: 0
+    value: 60
   centerOffsetX:
     overrideState: 1
     value: 0
   centerOffsetY:
     overrideState: 1
     value: 0
-  areaSize:
-    overrideState: 1
+  AreaSize:
+    overrideState: 0
     value: 8
   showPreview:
     overrideState: 1

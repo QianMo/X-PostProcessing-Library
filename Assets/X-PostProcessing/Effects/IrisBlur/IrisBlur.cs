@@ -25,13 +25,13 @@ namespace XPostProcessing
     [PostProcess(typeof(IrisBlurRenderer), PostProcessEvent.AfterStack, "X-PostProcessing/Blur/IrisBlur/IrisBlurV1")]
     public class IrisBlur : PostProcessEffectSettings
     {
-        public IrisBlurQualityLevelParameter qualityLevel = new IrisBlurQualityLevelParameter { value = IrisBlurQualityLevel.High_Quality };
+        public IrisBlurQualityLevelParameter QualityLevel = new IrisBlurQualityLevelParameter { value = IrisBlurQualityLevel.High_Quality };
 
         [Range(0.0f, 1.0f)]
-        public FloatParameter areaSize = new FloatParameter { value = 0.5f };
+        public FloatParameter AreaSize = new FloatParameter { value = 0.5f };
 
         [Range(0.0f, 1.0f)]
-        public FloatParameter blurRadius = new FloatParameter { value = 1.0f };
+        public FloatParameter BlurRadius = new FloatParameter { value = 1.0f };
 
         [Range(1,8)]
         public IntParameter Iteration = new IntParameter { value = 2 };
@@ -59,11 +59,10 @@ namespace XPostProcessing
 
         static class ShaderIDs
         {
-            internal static readonly int areaSize = Shader.PropertyToID("_BluSize");
-            internal static readonly int blurRadius = Shader.PropertyToID("_BlurRadius");
-            internal static readonly int blurredTex = Shader.PropertyToID("_BlurredTex");
-            internal static readonly int bufferRT1 = Shader.PropertyToID("_BufferRT1");
-            internal static readonly int bufferRT2 = Shader.PropertyToID("_BufferRT2");
+            internal static readonly int Params = Shader.PropertyToID("_Params");
+            internal static readonly int BlurredTex = Shader.PropertyToID("_BlurredTex");
+            internal static readonly int BufferRT1 = Shader.PropertyToID("_BufferRT1");
+            internal static readonly int BufferRT2 = Shader.PropertyToID("_BufferRT2");
         }
 
         public override void Render(PostProcessRenderContext context)
@@ -95,25 +94,24 @@ namespace XPostProcessing
             // Get RT
             int RTWidth = (int)(context.screenWidth / settings.RTDownScaling);
             int RTHeight = (int)(context.screenHeight / settings.RTDownScaling);
-            cmd.GetTemporaryRT(ShaderIDs.bufferRT1, RTWidth, RTHeight, 0, FilterMode.Bilinear);
+            cmd.GetTemporaryRT(ShaderIDs.BufferRT1, RTWidth, RTHeight, 0, FilterMode.Bilinear);
 
             // Set Property
-            sheet.properties.SetFloat(ShaderIDs.areaSize, settings.areaSize);
-            sheet.properties.SetFloat(ShaderIDs.blurRadius, settings.blurRadius);
+            sheet.properties.SetVector(ShaderIDs.Params, new Vector4(settings.AreaSize, settings.BlurRadius));
 
             // Do Blit
-            context.command.BlitFullscreenTriangle(context.source, ShaderIDs.bufferRT1, sheet, (int)settings.qualityLevel.value);
+            context.command.BlitFullscreenTriangle(context.source, ShaderIDs.BufferRT1, sheet, (int)settings.QualityLevel.value);
 
             // Final Blit
-            cmd.SetGlobalTexture(ShaderIDs.blurredTex, ShaderIDs.bufferRT1);
+            cmd.SetGlobalTexture(ShaderIDs.BlurredTex, ShaderIDs.BufferRT1);
             cmd.BlitFullscreenTriangle(context.source, context.destination, sheet, 2);
 
             // Release
-            cmd.ReleaseTemporaryRT(ShaderIDs.bufferRT1);
+            cmd.ReleaseTemporaryRT(ShaderIDs.BufferRT1);
         }
 
 
-        void HandleMultipleIterationBlur(PostProcessRenderContext context, CommandBuffer cmd, PropertySheet sheet, int iteration)
+        void HandleMultipleIterationBlur(PostProcessRenderContext context, CommandBuffer cmd, PropertySheet sheet, int Iteration)
         {
             if (context == null || cmd == null || sheet == null)
             {
@@ -123,33 +121,32 @@ namespace XPostProcessing
             // Get RT
             int RTWidth = (int)(context.screenWidth / settings.RTDownScaling);
             int RTHeight = (int)(context.screenHeight / settings.RTDownScaling);
-            cmd.GetTemporaryRT(ShaderIDs.bufferRT1, RTWidth, RTHeight, 0, FilterMode.Bilinear);
-            cmd.GetTemporaryRT(ShaderIDs.bufferRT2, RTWidth, RTHeight, 0, FilterMode.Bilinear);
+            cmd.GetTemporaryRT(ShaderIDs.BufferRT1, RTWidth, RTHeight, 0, FilterMode.Bilinear);
+            cmd.GetTemporaryRT(ShaderIDs.BufferRT2, RTWidth, RTHeight, 0, FilterMode.Bilinear);
 
             // Set Property
-            sheet.properties.SetFloat(ShaderIDs.areaSize, settings.areaSize);
-            sheet.properties.SetFloat(ShaderIDs.blurRadius, settings.blurRadius);
+            sheet.properties.SetVector(ShaderIDs.Params,new Vector2(settings.AreaSize, settings.BlurRadius));
 
-            RenderTargetIdentifier finalBlurID = ShaderIDs.bufferRT1;
+            RenderTargetIdentifier finalBlurID = ShaderIDs.BufferRT1;
             RenderTargetIdentifier firstID = context.source;
-            RenderTargetIdentifier secondID = ShaderIDs.bufferRT1;
-            for (int i = 0; i < iteration; i++)
+            RenderTargetIdentifier secondID = ShaderIDs.BufferRT1;
+            for (int i = 0; i < Iteration; i++)
             {
                 // Do Blit
-                context.command.BlitFullscreenTriangle(firstID, secondID, sheet, (int)settings.qualityLevel.value);
+                context.command.BlitFullscreenTriangle(firstID, secondID, sheet, (int)settings.QualityLevel.value);
 
                 finalBlurID = secondID;
                 firstID = secondID;
-                secondID = (secondID == ShaderIDs.bufferRT1) ? ShaderIDs.bufferRT2 : ShaderIDs.bufferRT1;
+                secondID = (secondID == ShaderIDs.BufferRT1) ? ShaderIDs.BufferRT2 : ShaderIDs.BufferRT1;
             }
 
             // Final Blit
-            cmd.SetGlobalTexture(ShaderIDs.blurredTex, finalBlurID);
+            cmd.SetGlobalTexture(ShaderIDs.BlurredTex, finalBlurID);
             cmd.BlitFullscreenTriangle(context.source, context.destination, sheet, 2);
 
             // Release
-            cmd.ReleaseTemporaryRT(ShaderIDs.bufferRT1);
-            cmd.ReleaseTemporaryRT(ShaderIDs.bufferRT2);
+            cmd.ReleaseTemporaryRT(ShaderIDs.BufferRT1);
+            cmd.ReleaseTemporaryRT(ShaderIDs.BufferRT2);
         }
 
     }

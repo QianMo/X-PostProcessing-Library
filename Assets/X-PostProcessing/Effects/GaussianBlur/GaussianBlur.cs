@@ -48,8 +48,8 @@ namespace XPostProcessing
         {
 
             internal static readonly int BlurRadius = Shader.PropertyToID("_BlurOffset");
-            internal static readonly int bufferRT1 = Shader.PropertyToID("_BufferRT1");
-            internal static readonly int bufferRT2 = Shader.PropertyToID("_BufferRT2");
+            internal static readonly int BufferRT1 = Shader.PropertyToID("_BufferRT1");
+            internal static readonly int BufferRT2 = Shader.PropertyToID("_BufferRT2");
         }
 
         public override void Render(PostProcessRenderContext context)
@@ -62,30 +62,30 @@ namespace XPostProcessing
 
             int RTWidth = (int)(context.screenWidth / settings.RTDownScaling);
             int RTHeight = (int)(context.screenHeight / settings.RTDownScaling);
-            cmd.GetTemporaryRT(ShaderIDs.bufferRT1, RTWidth, RTHeight, 0, FilterMode.Bilinear);
-            cmd.GetTemporaryRT(ShaderIDs.bufferRT2, RTWidth, RTHeight, 0, FilterMode.Bilinear);
+            cmd.GetTemporaryRT(ShaderIDs.BufferRT1, RTWidth, RTHeight, 0, FilterMode.Bilinear);
+            cmd.GetTemporaryRT(ShaderIDs.BufferRT2, RTWidth, RTHeight, 0, FilterMode.Bilinear);
 
             // downsample screen copy into smaller RT
-            context.command.BlitFullscreenTriangle(context.source, ShaderIDs.bufferRT1);
+            context.command.BlitFullscreenTriangle(context.source, ShaderIDs.BufferRT1);
 
 
             for (int i = 0; i < settings.Iteration; i++)
             {
                 // horizontal blur
                 sheet.properties.SetVector(ShaderIDs.BlurRadius, new Vector4(settings.BlurRadius / context.screenWidth, 0, 0, 0));
-                context.command.BlitFullscreenTriangle(ShaderIDs.bufferRT1, ShaderIDs.bufferRT2, sheet, 0);
+                context.command.BlitFullscreenTriangle(ShaderIDs.BufferRT1, ShaderIDs.BufferRT2, sheet, 0);
 
                 // vertical blur
                 sheet.properties.SetVector(ShaderIDs.BlurRadius, new Vector4(0, settings.BlurRadius / context.screenHeight, 0, 0));
-                context.command.BlitFullscreenTriangle(ShaderIDs.bufferRT2, ShaderIDs.bufferRT1, sheet, 0);
+                context.command.BlitFullscreenTriangle(ShaderIDs.BufferRT2, ShaderIDs.BufferRT1, sheet, 0);
             }
 
             // Render blurred texture in blend pass
-            cmd.BlitFullscreenTriangle(ShaderIDs.bufferRT1, context.destination, sheet, 1);
+            cmd.BlitFullscreenTriangle(ShaderIDs.BufferRT1, context.destination, sheet, 1);
 
             // release
-            cmd.ReleaseTemporaryRT(ShaderIDs.bufferRT1);
-            cmd.ReleaseTemporaryRT(ShaderIDs.bufferRT2);
+            cmd.ReleaseTemporaryRT(ShaderIDs.BufferRT1);
+            cmd.ReleaseTemporaryRT(ShaderIDs.BufferRT2);
 
             cmd.EndSample(PROFILER_TAG);
         }

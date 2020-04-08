@@ -14,15 +14,15 @@ namespace XPostProcessing
     {
 
         [Range(0.0f, 1.0f)]
-        public FloatParameter blurRadius = new FloatParameter { value = 0.6f };
+        public FloatParameter BlurRadius = new FloatParameter { value = 0.6f };
 
         [Range(2,30)]
-        public IntParameter iteration = new IntParameter { value = 10 };
+        public IntParameter Iteration = new IntParameter { value = 10 };
 
         [Range(0f, 1.0f)]
-        public FloatParameter radialCenterX = new FloatParameter { value = 0.5f };
+        public FloatParameter RadialCenterX = new FloatParameter { value = 0.5f };
         [Range(0f, 1.0f)]
-        public FloatParameter radialCenterY = new FloatParameter { value = 0.5f };
+        public FloatParameter RadialCenterY = new FloatParameter { value = 0.5f };
 
     }
 
@@ -52,7 +52,7 @@ namespace XPostProcessing
             PropertySheet sheet = context.propertySheets.Get(shader);
             cmd.BeginSample(PROFILER_TAG);
 
-            sheet.properties.SetVector(ShaderIDs.Params , new Vector4(settings.blurRadius * 0.02f, settings.iteration, settings.radialCenterX, settings.radialCenterY));
+            sheet.properties.SetVector(ShaderIDs.Params , new Vector4(settings.BlurRadius * 0.02f, settings.Iteration, settings.RadialCenterX, settings.RadialCenterY));
 
             context.command.BlitFullscreenTriangle(context.source, context.destination, sheet, 0);
             cmd.EndSample(PROFILER_TAG);

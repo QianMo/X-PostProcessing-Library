@@ -18,15 +18,15 @@ namespace XPostProcessing
     public sealed class BokehBlurEditor : PostProcessEffectEditor<BokehBlur>
     {
 
-        SerializedParameterOverride blurRadius;
-        SerializedParameterOverride iteration;
+        SerializedParameterOverride BlurRadius;
+        SerializedParameterOverride Iteration;
         SerializedParameterOverride RTDownScaling;
 
 
         public override void OnEnable()
         {
-            blurRadius = FindParameterOverride(x => x.blurRadius);
-            iteration = FindParameterOverride(x => x.iteration);
+            BlurRadius = FindParameterOverride(x => x.BlurRadius);
+            Iteration = FindParameterOverride(x => x.Iteration);
             RTDownScaling = FindParameterOverride(x => x.RTDownScaling);
         }
 
@@ -37,8 +37,8 @@ namespace XPostProcessing
 
         public override void OnInspectorGUI()
         {
-            PropertyField(blurRadius);
-            PropertyField(iteration);
+            PropertyField(BlurRadius);
+            PropertyField(Iteration);
             PropertyField(RTDownScaling);
         }
 

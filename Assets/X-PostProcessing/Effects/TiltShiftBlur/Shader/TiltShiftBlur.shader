@@ -16,10 +16,11 @@ Shader "Hidden/X-PostProcessing/TiltShiftBlur"
 	
 	TEXTURE2D_SAMPLER2D(_BlurredTex, sampler_BlurredTex);
 	
-	//float4 _MainTex_TexelSize;
 	float4 _BlurredTex_TexelSize;
-	uniform float _BlurSize;
-	uniform float _BlurRadius;
+	half2 _Params;	
+	
+	#define _BluSize _Params.x
+	#define _BlurRadius _Params.y
 
 	
 	
