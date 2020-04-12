@@ -23,7 +23,6 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
 
 
 
-
 <div align=center><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/title-rendering.jpg"/> </div>
 
 
@@ -102,7 +101,7 @@ The new effect should be available for a post processing profile with different 
 
 - 建议使用Unity 2017.2+。
 
-- 如果使用的是Unity的旧版本（5.6和2017.1），则需要将[此文件夹](https://github.com/QianMo/X-PostProcessing-Library/tree/master/Assets/PostProcessing-2) 替换为 [pps v2 2.1.8](https://github.com/Unity-Technologies/PostProcessing/tree/bec8546fc498db388cedadd14021cc7006338cc4)。
+- 如果使用的是较旧版本的Unity（5.6 或 2017.1），则需要将[此文件夹](https://github.com/QianMo/X-PostProcessing-Library/tree/master/Assets/PostProcessing-2) 替换为 [pps v2 2.1.8](https://github.com/Unity-Technologies/PostProcessing/tree/bec8546fc498db388cedadd14021cc7006338cc4)。
 
 - Unity 2017.2+  is recommended.
 
