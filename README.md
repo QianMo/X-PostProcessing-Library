@@ -31,7 +31,7 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
 
 # 内容 Content
 
-- Blur Effects
+- 图像模糊后处理 | Blur Effects
     - [Gaussian Blur](Assets/X-PostProcessing/Effects/GaussianBlur)
     - [Box Blur](Assets/X-PostProcessing/Effects/BoxBlur)
     - [Tent Blur](Assets/X-PostProcessing/Effects/TentBlur)
@@ -49,7 +49,7 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
     - [Radial Blur](Assets/X-PostProcessing/Effects/RadialBlur)
     - [Radial Blur V2](Assets/X-PostProcessing/Effects/RadialBlurV2)
     - [Directional Blur](Assets/X-PostProcessing/Effects/DirectionalBlur)
-- Pixelate Effects
+- 像素化后处理 | Pixelate Effects
     - [Pixelize Quad](Assets/X-PostProcessing/Effects/PixelizeQuad)
     - [Pixelize Led](Assets/X-PostProcessing/Effects/PixelizeLed)
     - [Pixelize Leaf](Assets/X-PostProcessing/Effects/PixelizeLeaf)
