@@ -13,7 +13,6 @@
 <a href="https://github.com/QianMo/X-PostProcessing-Library/pulls">
     <img alt="GitHub pull requests" src ="https://img.shields.io/github/issues-pr/QianMo/X-PostProcessing-Library" />
 </a>
-
 </p>
 
 X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后处理库，旨在提供业界主流的高品质后处理特效的完整解决方案。目前已完美支持Unity Post-processing Stack v2，后续也将提供对Unity引擎URP/LWRP/HDRP的兼容支持。
@@ -47,8 +46,18 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
     - [Radial Blur](Assets/X-PostProcessing/Effects/RadialBlur)
     - [Radial Blur V2](Assets/X-PostProcessing/Effects/RadialBlurV2)
     - [Directional Blur](Assets/X-PostProcessing/Effects/DirectionalBlur)
-- Color Adjustment Effects
 - Pixelate Effects
+    - [Pixelize Quad](Assets/X-PostProcessing/Effects/PixelizeQuad)
+    - [Pixelize Led](Assets/X-PostProcessing/Effects/PixelizeLed)
+    - [Pixelize Leaf](Assets/X-PostProcessing/Effects/PixelizeLeaf)
+    - [Pixelize Circle](Assets/X-PostProcessing/Effects/PixelizeCircle)
+    - [Pixelize Diamond](Assets/X-PostProcessing/Effects/PixelizeDiamond)
+    - [Pixelize Sector](Assets/X-PostProcessing/Effects/PixelizeSector)
+    - [Pixelize Diamond](Assets/X-PostProcessing/Effects/PixelizeDiamond)
+    - [Pixelize Triangle](Assets/X-PostProcessing/Effects/PixelizeTriangle)
+    - [Pixelize Hexagon](Assets/X-PostProcessing/Effects/PixelizeHexagon)
+    - [Pixelize Hexagon Grid](Assets/X-PostProcessing/Effects/PixelizeHexagonGrid)
+- Color Adjustment Effects
 - Glitch Effects
 - Stylized Effects
 - Painting Effects
@@ -88,6 +97,7 @@ The new effect should be available for a post processing profile with different 
 
 
 # 环境 Environment
+
 - 建议使用Unity 2017.2+。
 
 - 如果使用的是Unity的旧版本（5.6和2017.1），则需要将[此文件夹](https://github.com/QianMo/X-PostProcessing-Library/tree/master/Assets/PostProcessing-2) 替换为 [pps v2 2.1.8](https://github.com/Unity-Technologies/PostProcessing/tree/bec8546fc498db388cedadd14021cc7006338cc4)。
