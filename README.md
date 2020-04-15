@@ -126,6 +126,9 @@ The new effect should be available for a post processing profile with different 
 
 # 6. 部分渲染效果图 | Selected Gallery
 
+属性变化下的后处理效果变化动图：
+
+Post-processing Effect under Attribute Changes:
 
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/IrisBlurV2/IrisBlurV2-1.gif)
 
@@ -138,7 +141,14 @@ The new effect should be available for a post processing profile with different 
 
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/PixelizeHexagonGrid/PixelizeHexagonGrid.gif)
 
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/PixelizeQuad/PixelizeQuad.gif)
+
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/PixelizeHexagon/PixelizeHexagon.gif)
+
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/PixelizeLeaf/PixelizeLeaf.gif)
+
+
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/PixelizeDiamond/PixelizeDiamond.gif)
 
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/PixelizeLed/PixelizeLed.gif)
 
