@@ -15,12 +15,12 @@ Shader "Hidden/X-PostProcessing/PixelizeHexagon"
 	#include "../../../Shaders/StdLib.hlsl"
 	#include "../../../Shaders/XPostProcessing.hlsl"
 	
-	half _PixelSize;
-	half _PixelRatio;
-	half _PixelScaleX;
-	half _PixelScaleY;
-	half4 _BackgroundColor;
-	half _GridWidth;
+
+	half4 _Params;
+	#define _PixelSize _Params.x
+	#define _PixelRatio _Params.y
+	#define _PixelScaleX _Params.z
+	#define _PixelScaleY _Params.w
 	
 
 	float HexDist(float2 a, float2 b)
@@ -94,8 +94,6 @@ Shader "Hidden/X-PostProcessing/PixelizeHexagon"
 	}
 	
 
-
-	float4 _Params;
 
 	float2 HexPixelizeUV(float2 hexIndex)
 	{

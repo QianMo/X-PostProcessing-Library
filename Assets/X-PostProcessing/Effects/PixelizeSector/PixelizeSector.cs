@@ -44,6 +44,12 @@ namespace XPostProcessing
             base.Release();
         }
 
+        static class ShaderIDs
+        {
+            internal static readonly int Params = Shader.PropertyToID("_Params");
+            internal static readonly int Params2 = Shader.PropertyToID("_Params2");
+        }
+
         public override void Render(PostProcessRenderContext context)
         {
             CommandBuffer cmd = context.command;
@@ -53,9 +59,8 @@ namespace XPostProcessing
             float size = (1.01f - settings.pixelSize) * 300f;
             Vector4 parameters = new Vector4(size, ((context.screenWidth * 2 / context.screenHeight) * size / Mathf.Sqrt(3f)), settings.circleRadius, 0f);
 
-            sheet.properties.SetVector("_Params", parameters);
-            sheet.properties.SetFloat("_PixelIntervalX", settings.pixelIntervalX);
-            sheet.properties.SetFloat("_PixelIntervalY", settings.pixelIntervalY);
+            sheet.properties.SetVector(ShaderIDs.Params, parameters);
+            sheet.properties.SetVector(ShaderIDs.Params2, new Vector2(settings.pixelIntervalX, settings.pixelIntervalY));
             sheet.properties.SetColor("_BackgroundColor", settings.BackgroundColor);
 
 

@@ -48,6 +48,13 @@ namespace XPostProcessing
             base.Release();
         }
 
+        static class ShaderIDs
+        {
+            internal static readonly int Params = Shader.PropertyToID("_Params");
+            internal static readonly int BackgroundColor = Shader.PropertyToID("_BackgroundColor");
+        }
+
+
         public override void Render(PostProcessRenderContext context)
         {
             CommandBuffer cmd = context.command;
@@ -56,8 +63,6 @@ namespace XPostProcessing
 
 
             float size = (1.01f - settings.pixelSize) * 300f;
-            sheet.properties.SetFloat("_PixelSize", size);
-
 
             float ratio = settings.pixelRatio;
             if (settings.useAutoScreenRatio)
@@ -69,9 +74,9 @@ namespace XPostProcessing
                 }
             }
 
-            sheet.properties.SetFloat("_PixelRatio", ratio);
-            sheet.properties.SetFloat("_LedRadius", settings.ledRadius);
-            sheet.properties.SetColor("_BackgroundColor", settings.BackgroundColor);
+
+            sheet.properties.SetVector(ShaderIDs.Params, new Vector4(size, ratio, settings.ledRadius));
+            sheet.properties.SetColor(ShaderIDs.BackgroundColor, settings.BackgroundColor);
 
             cmd.BlitFullscreenTriangle(context.source, context.destination, sheet, 0);
             cmd.EndSample(PROFILER_TAG);

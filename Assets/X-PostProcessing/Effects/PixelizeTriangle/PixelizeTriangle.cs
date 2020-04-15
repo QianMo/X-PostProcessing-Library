@@ -47,6 +47,10 @@ namespace XPostProcessing
         {
             base.Release();
         }
+        static class ShaderIDs
+        {
+            internal static readonly int Params = Shader.PropertyToID("_Params");
+        }
 
         public override void Render(PostProcessRenderContext context)
         {
@@ -55,7 +59,6 @@ namespace XPostProcessing
             cmd.BeginSample(PROFILER_TAG);
 
             float size = (1.01f - settings.pixelSize) * 5f;
-            sheet.properties.SetFloat("_PixelSize", size);
 
             float ratio = settings.pixelRatio;
             if (settings.useAutoScreenRatio)
@@ -66,9 +69,8 @@ namespace XPostProcessing
                     ratio = 1f;
                 }
             }
-            sheet.properties.SetFloat("_PixelRatio", ratio);
-            sheet.properties.SetFloat("_PixelScaleX", settings.pixelScaleX * 20);
-            sheet.properties.SetFloat("_PixelScaleY", settings.pixelScaleY * 20);
+
+            sheet.properties.SetVector(ShaderIDs.Params, new Vector4(size, ratio, settings.pixelScaleX * 20, settings.pixelScaleY * 20));
 
             cmd.BlitFullscreenTriangle(context.source, context.destination, sheet, 0);
             cmd.EndSample(PROFILER_TAG);

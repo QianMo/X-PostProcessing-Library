@@ -20,12 +20,12 @@ Shader "Hidden/X-PostProcessing/PixelizeLed"
 			#include "../../../Shaders/XPostProcessing.hlsl"
 
 			
-
-			float _PixelSize;
-			float _PixelRatio;
-			float _LedRadius;
+			half4 _Params;
 			half4 _BackgroundColor;
 
+			#define _PixelSize _Params.x
+			#define _PixelRatio _Params.y
+			#define _LedRadius _Params.z
 
 			float2 RectPixelizeUV(half2 uv)
 			{

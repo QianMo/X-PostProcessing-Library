@@ -21,11 +21,12 @@ Shader "Hidden/X-PostProcessing/PixelizeCircle"
 			
 			
 			
-			float4 _Params;
-			float _PixelRatio;
-			float _PixelIntervalX;
-			float _PixelIntervalY;
+			half4 _Params;
+			half2 _Params2;
 			half4 _BackgroundColor;
+
+			#define _PixelIntervalX _Params2.x
+			#define _PixelIntervalY _Params2.y
 
 
 			float4 CirclePixelize(float2 uv)

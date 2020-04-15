@@ -22,18 +22,12 @@ Shader "Hidden/X-PostProcessing/PixelizeSector"
 			
 			
 			float4 _Params;
-			float _PixelIntervalX;
-			float _PixelIntervalY;
+			float2 _Params2;
 			half4 _BackgroundColor;
 
-			//float2 CirclePixelizeUV(float2 uv)
-			//{
-			//	float pixelScale = 1.0 / _Params.x;
+			#define _PixelIntervalX _Params2.x
+			#define _PixelIntervalY _Params2.y
 
-			//	half2 coord = half2(pixelScale *_PixelIntervalX* floor(uv.x / (pixelScale * _PixelIntervalX)), (pixelScale * _PixelIntervalY) * floor(uv.y / (pixelScale * _PixelIntervalY)));
-
-			//	return coord;
-			//}
 			
 			float4 SectorPixelize(float2 uv)
 			{
@@ -66,33 +60,7 @@ Shader "Hidden/X-PostProcessing/PixelizeSector"
 			
 			float4 Frag(VaryingsDefault i): SV_Target
 			{
-
-					return SectorPixelize(i.texcoord);
-
-					////float circleSize = 1.0 / _Params.x;
-
-					////校正UV，防止UV因分辨率因长宽比而形变
-					////float aspect = _ScreenParams.y / _ScreenParams.x;
-
-					//float2 uv = i.texcoord;
-					////调整UV长宽比
-					////uv.x = uv.x * _PixelInterval;
-					////uv.x = uv.x;
-
-					////获取分段UV
-					//float2 circlePixelizeUV = CirclePixelizeUV(uv);
-
-					//float dist = length(uv - circlePixelizeUV) * _Params.x;
-
-					////circlePixelizeUV.x /= _ScreenParams.x / _ScreenParams.y;
-
-					//float4 screenColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, circlePixelizeUV);
-
-					//if (dist > _Params.z)
-					//{
-					//	screenColor = _BackgroundColor;
-					//}
-					//return screenColor;
+				return SectorPixelize(i.texcoord);
 			}
 			
 			ENDHLSL

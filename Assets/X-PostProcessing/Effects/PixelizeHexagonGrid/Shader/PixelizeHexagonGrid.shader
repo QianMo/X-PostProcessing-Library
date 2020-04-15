@@ -15,13 +15,10 @@ Shader "Hidden/X-PostProcessing/PixelizeHexagonGrid"
 	#include "../../../Shaders/StdLib.hlsl"
 	#include "../../../Shaders/XPostProcessing.hlsl"
 	
-	half _PixelSize;
-	half _PixelRatio;
-	half _PixelScaleX;
-	half _PixelScaleY;
-	half4 _BackgroundColor;
-	half _GridWidth;
-	
+	half2 _Params;
+	#define _PixelSize _Params.x
+	#define _GridWidth _Params.y
+
 
 	float HexDist(float2 a, float2 b)
 	{
@@ -95,7 +92,6 @@ Shader "Hidden/X-PostProcessing/PixelizeHexagonGrid"
 
 		float4 finalColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, nearest / _ScreenParams.xy);
 
-
 		float dist = HexDist(i.texcoord * _ScreenParams.xy, nearest);
 
 		float interiorSize = pixelSize;
@@ -104,10 +100,6 @@ Shader "Hidden/X-PostProcessing/PixelizeHexagonGrid"
 		return float4(finalColor.rgb * interior, 1.0);
 
 	}
-
-
-
-	float4 _Params;
 
 	float2 HexPixelizeUV(float2 hexIndex)
 	{

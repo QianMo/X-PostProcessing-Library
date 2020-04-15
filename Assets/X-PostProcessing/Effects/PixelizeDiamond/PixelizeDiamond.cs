@@ -37,13 +37,18 @@ namespace XPostProcessing
             base.Release();
         }
 
+        static class ShaderIDs
+        {
+            internal static readonly int PixelSize = Shader.PropertyToID("_PixelSize");
+        }
+
         public override void Render(PostProcessRenderContext context)
         {
             CommandBuffer cmd = context.command;
             PropertySheet sheet = context.propertySheets.Get(shader);
             cmd.BeginSample(PROFILER_TAG);
 
-            sheet.properties.SetFloat("_PixelSize", settings.pixelSize);
+            sheet.properties.SetFloat(ShaderIDs.PixelSize, settings.pixelSize);
 
             cmd.BlitFullscreenTriangle(context.source, context.destination, sheet, 0);
             cmd.EndSample(PROFILER_TAG);

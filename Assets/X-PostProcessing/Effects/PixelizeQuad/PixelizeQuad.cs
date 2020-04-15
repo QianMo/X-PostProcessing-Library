@@ -49,10 +49,7 @@ namespace XPostProcessing
 
         static class ShaderIDs
         {
-            internal static readonly int edgeWidth = Shader.PropertyToID("_EdgeWidth");
-            internal static readonly int backgroundFade = Shader.PropertyToID("_BackgroundFade");
-            internal static readonly int edgeColor = Shader.PropertyToID("_EdgeColor");
-            internal static readonly int backgroundColor = Shader.PropertyToID("_BackgroundColor");
+            internal static readonly int Params = Shader.PropertyToID("_Params");
         }
 
         public override void Render(PostProcessRenderContext context)
@@ -74,9 +71,9 @@ namespace XPostProcessing
                     ratio = 1f;
                 }
             }
-            sheet.properties.SetFloat("_PixelRatio", ratio);
-            sheet.properties.SetFloat("_PixelScaleX", settings.pixelScaleX);
-            sheet.properties.SetFloat("_PixelScaleY", settings.pixelScaleY);
+
+            sheet.properties.SetVector(ShaderIDs.Params, new Vector4(size, ratio, settings.pixelScaleX, settings.pixelScaleY));
+
 
             cmd.BlitFullscreenTriangle(context.source, context.destination, sheet, 0);
             cmd.EndSample(PROFILER_TAG);

@@ -20,14 +20,11 @@ Shader "Hidden/X-PostProcessing/PixelizeTriangle"
 			#include "../../../Shaders/StdLib.hlsl"
 			#include "../../../Shaders/XPostProcessing.hlsl"
 
-			
-
-			float _PixelSize;
-			float _PixelRatio;
-			float _PixelScaleX;
-			float _PixelScaleY;
-			//half4 _BackgroundColor;
-
+			half4 _Params;
+			#define _PixelSize _Params.x
+			#define _PixelRatio _Params.y
+			#define _PixelScaleX _Params.z
+			#define _PixelScaleY _Params.w
 
 
 			float2 TrianglePixelizeUV(float2 uv)

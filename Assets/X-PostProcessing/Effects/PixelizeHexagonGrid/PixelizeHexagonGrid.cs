@@ -52,14 +52,19 @@ namespace XPostProcessing
             base.Release();
         }
 
+        static class ShaderIDs
+        {
+            internal static readonly int Params = Shader.PropertyToID("_Params");
+        }
+
         public override void Render(PostProcessRenderContext context)
         {
             CommandBuffer cmd = context.command;
             PropertySheet sheet = context.propertySheets.Get(shader);
             cmd.BeginSample(PROFILER_TAG);
 
-            sheet.properties.SetFloat("_PixelSize", settings.pixelSize);
-            sheet.properties.SetFloat("_GridWidth", settings.gridWidth);
+            sheet.properties.SetVector(ShaderIDs.Params, new Vector2(settings.pixelSize, settings.gridWidth));
+
 
             cmd.BlitFullscreenTriangle(context.source, context.destination, sheet, 0);
             cmd.EndSample(PROFILER_TAG);
