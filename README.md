@@ -126,9 +126,9 @@ The new effect should be available for a post processing profile with different 
 
 # 6. 部分渲染效果图 | Selected Gallery
 
-属性变化下的后处理效果变化动图：
+以下是一些调节后处理参数时的渲染效果动图：
 
-Post-processing Effect under Attribute Changes:
+The following are some gif when adjusting various post-processing attributes:
 
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/IrisBlurV2/IrisBlurV2-1.gif)
 
