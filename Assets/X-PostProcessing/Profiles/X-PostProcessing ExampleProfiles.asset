@@ -18,6 +18,34 @@ MonoBehaviour:
   - {fileID: 114417544700008348}
   - {fileID: 114365642992012064}
   - {fileID: 114881628477261990}
+  - {fileID: 114186190907686168}
+--- !u!114 &114186190907686168
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2bae125e8b72241b38b94373f3c521, type: 3}
+  m_Name: EdgeDetectionRoberts
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  edgeWidth:
+    overrideState: 1
+    value: 0.98
+  edgeColor:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 1}
+  backgroundFade:
+    overrideState: 1
+    value: 1
+  backgroundColor:
+    overrideState: 1
+    value: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114365642992012064
 MonoBehaviour:
   m_ObjectHideFlags: 3
