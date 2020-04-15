@@ -27,7 +27,7 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
  </span>
 
 
-- 图像模糊后处理 | Blur Effects
+- 图像模糊型后处理 | Blur Effects
     - [Gaussian Blur](Assets/X-PostProcessing/Effects/GaussianBlur)
     - [Box Blur](Assets/X-PostProcessing/Effects/BoxBlur)
     - [Tent Blur](Assets/X-PostProcessing/Effects/TentBlur)
@@ -45,7 +45,7 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
     - [Radial Blur](Assets/X-PostProcessing/Effects/RadialBlur)
     - [Radial Blur V2](Assets/X-PostProcessing/Effects/RadialBlurV2)
     - [Directional Blur](Assets/X-PostProcessing/Effects/DirectionalBlur)
-- 像素化后处理 | Pixelate Effects
+- 像素化型后处理 | Pixelate Effects
     - [Pixelize Quad](Assets/X-PostProcessing/Effects/PixelizeQuad)
     - [Pixelize Led](Assets/X-PostProcessing/Effects/PixelizeLed)
     - [Pixelize Leaf](Assets/X-PostProcessing/Effects/PixelizeLeaf)
@@ -78,53 +78,7 @@ More effects and LWRP/URP/HDRP version will arrive soon.
 
 
 
-# 2. 安装 | Installation
-
-有两种主要的安装X-PostProcessing Library的方法：
-
-- 【方法一】 克隆或下载此Repo，并直接使用Unity打开。建议可先从已设置好后处理的示例场景 [Assets/Example/ExampleScene.unity](Assets/Example/ExampleScene.unity) 开始。
-
-- 【方法二】 将[X-PostProcessing](Assets/X-PostProcessing) 文件夹放置在项目Assets路径下的任一位置，并确保Post Processing Stack v2也位于项目中。
-
-You have two main ways to install X-PostProcessing Library :
-
-- **[Method 1]**   Clone or download this repository , open with Unity Engine Editor and enjoy. It is recommended to start with the example scene [Assets/Example/ExampleScene.unity](Assets/Example/ExampleScene.unity) .
-- **[Method 2]**  Place the [X-PostProcessing](Assets/X-PostProcessing) folder anywhere in your project, make sure that Post Processing Stack v2 is in the project as well, and enjoy.
-
-
-
-# 3. 使用 | Usage
-
-
-post processing profile 有各种不同的修改和添加方式，最常规的方法是，选中一个post processing profile ，在Inspetor窗口下：
-
-- `Add effect... > X-PostProcessing > 选择一种新的后处理`
-
-The new effect should be available for a post processing profile with different injection points，just like:
-
-- `Add effect... > X-PostProcessing > Choose an effect`
-
-
-
-# 4. 环境 | Environment
-
-- 建议使用Unity 2017.2+。
-
-- 如果使用的是较旧版本的Unity（5.6 或 2017.1），则需要将[此文件夹](https://github.com/QianMo/X-PostProcessing-Library/tree/master/Assets/PostProcessing-2) 替换为 [pps v2 2.1.8](https://github.com/Unity-Technologies/PostProcessing/tree/bec8546fc498db388cedadd14021cc7006338cc4)。
-
-- Unity 2017.2+  is recommended.
-
-- if you use older versions of Unity (5.6 and 2017.1) , you need to replace [this folder](https://github.com/QianMo/X-PostProcessing-Library/tree/master/Assets/PostProcessing-2) with [pps v2 2.1.8](https://github.com/Unity-Technologies/PostProcessing/tree/bec8546fc498db388cedadd14021cc7006338cc4).
-
-<br>
-
-# 5. 文章 |  Blog Post
-
-- [高品质后处理：十种图像模糊算法的总结与实现](https://zhuanlan.zhihu.com/p/125744132) | [GitHub Version](https://github.com/QianMo/Game-Programmer-Study-Notes/blob/master/Content/%E9%AB%98%E5%93%81%E8%B4%A8%E5%90%8E%E5%A4%84%E7%90%86%EF%BC%9A%E5%8D%81%E7%A7%8D%E5%9B%BE%E5%83%8F%E6%A8%A1%E7%B3%8A%E7%AE%97%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93%E4%B8%8E%E5%AE%9E%E7%8E%B0/README.md)
-
-<br>
-
-# 6. 部分渲染效果图 | Selected Gallery
+# 2. 部分渲染效果图 | Selected Gallery
 
 以下是一些调节后处理参数时的渲染效果动图：
 
@@ -155,6 +109,54 @@ The following are some gif when adjusting various post-processing attributes:
 需要查看更多渲染效果图和每个特效的参数与属性，可以在 [目录 ](#jump)  部分的具体后处理特效子页面中查看。
 
 For more gallery , you can enter the specific post-processing effects sub-page in the [ Content ](#jump) section.
+
+
+
+# 3. 安装 | Installation
+
+有两种主要的安装X-PostProcessing Library的方法：
+
+- 【方法一】 克隆或下载此Repo，并直接使用Unity打开。建议可先从已设置好后处理的示例场景 [Assets/Example/ExampleScene.unity](Assets/Example/ExampleScene.unity) 开始。
+
+- 【方法二】 将[X-PostProcessing](Assets/X-PostProcessing) 文件夹放置在项目Assets路径下的任一位置，并确保Post Processing Stack v2也位于项目中。
+
+You have two main ways to install X-PostProcessing Library :
+
+- **[Method 1]**   Clone or download this repository , open with Unity Engine Editor and enjoy. It is recommended to start with the example scene [Assets/Example/ExampleScene.unity](Assets/Example/ExampleScene.unity) .
+- **[Method 2]**  Place the [X-PostProcessing](Assets/X-PostProcessing) folder anywhere in your project, make sure that Post Processing Stack v2 is in the project as well, and enjoy.
+
+
+
+# 4. 使用 | Usage
+
+
+post processing profile 有各种不同的修改和添加方式，最常规的方法是，选中一个post processing profile ，在Inspetor窗口下：
+
+- `Add effect... > X-PostProcessing > 选择一种新的后处理`
+
+The new effect should be available for a post processing profile with different injection points，just like:
+
+- `Add effect... > X-PostProcessing > Choose an effect`
+
+
+
+# 5. 环境 | Environment
+
+- 建议使用Unity 2017.2+。
+
+- 如果使用的是较旧版本的Unity（5.6 或 2017.1），则需要将[此文件夹](https://github.com/QianMo/X-PostProcessing-Library/tree/master/Assets/PostProcessing-2) 替换为 [pps v2 2.1.8](https://github.com/Unity-Technologies/PostProcessing/tree/bec8546fc498db388cedadd14021cc7006338cc4)。
+
+- Unity 2017.2+  is recommended.
+
+- if you use older versions of Unity (5.6 and 2017.1) , you need to replace [this folder](https://github.com/QianMo/X-PostProcessing-Library/tree/master/Assets/PostProcessing-2) with [pps v2 2.1.8](https://github.com/Unity-Technologies/PostProcessing/tree/bec8546fc498db388cedadd14021cc7006338cc4).
+
+<br>
+
+# 6. 文章 |  Blog Post
+
+- [高品质后处理：十种图像模糊算法的总结与实现](https://zhuanlan.zhihu.com/p/125744132) | [GitHub Version](https://github.com/QianMo/Game-Programmer-Study-Notes/blob/master/Content/%E9%AB%98%E5%93%81%E8%B4%A8%E5%90%8E%E5%A4%84%E7%90%86%EF%BC%9A%E5%8D%81%E7%A7%8D%E5%9B%BE%E5%83%8F%E6%A8%A1%E7%B3%8A%E7%AE%97%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93%E4%B8%8E%E5%AE%9E%E7%8E%B0/README.md)
+
+<br>
 
 
 
