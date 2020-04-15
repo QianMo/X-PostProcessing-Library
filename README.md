@@ -1,8 +1,5 @@
 
 
-
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/XPL-Title-v2.jpg)
-
 <p>
 <a href="https://github.com/QianMo/X-PostProcessing-Library/blob/master/LICENSE">
     <img alt="GitHub license" src ="https://img.shields.io/github/license/QianMo/X-PostProcessing-Library" />
@@ -22,8 +19,12 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
 **X-PostProcessing Library (XPL)** is a high quality post processing library for for Unity Post Processing Stack v2/LWRP/URP/HDRP
 
 
+<span id="jump">
 
-# 内容 | Content
+ # 1. 目录 | Content 
+ 
+ </span>
+
 
 - 图像模糊后处理 | Blur Effects
     - [Gaussian Blur](Assets/X-PostProcessing/Effects/GaussianBlur)
@@ -76,7 +77,7 @@ More effects and LWRP/URP/HDRP version will arrive soon.
 
 
 
-# 安装 | Installation
+# 2. 安装 | Installation
 
 有两种主要的安装X-PostProcessing Library的方法：
 
@@ -91,7 +92,7 @@ You have two main ways to install X-PostProcessing Library :
 
 
 
-# 使用 | Usage
+# 3. 使用 | Usage
 
 
 post processing profile 有各种不同的修改和添加方式，最常规的方法是，选中一个post processing profile ，在Inspetor窗口下：
@@ -104,7 +105,7 @@ The new effect should be available for a post processing profile with different 
 
 
 
-# 环境 | Environment
+# 4. 环境 | Environment
 
 - 建议使用Unity 2017.2+。
 
@@ -116,13 +117,13 @@ The new effect should be available for a post processing profile with different 
 
 <br>
 
-# 文章 |  Blog Post
+# 5. 文章 |  Blog Post
 
 - [高品质后处理：十种图像模糊算法的总结与实现](https://zhuanlan.zhihu.com/p/125744132) | [GitHub Version](https://github.com/QianMo/Game-Programmer-Study-Notes/blob/master/Content/%E9%AB%98%E5%93%81%E8%B4%A8%E5%90%8E%E5%A4%84%E7%90%86%EF%BC%9A%E5%8D%81%E7%A7%8D%E5%9B%BE%E5%83%8F%E6%A8%A1%E7%B3%8A%E7%AE%97%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93%E4%B8%8E%E5%AE%9E%E7%8E%B0/README.md)
 
 <br>
 
-# 部分渲染效果图 | Selected Gallery
+# 6. 部分渲染效果图 | Selected Gallery
 
 
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/IrisBlurV2/IrisBlurV2-1.gif)
@@ -140,9 +141,11 @@ The new effect should be available for a post processing profile with different 
 
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/PixelizeLed/PixelizeLed.gif)
 
-需要查看更多渲染效果图和每个特效的参数与属性，可以[Content](#内容|Content)部分的具体后处理特效子页面中查看。
+需要查看更多渲染效果图和每个特效的参数与属性，可以在 [ 目录 ](#jump)  部分的具体后处理特效子页面中查看。
 
-For more gallery , you can enter the specific post-processing effects sub-page in the [Content](#内容|Content)section.
+For more gallery , you can enter the specific post-processing effects sub-page in the [ Content ](#jump) section.
+
+
 
 
  
