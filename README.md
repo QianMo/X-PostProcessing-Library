@@ -1,4 +1,5 @@
 
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/XPL-Title-v2.jpg)
 
 <p>
 <a href="https://github.com/QianMo/X-PostProcessing-Library/blob/master/LICENSE">
@@ -21,7 +22,7 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
 
 <span id="jump">
 
- # 1. 目录 | Content 
+ # 1. 内容 | Content 
  
  </span>
 
@@ -141,7 +142,7 @@ The new effect should be available for a post processing profile with different 
 
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/PixelizeLed/PixelizeLed.gif)
 
-需要查看更多渲染效果图和每个特效的参数与属性，可以在 [ 目录 ](#jump)  部分的具体后处理特效子页面中查看。
+需要查看更多渲染效果图和每个特效的参数与属性，可以在 [目录 ](#jump)  部分的具体后处理特效子页面中查看。
 
 For more gallery , you can enter the specific post-processing effects sub-page in the [ Content ](#jump) section.
 
