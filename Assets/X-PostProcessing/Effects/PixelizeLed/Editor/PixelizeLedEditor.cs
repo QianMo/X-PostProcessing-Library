@@ -1,6 +1,9 @@
 ﻿//----------------------------------------------------------------------------------------------------------
 // X-PostProcessing Library
-// created by QianMo @ 2020
+// Copyright (C) 2020 QianMo. All rights reserved.
+// Licensed under the MIT License 
+// you may not use this file except in compliance with the License.You may obtain a copy of the License at
+// http://opensource.org/licenses/MIT
 //----------------------------------------------------------------------------------------------------------
 
 using System.Collections;
