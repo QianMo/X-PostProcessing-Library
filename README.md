@@ -58,14 +58,14 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
     - [Pixelize Hexagon Grid](Assets/X-PostProcessing/Effects/PixelizeHexagonGrid)
 - 边缘检测型后处理 | Edge Detection Effects
     - [Edge Detection Sobel](Assets/X-PostProcessing/Effects/EdgeDetectionSobel)
-    - [Edge DetectionSobel Neon](Assets/X-PostProcessing/Effects/EdgeDetectionSobelNeon)
-    - [Edge DetectionSobel NeonV2](Assets/X-PostProcessing/Effects/EdgeDetectionSobelNeonV2)
-    - [Edge DetectionScharr](Assets/X-PostProcessing/Effects/EdgeDetectionScharr)
-    - [Edge DetectionRobertsNeon](Assets/X-PostProcessing/Effects/EdgeDetectionRobertsNeon)
-    - [Edge DetectionRoberts NeonV2](Assets/X-PostProcessing/Effects/EdgeDetectionRobertsNeonV2)
+    - [Edge Detection Sobel Neon](Assets/X-PostProcessing/Effects/EdgeDetectionSobelNeon)
+    - [Edge Detection Sobel Neon V2](Assets/X-PostProcessing/Effects/EdgeDetectionSobelNeonV2)
+    - [Edge Detection Roberts](Assets/X-PostProcessing/Effects/EdgeDetectionRoberts)
+    - [Edge Detection Roberts Neon](Assets/X-PostProcessing/Effects/EdgeDetectionRobertsNeon)
+    - [Edge Detection Roberts Neon V2](Assets/X-PostProcessing/Effects/EdgeDetectionRobertsNeonV2)
     - [Edge DetectionScharr](Assets/X-PostProcessing/Effects/EdgeDetectionScharr)
     - [Edge DetectionScharr Neon](Assets/X-PostProcessing/Effects/EdgeDetectionScharrNeon)
-    - [Edge DetectionScharr NeonV2](Assets/X-PostProcessing/Effects/EdgeDetectionScharrNeonV2)
+    - [Edge DetectionScharr Neon V2](Assets/X-PostProcessing/Effects/EdgeDetectionScharrNeonV2)
 
 - Color Adjustment Effects
 - Glitch Effects
@@ -105,6 +105,14 @@ The following are some gif when adjusting various post-processing attributes:
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/PixelizeDiamond/PixelizeDiamond.gif)
 
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/PixelizeLed/PixelizeLed.gif)
+
+
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/EdgeDetection/EdgeDetectionRoberts/EdgeDetectionRoberts1.gif)
+
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/EdgeDetection/EdgeDetectionScharr/EdgeDetectionScharr1.gif)
+
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/EdgeDetection/EdgeDetectionSobel/EdgeDetectionSobel2.gif)
+
 
 需要查看更多渲染效果图和每个特效的参数与属性，可以在 [目录 ](#jump)  部分的具体后处理特效子页面中查看。
 
