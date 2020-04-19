@@ -63,9 +63,9 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
     - [Edge Detection Roberts](Assets/X-PostProcessing/Effects/EdgeDetectionRoberts)
     - [Edge Detection Roberts Neon](Assets/X-PostProcessing/Effects/EdgeDetectionRobertsNeon)
     - [Edge Detection Roberts Neon V2](Assets/X-PostProcessing/Effects/EdgeDetectionRobertsNeonV2)
-    - [Edge DetectionScharr](Assets/X-PostProcessing/Effects/EdgeDetectionScharr)
-    - [Edge DetectionScharr Neon](Assets/X-PostProcessing/Effects/EdgeDetectionScharrNeon)
-    - [Edge DetectionScharr Neon V2](Assets/X-PostProcessing/Effects/EdgeDetectionScharrNeonV2)
+    - [Edge Detection Scharr](Assets/X-PostProcessing/Effects/EdgeDetectionScharr)
+    - [Edge Detection Scharr Neon](Assets/X-PostProcessing/Effects/EdgeDetectionScharrNeon)
+    - [Edge Detection Scharr Neon V2](Assets/X-PostProcessing/Effects/EdgeDetectionScharrNeonV2)
 
 - Color Adjustment Effects
 - Glitch Effects
