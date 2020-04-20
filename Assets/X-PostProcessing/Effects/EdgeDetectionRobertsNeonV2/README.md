@@ -11,10 +11,7 @@
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/EdgeDetection/EdgeDetectionRobertsNeonV2/EdgeDetectionRobertsNeonV2Property.jpg)
 
 ## Gallery
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/EdgeDetection/EdgeDetectionRobertsNeonV2/EdgeDetectionRobertsNeonV21.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/EdgeDetection/EdgeDetectionRobertsNeonV2/EdgeDetectionRobertsNeonV2.jpg)
 
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/EdgeDetection/EdgeDetectionRobertsNeonV2/EdgeDetectionRobertsNeonV22.jpg)
 
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/EdgeDetection/EdgeDetectionRobertsNeonV2/EdgeDetectionRobertsNeonV21.gif)
-
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/EdgeDetection/EdgeDetectionRobertsNeonV2/EdgeDetectionRobertsNeonV22.gif)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/EdgeDetection/EdgeDetectionRobertsNeonV2/EdgeDetectionRobertsNeonV2.gif)
