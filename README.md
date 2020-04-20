@@ -90,6 +90,10 @@ The following are some gif when adjusting various post-processing attributes:
 
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/BokehBlur/BokehBlur.gif)
 
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/DirectionalBlur/DirectionalBlur-1.gif)
+
+
+
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/GaussianBlur/GaussianBlur.gif)
 
 
