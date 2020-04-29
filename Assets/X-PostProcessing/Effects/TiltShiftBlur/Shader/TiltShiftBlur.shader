@@ -22,7 +22,7 @@ Shader "Hidden/X-PostProcessing/TiltShiftBlur"
 	float4 _BlurredTex_TexelSize;
 	half2 _Params;	
 	
-	#define _BluSize _Params.x
+	#define _BlurSize _Params.x
 	#define _BlurRadius _Params.y
 
 	
