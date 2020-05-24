@@ -66,9 +66,29 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
     - [Edge Detection Scharr](Assets/X-PostProcessing/Effects/EdgeDetectionScharr)
     - [Edge Detection Scharr Neon](Assets/X-PostProcessing/Effects/EdgeDetectionScharrNeon)
     - [Edge Detection Scharr Neon V2](Assets/X-PostProcessing/Effects/EdgeDetectionScharrNeonV2)
+- 故障艺术型后处理| Glitch Effects
+    - [Glitch Analog Noise](Assets/X-PostProcessing/Effects/GlitchAnalogNoise)
+    - [Glitch Digital Stripe](Assets/X-PostProcessing/Effects/GlitchDigitalStripe)
+    - [Glitch Digital StripeV2](Assets/X-PostProcessing/Effects/GlitchDigitalStripeV2)
+    - [Glitch Image Block](Assets/X-PostProcessing/Effects/GlitchImageBlock)
+    - [Glitch Image Block V2](Assets/X-PostProcessing/Effects/GlitchImageBlockV2)
+    - [Glitch Image Block V3](Assets/X-PostProcessing/Effects/GlitchImageBlockV3)
+    - [Glitch Image Block V4](Assets/X-PostProcessing/Effects/GlitchImageBlockV4)
+    - [Glitch Line Block](Assets/X-PostProcessing/Effects/GlitchLineBlock)
+    - [Glitch RGB Split](Assets/X-PostProcessing/Effects/GlitchRGBSplit)
+    - [Glitch RGB Split V2](Assets/X-PostProcessing/Effects/GlitchRGBSplitV2)
+    - [Glitch RGB Split V3](Assets/X-PostProcessing/Effects/GlitchRGBSplitV3)
+    - [Glitch RGB Split V4](Assets/X-PostProcessing/Effects/GlitchRGBSplitV4)
+    - [Glitch RGB Split V5](Assets/X-PostProcessing/Effects/GlitchRGBSplitV5)
+    - [Glitch Scan Line Jitter](Assets/X-PostProcessing/Effects/GlitchScanLineJitter)
+    - [Glitch Scan Line Jitter V2](Assets/X-PostProcessing/Effects/GlitchScanLineJitterV2)
+    - [Glitch Screen Jump](Assets/X-PostProcessing/Effects/GlitchScreenJump)
+    - [Glitch Screen Shake](Assets/X-PostProcessing/Effects/GlitchScreenShake)
+    - [Glitch Tile Jitter](Assets/X-PostProcessing/Effects/GlitchTileJitter)
+
+
 
 - Color Adjustment Effects
-- Glitch Effects
 - Stylized Effects
 - Painting Effects
 - Image Processing Effects
