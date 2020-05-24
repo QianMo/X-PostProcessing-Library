@@ -19,6 +19,7 @@ MonoBehaviour:
   - {fileID: 114365642992012064}
   - {fileID: 114881628477261990}
   - {fileID: 114186190907686168}
+  - {fileID: 114849167120319780}
 --- !u!114 &114186190907686168
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -57,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6fc311bab7f3714daba3e248900eb31, type: 3}
   m_Name: TiltShiftBlurV2
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
@@ -151,6 +152,33 @@ MonoBehaviour:
   RTDownScaling:
     overrideState: 1
     value: 2
+--- !u!114 &114849167120319780
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 429cea4139dc31045991cc87717ec0b7, type: 3}
+  m_Name: EdgeDetectionScharr
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  edgeWidth:
+    overrideState: 0
+    value: 0.3
+  edgeColor:
+    overrideState: 0
+    value: {r: 0, g: 0, b: 0, a: 1}
+  backgroundFade:
+    overrideState: 0
+    value: 1
+  backgroundColor:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114881628477261990
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -162,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b3bbc5404f2acf4a9963784dd2159af, type: 3}
   m_Name: IrisBlurV2
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
