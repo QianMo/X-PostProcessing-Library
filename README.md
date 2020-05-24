@@ -20,14 +20,8 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
 **X-PostProcessing Library (XPL)** is a high quality post processing library for for Unity Post Processing Stack v2/LWRP/URP/HDRP
 
 <img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/BokehBlur/BokehBlur.gif" height="180" width="300" align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/RadialBlurV2/RadialBlurV2.gif" height="180" width="300" align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/GaussianBlur/GaussianBlur.gif" height="180" width="300" align="middle" />
-
-
 <img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Blur/DirectionalBlur/DirectionalBlur-3.gif" height="180" width="300" align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/EdgeDetection/EdgeDetectionSobel/EdgeDetectionSobel2.gif" height="180" width="300" align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/EdgeDetection/EdgeDetectionRoberts/EdgeDetectionRoberts1.gif" height="180" width="300" align="middle" />
-
-
 <img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/PixelizeLed/PixelizeLed.gif" height="180" width="300" align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/PixelizeDiamond/PixelizeDiamond.gif" height="180" width="300" align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/PixelizeLeaf/PixelizeLeaf.gif" height="180" width="300" align="middle" />
-
-
 <img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/PixelizeHexagon/PixelizeHexagon.gif" height="180" width="300" align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/PixelizeQuad/PixelizeQuad.gif" height="180" width="300" align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/PixelizeHexagonGrid/PixelizeHexagonGrid.gif" height="180" width="300" align="middle" />
 
 
