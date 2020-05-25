@@ -18,7 +18,7 @@ namespace XPostProcessing
 {
 
     [Serializable]
-    [PostProcess(typeof(GlitchImageBlockV3Renderer), PostProcessEvent.AfterStack, "X-PostProcessing/Glitch/GlitchImageBlockV3")]
+    [PostProcess(typeof(GlitchImageBlockV3Renderer), PostProcessEvent.AfterStack, "X-PostProcessing/Glitch/ImageBlockV3")]
     public class GlitchImageBlockV3 : PostProcessEffectSettings
     {
 
