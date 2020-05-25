@@ -96,7 +96,7 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
     - [Glitch Screen Jump](Assets/X-PostProcessing/Effects/GlitchScreenJump)
     - [Glitch Screen Shake](Assets/X-PostProcessing/Effects/GlitchScreenShake)
     - [Glitch Tile Jitter](Assets/X-PostProcessing/Effects/GlitchTileJitter)
-
+    - [Glitch Wave Jitter](Assets/X-PostProcessing/Effects/GlitchWaveJitter)
 
 
 - Color Adjustment Effects
