@@ -32,7 +32,6 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
 For more gallery , you can enter the specific post-processing effects sub-page in the [ Content ](#jump) section below.
 
 <br>
-<br>
 
 <span id="jump">
 
@@ -109,7 +108,6 @@ For more gallery , you can enter the specific post-processing effects sub-page i
 - ...
 
 More effects and LWRP/URP/HDRP version will arrive soon.
-
 
 
 
