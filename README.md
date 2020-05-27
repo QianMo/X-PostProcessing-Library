@@ -1,5 +1,5 @@
 
-![](Media/XPL-Title-v2.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/XPL-Title-v2.jpg)
 
 <p>
 <a href="https://github.com/QianMo/X-PostProcessing-Library/blob/master/LICENSE">
