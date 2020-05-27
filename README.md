@@ -113,7 +113,7 @@ More effects and LWRP/URP/HDRP version will arrive soon.
 
 
 
-
+<br>
 
 
 # 2. 安装 | Installation
@@ -130,6 +130,9 @@ You have two main ways to install X-PostProcessing Library :
 - **[Method 2]**  Place the [X-PostProcessing](Assets/X-PostProcessing) folder anywhere in your project, make sure that Post Processing Stack v2 is in the project as well, and enjoy.
 
 
+<br>
+
+
 
 # 3. 使用 | Usage
 
@@ -141,6 +144,8 @@ post processing profile 有各种不同的修改和添加方式，最常规的�
 The new effect should be available for a post processing profile with different injection points，just like:
 
 - `Add effect... > X-PostProcessing > Choose an effect`
+
+<br>
 
 
 
@@ -154,7 +159,9 @@ The new effect should be available for a post processing profile with different 
 
 - if you use older versions of Unity (5.6 and 2017.1) , you need to replace [this folder](https://github.com/QianMo/X-PostProcessing-Library/tree/master/Assets/PostProcessing-2) with [pps v2 2.1.8](https://github.com/Unity-Technologies/PostProcessing/tree/bec8546fc498db388cedadd14021cc7006338cc4).
 
+
 <br>
+
 
 # 5. 文章 |  Blog Post
 
