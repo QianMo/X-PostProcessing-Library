@@ -5,7 +5,7 @@
 <a href="https://github.com/QianMo/X-PostProcessing-Library/blob/master/LICENSE">
     <img alt="GitHub license" src ="https://img.shields.io/github/license/QianMo/X-PostProcessing-Library" />
 </a>
-    <img alt="Version" src ="https://img.shields.io/badge/version-0.7.0-blue" />
+    <img alt="Version" src ="https://img.shields.io/badge/version-1.1.2-blue" />
 <a href="https://github.com/QianMo/X-PostProcessing-Library/issues">
     <img alt="GitHub issues" src="https://img.shields.io/github/issues/QianMo/X-PostProcessing-Library">
 </a>
