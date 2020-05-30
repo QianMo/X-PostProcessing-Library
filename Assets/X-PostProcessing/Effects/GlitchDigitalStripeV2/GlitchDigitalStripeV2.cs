@@ -57,15 +57,11 @@ namespace XPostProcessing
 
         static class ShaderIDs
         {
-            internal static readonly int floatProperty1 = Shader.PropertyToID("_Float1");
-            internal static readonly int floatProperty2 = Shader.PropertyToID("_Float2");
-            internal static readonly int floatProperty3 = Shader.PropertyToID("_Float3");
-            internal static readonly int colorProperty1 = Shader.PropertyToID("_Color1");
-            internal static readonly int bumpMap = Shader.PropertyToID("_BumpMap");
+
 
             internal static readonly int Params = Shader.PropertyToID("_Params");
             internal static readonly int Params2 = Shader.PropertyToID("_Params2");
-}
+        }
 
         public override void Render(PostProcessRenderContext context)
         {
@@ -138,6 +134,8 @@ namespace XPostProcessing
 
             UpdateNoiseTexture(g_2Res);
         }
+
+
         void UpdateNoiseTexture(float g_2Res)
         {
             Color color = RandomColor();
@@ -157,10 +155,12 @@ namespace XPostProcessing
 
             _noiseTexture.Apply();
         }
+
         static Color RandomColor()
         {
             return new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value);
         }
+
     }
 }
         

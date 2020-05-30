@@ -24,15 +24,22 @@ Shader "Hidden/X-PostProcessing/Glitch/DigitalStripeV2"
 	float4 Frag(VaryingsDefault i): SV_Target
 	{
 		float4 glitch = SAMPLE_TEXTURE2D(_NoiseTex, sampler_NoiseTex, i.texcoord);
-		float thresh = 1.001 - _Intensity * 1.001;
-		float w_d = step(thresh * _ColorIntensity, pow(abs(glitch.z), 2.5));
-		float w_f = step((thresh), (pow(abs(glitch.w), 2.5)));
-		float w_c = step(thresh, pow(abs(glitch.z), 3.5));
-		float2 uv = frac(i.texcoord + glitch.xy * w_d);
+
+		// Data prepare
+		float threshold = 1.001 - _Intensity * 1.001;
+		float displacement = step(threshold * _ColorIntensity, pow(abs(glitch.z), 2.5));
+		float frame = step((threshold), (pow(abs(glitch.w), 2.5)));
+		float glitchValue = step(threshold, pow(abs(glitch.z), 3.5));
+
+		// Displacement
+		float2 uv = frac(i.texcoord + glitch.xy * displacement);
 		float4 source = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv);
-		float3 color = lerp(source, SAMPLE_TEXTURE2D(_TrashTex, sampler_TrashTex, uv), w_f).rgb;
-		float3 neg = saturate(color.grb + (1 - dot(color, 1)) * 0.1);
-		color = lerp(color, neg, w_c);
+
+		// Lerp with trash frame
+		float3 color = lerp(source, SAMPLE_TEXTURE2D(_TrashTex, sampler_TrashTex, uv), frame).rgb;
+
+		float3 negative = saturate(color.grb + (1 - dot(color, 1)) * 0.1);
+		color = lerp(color, negative, glitchValue);
 		
 		return float4(color, source.a);
 	}

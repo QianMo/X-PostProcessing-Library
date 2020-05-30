@@ -8,13 +8,14 @@
 // http://opensource.org/licenses/MIT
 //----------------------------------------------------------------------------------------------------------
 
+//reference : https://github.com/keijiro/KinoGlitch
+
 using System;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
 namespace XPostProcessing
 {
-
     [Serializable]
     [PostProcess(typeof(GlitchDigitalStripeRenderer), PostProcessEvent.AfterStack, "X-PostProcessing/Glitch/DigitalStripe")]
     public class GlitchDigitalStripe : PostProcessEffectSettings
@@ -24,10 +25,10 @@ namespace XPostProcessing
         public FloatParameter intensity = new FloatParameter { value = 0.25f };
         [Range(1, 10)]
         public IntParameter frequncy = new IntParameter { value = 3 };
-        [Range(5f, 9.8f)]
-        public FloatParameter stripeLength = new FloatParameter { value = 8 };
+        [Range(0f, 9.9f)]
+        public FloatParameter stripeLength = new FloatParameter { value = 8.9f };
         [Range(8, 64)]
-        public IntParameter stripeWidth = new IntParameter { value = 32 };
+        public IntParameter stripeWidth = new IntParameter { value = 20 };
     }
 
     public sealed class GlitchDigitalStripeRenderer : PostProcessEffectRenderer<GlitchDigitalStripe>
@@ -47,22 +48,19 @@ namespace XPostProcessing
             base.Release();
         }
 
-
-
         static class ShaderIDs
         {
             internal static readonly int indensity = Shader.PropertyToID("_Indensity");
             internal static readonly int noiseTex = Shader.PropertyToID("_NoiseTex");
             internal static readonly int trashTex = Shader.PropertyToID("_TrashTex");
-            internal static readonly int colorProperty1 = Shader.PropertyToID("_Color1");
-            internal static readonly int bumpMap = Shader.PropertyToID("_BumpMap");
         }
 
 
-        void SetUpResources(int frame, int stripeWidth)
+
+        void UpdateNoiseTexture(int frame, int stripeWidth, float stripLength)
         {
-            int fcount = Time.frameCount;
-            if (fcount % frame != 0)
+            int frameCount = Time.frameCount;
+            if (frameCount % frame != 0)
             {
                 return;
             }
@@ -75,15 +73,6 @@ namespace XPostProcessing
             _trashFrame2 = new RenderTexture(Screen.width, Screen.height, 0);
             _trashFrame1.hideFlags = HideFlags.DontSave;
             _trashFrame2.hideFlags = HideFlags.DontSave;
-        }
-
-        void UpdateNoiseTexture(int frame, float stripLength)
-        {
-            int fcount = Time.frameCount;
-            if (fcount % frame != 0)
-            {
-                return;
-            }
 
             var color = XPostProcessingUtility.RandomColor();
 
@@ -104,19 +93,19 @@ namespace XPostProcessing
 
         public override void Render(PostProcessRenderContext context)
         {
-            SetUpResources(settings.frequncy, settings.stripeWidth);
-            UpdateNoiseTexture(settings.frequncy, settings.stripeLength * 0.1f);
+
+            UpdateNoiseTexture(settings.frequncy, settings.stripeWidth, settings.stripeLength * 0.1f);
 
             PropertySheet sheet = context.propertySheets.Get(shader);
 
             sheet.properties.SetFloat(ShaderIDs.indensity, settings.intensity);
 
-            int fcount = Time.frameCount;
-            if (fcount % 13 == 0)
+            int frameCount = Time.frameCount;
+            if (frameCount % 16 == 0)
             {
                 context.command.BlitFullscreenTriangle(context.source, _trashFrame1);
             }
-            if (fcount % 73 == 0)
+            if (frameCount % 56 == 0)
             {
                 context.command.BlitFullscreenTriangle(context.source, _trashFrame2);
             }
@@ -130,8 +119,6 @@ namespace XPostProcessing
             {
                 sheet.properties.SetTexture(ShaderIDs.trashTex, trashFrame);
             }
-
-
 
             context.command.BlitFullscreenTriangle(context.source, context.destination, sheet, 0);
         }
