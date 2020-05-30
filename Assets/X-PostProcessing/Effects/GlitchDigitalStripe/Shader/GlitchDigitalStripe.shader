@@ -17,33 +17,32 @@ Shader "Hidden/X-PostProcessing/Glitch/DigitalStripe"
 	
 	#include "../../../Shaders/XPostProcessing.hlsl"
 	
+	#pragma shader_feature NEED_TRASH_FRAME
+
 	TEXTURE2D_SAMPLER2D(_NoiseTex, sampler_NoiseTex);
-	TEXTURE2D_SAMPLER2D(_TrashTex, sampler_TrashTex);
+
 	uniform half _Indensity;
+	uniform half4 _StripColorAdjustColor;
+	uniform half _StripColorAdjustIndensity;
 
 	
 	half4 Frag(VaryingsDefault i): SV_Target
 	{
-
-		 half4 glitch = SAMPLE_TEXTURE2D(_NoiseTex, sampler_NoiseTex, i.texcoord);
-
-		 // Data Prepare
+		// Data Prepare
+		 half4 stripNoise = SAMPLE_TEXTURE2D(_NoiseTex, sampler_NoiseTex, i.texcoord);
 		 half threshold = 1.001 - _Indensity * 1.001;
-		 half displacement = step(threshold, pow(abs(glitch.z), 2.5));
-		 half frame = step(threshold, pow(abs(glitch.w), 2.5));
-		 half glitchValue = step(threshold, pow(abs(glitch.z), 3.5));
 
-		// Displacement
-		float2 uv = frac(i.texcoord + glitch.xy * displacement);
+		// uv Shift
+		half uvShift = step(threshold, pow(abs(stripNoise.x), 3));
+		float2 uv = frac(i.texcoord + stripNoise.yz * uvShift);
 		half4 source = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv);
 
-		// Lerp with trash frame
-		half3 color = lerp(source, SAMPLE_TEXTURE2D(_TrashTex, sampler_TrashTex, uv), frame).rgb;
-
-		// Shift color components
-		//half3 negative = saturate(color.rgb + (1 - dot(color, 1)) * 0.5);
-		//color = lerp(color, negative, glitchValue );
-
+#ifndef NEED_TRASH_FRAME
+		return source;
+#endif 	
+		// Lerp with trash stripIndensity
+		half stripIndensity = step(threshold, pow(abs(stripNoise.w), 3)) * _StripColorAdjustIndensity;
+		half3 color = lerp(source, _StripColorAdjustColor, stripIndensity).rgb;
 		return float4(color, source.a);
 	}
 	

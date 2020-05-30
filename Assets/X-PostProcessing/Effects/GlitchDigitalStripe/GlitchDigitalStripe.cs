@@ -11,7 +11,9 @@
 //reference : https://github.com/keijiro/KinoGlitch
 
 using System;
+using System.IO;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Rendering.PostProcessing;
 
 namespace XPostProcessing
@@ -23,16 +25,32 @@ namespace XPostProcessing
 
         [Range(0.0f, 1.0f)]
         public FloatParameter intensity = new FloatParameter { value = 0.25f };
+
         [Range(1, 10)]
         public IntParameter frequncy = new IntParameter { value = 3 };
-        [Range(0f, 9.9f)]
-        public FloatParameter stripeLength = new FloatParameter { value = 8.9f };
-        [Range(8, 64)]
-        public IntParameter stripeWidth = new IntParameter { value = 20 };
+
+        [Range(0f, 0.99f)]
+        public FloatParameter stripeLength = new FloatParameter { value = 0.89f };
+
+        [Range(8, 256)]
+        public IntParameter noiseTextureWidth = new IntParameter { value = 20 };
+
+        [Range(8, 256)]
+        public IntParameter noiseTextureHeight = new IntParameter { value = 20 };
+
+        public BoolParameter needStripColorAdjust = new BoolParameter { value = false };
+
+        [ColorUsageAttribute(true, true, 0f, 20f, 0.125f, 3f)]
+        public ColorParameter StripColorAdjustColor = new ColorParameter { value = new Color(0.1f, 0.1f, 0.1f) };
+
+        [Range(0, 10)]
+        public FloatParameter StripColorAdjustIndensity = new FloatParameter { value = 2f };
+
     }
 
     public sealed class GlitchDigitalStripeRenderer : PostProcessEffectRenderer<GlitchDigitalStripe>
     {
+        private const string PROFILER_TAG = "X-GlitchDigitalStripe";
         private Shader shader;
         Texture2D _noiseTexture;
         RenderTexture _trashFrame1;
@@ -52,12 +70,13 @@ namespace XPostProcessing
         {
             internal static readonly int indensity = Shader.PropertyToID("_Indensity");
             internal static readonly int noiseTex = Shader.PropertyToID("_NoiseTex");
-            internal static readonly int trashTex = Shader.PropertyToID("_TrashTex");
+            internal static readonly int StripColorAdjustColor = Shader.PropertyToID("_StripColorAdjustColor");
+            internal static readonly int StripColorAdjustIndensity = Shader.PropertyToID("_StripColorAdjustIndensity");
         }
 
 
 
-        void UpdateNoiseTexture(int frame, int stripeWidth, float stripLength)
+        void UpdateNoiseTexture(int frame, int noiseTextureWidth, int noiseTextureHeight, float stripLength)
         {
             int frameCount = Time.frameCount;
             if (frameCount % frame != 0)
@@ -65,7 +84,7 @@ namespace XPostProcessing
                 return;
             }
 
-            _noiseTexture = new Texture2D(64, stripeWidth, TextureFormat.ARGB32, false);
+            _noiseTexture = new Texture2D(noiseTextureWidth, noiseTextureHeight, TextureFormat.ARGB32, false);
             _noiseTexture.wrapMode = TextureWrapMode.Clamp;
             _noiseTexture.filterMode = FilterMode.Point;
 
@@ -74,18 +93,25 @@ namespace XPostProcessing
             _trashFrame1.hideFlags = HideFlags.DontSave;
             _trashFrame2.hideFlags = HideFlags.DontSave;
 
-            var color = XPostProcessingUtility.RandomColor();
+            Color32 color = XPostProcessingUtility.RandomColor();
 
-            for (var y = 0; y < _noiseTexture.height; y++)
+            for (int y = 0; y < _noiseTexture.height; y++)
             {
-                for (var x = 0; x < _noiseTexture.width; x++)
+                for (int x = 0; x < _noiseTexture.width; x++)
                 {
-                    if (UnityEngine.Random.value > stripLength) color = XPostProcessingUtility.RandomColor();
+                    //随机值若大于给定strip随机阈值，重新随机颜色
+                    if (UnityEngine.Random.value > stripLength)
+                    {
+                        color = XPostProcessingUtility.RandomColor();
+                    }
+                    //设置贴图像素值
                     _noiseTexture.SetPixel(x, y, color);
                 }
             }
 
             _noiseTexture.Apply();
+
+            var bytes = _noiseTexture.EncodeToPNG();
         }
 
 
@@ -93,34 +119,32 @@ namespace XPostProcessing
 
         public override void Render(PostProcessRenderContext context)
         {
-
-            UpdateNoiseTexture(settings.frequncy, settings.stripeWidth, settings.stripeLength * 0.1f);
-
+            CommandBuffer cmd = context.command;
             PropertySheet sheet = context.propertySheets.Get(shader);
+            cmd.BeginSample(PROFILER_TAG);
+
+            UpdateNoiseTexture(settings.frequncy, settings.noiseTextureWidth,settings.noiseTextureHeight, settings.stripeLength);
 
             sheet.properties.SetFloat(ShaderIDs.indensity, settings.intensity);
 
-            int frameCount = Time.frameCount;
-            if (frameCount % 16 == 0)
-            {
-                context.command.BlitFullscreenTriangle(context.source, _trashFrame1);
-            }
-            if (frameCount % 56 == 0)
-            {
-                context.command.BlitFullscreenTriangle(context.source, _trashFrame2);
-            }
             if (_noiseTexture != null)
             {
                 sheet.properties.SetTexture(ShaderIDs.noiseTex, _noiseTexture);
             }
 
-            RenderTexture trashFrame = UnityEngine.Random.value > 0.5f ? _trashFrame1 : _trashFrame2;
-            if (trashFrame != null)
+            if (settings.needStripColorAdjust == true)
             {
-                sheet.properties.SetTexture(ShaderIDs.trashTex, trashFrame);
+                sheet.EnableKeyword("NEED_TRASH_FRAME");
+                sheet.properties.SetColor(ShaderIDs.StripColorAdjustColor, settings.StripColorAdjustColor);
+                sheet.properties.SetFloat(ShaderIDs.StripColorAdjustIndensity, settings.StripColorAdjustIndensity);
+            }
+            else
+            {
+                sheet.DisableKeyword("NEED_TRASH_FRAME");
             }
 
             context.command.BlitFullscreenTriangle(context.source, context.destination, sheet, 0);
+            cmd.EndSample(PROFILER_TAG);
         }
     }
 }

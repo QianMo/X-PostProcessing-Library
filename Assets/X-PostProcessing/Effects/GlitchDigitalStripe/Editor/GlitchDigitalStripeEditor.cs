@@ -24,8 +24,14 @@ namespace XPostProcessing
 
         SerializedParameterOverride intensity;
         SerializedParameterOverride frequncy;
-        SerializedParameterOverride stripeLength;
-        SerializedParameterOverride stripeWidth;
+        SerializedParameterOverride stripeLength;               
+        SerializedParameterOverride noiseTextureWidth;
+        SerializedParameterOverride noiseTextureHeight;
+        SerializedParameterOverride needStripColorAdjust;
+        SerializedParameterOverride StripColorAdjustIndensity;
+        SerializedParameterOverride StripColorAdjustColor;
+
+
 
 
         public override void OnEnable()
@@ -33,7 +39,11 @@ namespace XPostProcessing
             intensity = FindParameterOverride(x => x.intensity);
             frequncy = FindParameterOverride(x => x.frequncy);
             stripeLength = FindParameterOverride(x => x.stripeLength);
-            stripeWidth = FindParameterOverride(x => x.stripeWidth);
+            noiseTextureHeight = FindParameterOverride(x => x.noiseTextureHeight);
+            noiseTextureWidth = FindParameterOverride(x => x.noiseTextureWidth);
+            needStripColorAdjust = FindParameterOverride(x => x.needStripColorAdjust);
+            StripColorAdjustIndensity = FindParameterOverride(x => x.StripColorAdjustIndensity);
+            StripColorAdjustColor = FindParameterOverride(x => x.StripColorAdjustColor);
         }
 
         public override string GetDisplayTitle()
@@ -43,10 +53,23 @@ namespace XPostProcessing
 
         public override void OnInspectorGUI()
         {
+            EditorUtilities.DrawHeaderLabel("Core Property");
             PropertyField(intensity);
             PropertyField(frequncy);
+
+
+            EditorUtilities.DrawHeaderLabel("Stripe Generate");
             PropertyField(stripeLength);
-            PropertyField(stripeWidth);
+
+            EditorUtilities.DrawHeaderLabel("Noise Texture Size");
+            PropertyField(noiseTextureWidth);
+            PropertyField(noiseTextureHeight);
+
+            EditorUtilities.DrawHeaderLabel("Strip Color Adjust");
+            PropertyField(needStripColorAdjust);
+            PropertyField(StripColorAdjustIndensity);
+            PropertyField(StripColorAdjustColor);
+
 
         }
 

@@ -21,6 +21,7 @@ MonoBehaviour:
   - {fileID: 114186190907686168}
   - {fileID: 114964623377917018}
   - {fileID: 114789630020481822}
+  - {fileID: 114320506431503834}
 --- !u!114 &114186190907686168
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -48,6 +49,45 @@ MonoBehaviour:
   backgroundColor:
     overrideState: 1
     value: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &114320506431503834
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b63d2b442ad53ae42b8343f3a6602000, type: 3}
+  m_Name: GlitchDigitalStripe
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 0
+    value: 0.25
+  frequncy:
+    overrideState: 0
+    value: 3
+  stripeLength:
+    overrideState: 0
+    value: 0.89
+  noiseTextureWidth:
+    overrideState: 0
+    value: 20
+  noiseTextureHeight:
+    overrideState: 0
+    value: 20
+  needStripColorAdjust:
+    overrideState: 0
+    value: 0
+  StripColorAdjustColor:
+    overrideState: 0
+    value: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+  StripColorAdjustIndensity:
+    overrideState: 0
+    value: 2
 --- !u!114 &114365642992012064
 MonoBehaviour:
   m_ObjectHideFlags: 3
