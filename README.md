@@ -92,7 +92,6 @@ For more gallery , you can enter the specific post-processing effects sub-page i
     - [Glitch RGB Split V4](Assets/X-PostProcessing/Effects/GlitchRGBSplitV4)
     - [Glitch RGB Split V5](Assets/X-PostProcessing/Effects/GlitchRGBSplitV5)
     - [Glitch Scan Line Jitter](Assets/X-PostProcessing/Effects/GlitchScanLineJitter)
-    - [Glitch Scan Line Jitter V2](Assets/X-PostProcessing/Effects/GlitchScanLineJitterV2)
     - [Glitch Screen Jump](Assets/X-PostProcessing/Effects/GlitchScreenJump)
     - [Glitch Screen Shake](Assets/X-PostProcessing/Effects/GlitchScreenShake)
     - [Glitch Tile Jitter](Assets/X-PostProcessing/Effects/GlitchTileJitter)
