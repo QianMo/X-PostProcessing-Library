@@ -23,7 +23,7 @@ namespace XPostProcessing
     {
 
         [Range(0.0f, 5.0f)]
-        public FloatParameter Amplitude = new FloatParameter { value = 0.5f };
+        public FloatParameter Amplitude = new FloatParameter { value = 3f };
 
         [Range(0.0f, 1.0f)]
         public FloatParameter Speed = new FloatParameter { value = 0.1f };

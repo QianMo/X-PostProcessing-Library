@@ -65,28 +65,28 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   intensity:
-    overrideState: 0
-    value: 0.25
+    overrideState: 1
+    value: 0.165
   frequncy:
-    overrideState: 0
-    value: 3
+    overrideState: 1
+    value: 2
   stripeLength:
-    overrideState: 0
-    value: 0.89
+    overrideState: 1
+    value: 0.99
   noiseTextureWidth:
-    overrideState: 0
+    overrideState: 1
     value: 20
   noiseTextureHeight:
-    overrideState: 0
+    overrideState: 1
     value: 20
   needStripColorAdjust:
-    overrideState: 0
+    overrideState: 1
     value: 0
   StripColorAdjustColor:
-    overrideState: 0
+    overrideState: 1
     value: {r: 0.1, g: 0.1, b: 0.1, a: 1}
   StripColorAdjustIndensity:
-    overrideState: 0
+    overrideState: 1
     value: 2
 --- !u!114 &114365642992012064
 MonoBehaviour:
@@ -185,10 +185,10 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   Amplitude:
-    overrideState: 0
+    overrideState: 1
     value: 0.5
   Speed:
-    overrideState: 0
+    overrideState: 1
     value: 0.1
 --- !u!114 &114811271554320798
 MonoBehaviour:
@@ -282,13 +282,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f414c45c95c4c4fab1fba6f7db9a44, type: 3}
   m_Name: GlitchScanLineJitter
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
   JitterDirection:
-    overrideState: 0
+    overrideState: 1
     value: 0
   JitterIndensity:
-    overrideState: 0
-    value: 0.1
+    overrideState: 1
+    value: 0.174
