@@ -86,7 +86,6 @@ For more gallery , you can enter the specific post-processing effects sub-page i
     - [Glitch Line Block](Assets/X-PostProcessing/Effects/GlitchLineBlock)
     - [Glitch Analog Noise](Assets/X-PostProcessing/Effects/GlitchAnalogNoise)
     - [Glitch Digital Stripe](Assets/X-PostProcessing/Effects/GlitchDigitalStripe)
-    - [Glitch Digital StripeV2](Assets/X-PostProcessing/Effects/GlitchDigitalStripeV2)
     - [Glitch RGB Split](Assets/X-PostProcessing/Effects/GlitchRGBSplit)
     - [Glitch RGB Split V2](Assets/X-PostProcessing/Effects/GlitchRGBSplitV2)
     - [Glitch RGB Split V3](Assets/X-PostProcessing/Effects/GlitchRGBSplitV3)
