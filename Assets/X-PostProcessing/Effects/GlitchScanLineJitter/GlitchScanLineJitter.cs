@@ -27,6 +27,12 @@ namespace XPostProcessing
 
         public DirectionParameter JitterDirection  = new DirectionParameter { value = Direction.Horizontal };
 
+        public IntervalTypeParameter intervalType = new IntervalTypeParameter { value = IntervalType.Random };
+
+        [Range(0f, 25f)]
+        public FloatParameter frequency = new FloatParameter { value = 1f };
+
+
         [Range(0.0f, 1.0f)]
         public FloatParameter JitterIndensity = new FloatParameter { value = 0.1f };
 
@@ -36,6 +42,7 @@ namespace XPostProcessing
     {
         private const string PROFILER_TAG = "X-GlitchScanLineJitter";
         private Shader shader;
+        private float randomFrequency;
 
         public override void Init()
         {
@@ -49,6 +56,7 @@ namespace XPostProcessing
 
         static class ShaderIDs
         {
+            internal static readonly int Params = Shader.PropertyToID("_Params");
             internal static readonly int JitterIndensity = Shader.PropertyToID("_ScanLineJitter");
         }
 
@@ -58,13 +66,35 @@ namespace XPostProcessing
             PropertySheet sheet = context.propertySheets.Get(shader);
             cmd.BeginSample(PROFILER_TAG);
 
+            UpdateFrequency(sheet);
+
             float displacement = 0.005f + Mathf.Pow(settings.JitterIndensity, 3) * 0.1f;
             float threshold = Mathf.Clamp01(1.0f - settings.JitterIndensity * 1.2f);
 
-            sheet.properties.SetVector(ShaderIDs.JitterIndensity, new Vector2(displacement, threshold));
+            //sheet.properties.SetVector(ShaderIDs.Params, new Vector3(settings.amount, settings.speed, );
+
+            sheet.properties.SetVector(ShaderIDs.Params, new Vector3(displacement, threshold, settings.intervalType.value == IntervalType.Random ? randomFrequency : settings.frequency));
 
             context.command.BlitFullscreenTriangle(context.source, context.destination, sheet, (int)settings.JitterDirection.value);
             cmd.EndSample(PROFILER_TAG);
+        }
+
+
+        void UpdateFrequency(PropertySheet sheet)
+        {
+            if (settings.intervalType.value == IntervalType.Random)
+            {
+                randomFrequency = UnityEngine.Random.Range(0, settings.frequency);
+            }
+
+            if (settings.intervalType.value == IntervalType.Infinite)
+            {
+                sheet.EnableKeyword("USING_FREQUENCY_INFINITE");
+            }
+            else
+            {
+                sheet.DisableKeyword("USING_FREQUENCY_INFINITE");
+            }
         }
     }
 }

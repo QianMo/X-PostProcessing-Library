@@ -24,11 +24,15 @@ namespace XPostProcessing
 
         SerializedParameterOverride JitterDirection;
         SerializedParameterOverride JitterIndensity;
+        SerializedParameterOverride intervalType;
+        SerializedParameterOverride frequency;
 
         public override void OnEnable()
         {
             JitterDirection = FindParameterOverride(x => x.JitterDirection);
             JitterIndensity = FindParameterOverride(x => x.JitterIndensity);
+            intervalType = FindParameterOverride(x => x.intervalType);
+            frequency = FindParameterOverride(x => x.frequency);
         }
 
         public override string GetDisplayTitle()
@@ -38,7 +42,12 @@ namespace XPostProcessing
 
         public override void OnInspectorGUI()
         {
+            EditorUtilities.DrawHeaderLabel("Jitter Direction");
             PropertyField(JitterDirection);
+            EditorUtilities.DrawHeaderLabel("Interval Frequency");
+            PropertyField(intervalType);
+            PropertyField(frequency);
+            EditorUtilities.DrawHeaderLabel("Jitter Property");
             PropertyField(JitterIndensity);
         }
 
