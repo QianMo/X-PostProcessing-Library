@@ -289,6 +289,12 @@ MonoBehaviour:
   JitterDirection:
     overrideState: 1
     value: 0
+  intervalType:
+    overrideState: 0
+    value: 2
+  frequency:
+    overrideState: 0
+    value: 1
   JitterIndensity:
     overrideState: 1
     value: 0.174
