@@ -50,7 +50,7 @@ Shader "Hidden/X-PostProcessing/Glitch/ImageBlockV2"
 		float4 colorG = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv + float2(lineNoise * 0.05 * randomNoise(5.0), 0));
 		float4 colorB = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv - float2(lineNoise * 0.05 * randomNoise(31.0), 0));
 		
-		float4 result = float4(float3(colorR.r, colorG.r, colorB.r), colorR.a + colorG.a + colorB.a);
+		float4 result = float4(float3(colorR.r, colorG.g, colorB.b), colorR.a + colorG.a + colorB.a);
 		result = lerp(colorR, result, _Fade);
 		
 		return result;
