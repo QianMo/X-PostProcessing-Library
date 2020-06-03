@@ -46,12 +46,12 @@ Shader "Hidden/X-PostProcessing/Glitch/ImageBlockV2"
 		
 		float lineNoise = pow(randomNoise(blockLayer1), _BlockLayer1_Indensity) * _Offset - pow(randomNoise(5.1379), 7.1) * _RGBSplit_Indensity;
 		
-		float4 color1 = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv);
-		float4 color2 = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv + float2(lineNoise * 0.05 * randomNoise(5.0), 0));
-		float4 color3 = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv - float2(lineNoise * 0.05 * randomNoise(31.0), 0));
+		float4 colorR = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv);
+		float4 colorG = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv + float2(lineNoise * 0.05 * randomNoise(5.0), 0));
+		float4 colorB = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv - float2(lineNoise * 0.05 * randomNoise(31.0), 0));
 		
-		float4 result = float4(float3(color1.x, color2.y, color3.z), color1.a + color2.a + color3.a);
-		result = lerp(color1, result, _Fade);
+		float4 result = float4(float3(colorR.r, colorG.r, colorB.r), colorR.a + colorG.a + colorB.a);
+		result = lerp(colorR, result, _Fade);
 		
 		return result;
 	}
