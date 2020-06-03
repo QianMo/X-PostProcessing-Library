@@ -23,16 +23,13 @@ namespace XPostProcessing
     {
 
         SerializedParameterOverride Speed;
-        SerializedParameterOverride Density;
-        SerializedParameterOverride MaxDisplacement;
+        SerializedParameterOverride BlockSize;
 
 
         public override void OnEnable()
         {
             Speed = FindParameterOverride(x => x.Speed);
-            Density = FindParameterOverride(x => x.Density);
-            MaxDisplacement = FindParameterOverride(x => x.MaxDisplacement);
-
+            BlockSize = FindParameterOverride(x => x.BlockSize);
         }
 
         public override string GetDisplayTitle()
@@ -44,9 +41,7 @@ namespace XPostProcessing
         {
             EditorUtilities.DrawHeaderLabel("Core Property");
             PropertyField(Speed);
-            PropertyField(Density);
-            PropertyField(MaxDisplacement);
-
+            PropertyField(BlockSize);
         }
 
     }

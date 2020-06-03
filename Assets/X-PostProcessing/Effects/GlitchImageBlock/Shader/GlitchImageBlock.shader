@@ -48,13 +48,16 @@ Shader "Hidden/X-PostProcessing/Glitch/ImageBlock"
 	{
 		float2 uv = i.texcoord.xy;
 		
+		//求解第一层blockLayer
 		float2 blockLayer1 = floor(uv * float2(_BlockLayer1_U, _BlockLayer1_V));
 		float2 blockLayer2 = floor(uv * float2(_BlockLayer2_U, _BlockLayer2_V));
+
+		//return float4(blockLayer1, blockLayer2);
 		
-		float lineNoise_1 = pow(randomNoise(blockLayer1), _BlockLayer1_Indensity);
-		float lineNoise_2 = pow(randomNoise(blockLayer2), _BlockLayer2_Indensity);
+		float lineNoise1 = pow(randomNoise(blockLayer1), _BlockLayer1_Indensity);
+		float lineNoise2 = pow(randomNoise(blockLayer2), _BlockLayer2_Indensity);
 		float RGBSplitNoise = pow(randomNoise(5.1379), 7.1) * _RGBSplit_Indensity;
-		float lineNoise = lineNoise_1 * lineNoise_2 * _Offset  - RGBSplitNoise;
+		float lineNoise = lineNoise1 * lineNoise2 * _Offset  - RGBSplitNoise;
 		
 		float4 colorR = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv);
 		float4 colorG = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv + float2(lineNoise * 0.05 * randomNoise(7.0), 0));
@@ -74,10 +77,10 @@ Shader "Hidden/X-PostProcessing/Glitch/ImageBlock"
 		float2 blockLayer1 = floor(uv * float2(_BlockLayer1_U, _BlockLayer1_V));
 		float2 blockLayer2 = floor(uv * float2(_BlockLayer2_U, _BlockLayer2_V));
 		
-		float lineNoise_1 = pow(randomNoise(blockLayer1), _BlockLayer1_Indensity);
-		float lineNoise_2 = pow(randomNoise(blockLayer2), _BlockLayer2_Indensity);
+		float lineNoise1 = pow(randomNoise(blockLayer1), _BlockLayer1_Indensity);
+		float lineNoise2 = pow(randomNoise(blockLayer2), _BlockLayer2_Indensity);
 		float RGBSplitNoise = pow(randomNoise(5.1379), 7.1) * _RGBSplit_Indensity;
-		float lineNoise = lineNoise_1 * lineNoise_2 * _Offset - RGBSplitNoise;
+		float lineNoise = lineNoise1 * lineNoise2 * _Offset - RGBSplitNoise;
 		
 		return float4(lineNoise, lineNoise, lineNoise, 1);
 	}

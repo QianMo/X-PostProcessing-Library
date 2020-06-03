@@ -22,6 +22,7 @@ MonoBehaviour:
   - {fileID: 114964623377917018}
   - {fileID: 114789630020481822}
   - {fileID: 114320506431503834}
+  - {fileID: 114760233488171950}
 --- !u!114 &114186190907686168
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -169,6 +170,27 @@ MonoBehaviour:
   RTDownScaling:
     overrideState: 1
     value: 2.66
+--- !u!114 &114760233488171950
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9acc76ac9d8d4e4a8d7294a5bd00c85, type: 3}
+  m_Name: GlitchImageBlockV3
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Speed:
+    overrideState: 0
+    value: 10
+  BlockSize:
+    overrideState: 0
+    value: 8
 --- !u!114 &114789630020481822
 MonoBehaviour:
   m_ObjectHideFlags: 3

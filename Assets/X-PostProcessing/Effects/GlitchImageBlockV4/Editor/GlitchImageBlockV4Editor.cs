@@ -24,8 +24,8 @@ namespace XPostProcessing
 
         SerializedParameterOverride Speed;
         SerializedParameterOverride BlockSize;
-        SerializedParameterOverride MaxOffsetX;
-        SerializedParameterOverride MaxOffsetY;
+        SerializedParameterOverride MaxRGBSplitX;
+        SerializedParameterOverride MaxRGBSplitY;
 
 
 
@@ -33,8 +33,8 @@ namespace XPostProcessing
         {
             Speed = FindParameterOverride(x => x.Speed);
             BlockSize = FindParameterOverride(x => x.BlockSize);
-            MaxOffsetX = FindParameterOverride(x => x.MaxOffsetX);
-            MaxOffsetY = FindParameterOverride(x => x.MaxOffsetY);
+            MaxRGBSplitX = FindParameterOverride(x => x.MaxRGBSplitX);
+            MaxRGBSplitY = FindParameterOverride(x => x.MaxRGBSplitY);
         }
 
         public override string GetDisplayTitle()
@@ -47,8 +47,10 @@ namespace XPostProcessing
             EditorUtilities.DrawHeaderLabel("Core Property");
             PropertyField(Speed);
             PropertyField(BlockSize);
-            PropertyField(MaxOffsetX);
-            PropertyField(MaxOffsetY);
+
+            EditorUtilities.DrawHeaderLabel("RGB Split");
+            PropertyField(MaxRGBSplitX);
+            PropertyField(MaxRGBSplitY);
         }
 
     }

@@ -22,14 +22,11 @@ namespace XPostProcessing
     public class GlitchImageBlockV3 : PostProcessEffectSettings
     {
 
-        [Range(0.0f, 100.0f)]
+        [Range(0.0f, 50.0f)]
         public FloatParameter Speed = new FloatParameter { value = 10f };
 
-        [Range(0.0f, 15.0f)]
-        public FloatParameter Density = new FloatParameter { value = 8f };
-
-        [Range(0.0f, 10.0f)]
-        public FloatParameter MaxDisplacement = new FloatParameter { value = 2f };
+        [Range(0.0f, 50.0f)]
+        public FloatParameter BlockSize = new FloatParameter { value = 8f };
 
     }
 
@@ -61,7 +58,7 @@ namespace XPostProcessing
             PropertySheet sheet = context.propertySheets.Get(shader);
             cmd.BeginSample(PROFILER_TAG);
 
-            sheet.properties.SetVector(ShaderIDs.Params, new Vector3(settings.Speed, settings.Density, settings.MaxDisplacement));
+            sheet.properties.SetVector(ShaderIDs.Params, new Vector2(settings.Speed, settings.BlockSize));
 
             cmd.BlitFullscreenTriangle(context.source, context.destination, sheet, 0);
             cmd.EndSample(PROFILER_TAG);

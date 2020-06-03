@@ -23,14 +23,15 @@ namespace XPostProcessing
     {
         [Range(0f, 50f)]
         public FloatParameter Speed = new FloatParameter { value = 10f };
+
         [Range(0f, 50f)]
         public FloatParameter BlockSize = new FloatParameter { value = 8f };
 
         [Range(0f, 25f)]
-        public FloatParameter MaxOffsetX = new FloatParameter { value = 1f };
+        public FloatParameter MaxRGBSplitX = new FloatParameter { value = 1f };
 
         [Range(0f, 25f)]
-        public FloatParameter MaxOffsetY = new FloatParameter { value = 1f };
+        public FloatParameter MaxRGBSplitY = new FloatParameter { value = 1f };
     }
 
     public sealed class GlitchImageBlockV4Renderer : PostProcessEffectRenderer<GlitchImageBlockV4>
@@ -64,7 +65,7 @@ namespace XPostProcessing
             PropertySheet sheet = context.propertySheets.Get(shader);
             cmd.BeginSample(PROFILER_TAG);
 
-            sheet.properties.SetVector(ShaderIDs.Params, new Vector4(settings.Speed, settings.BlockSize, settings.MaxOffsetX, settings.MaxOffsetY));
+            sheet.properties.SetVector(ShaderIDs.Params, new Vector4(settings.Speed, settings.BlockSize, settings.MaxRGBSplitX, settings.MaxRGBSplitY));
 
             cmd.BlitFullscreenTriangle(context.source, context.destination, sheet, 0);
             cmd.EndSample(PROFILER_TAG);

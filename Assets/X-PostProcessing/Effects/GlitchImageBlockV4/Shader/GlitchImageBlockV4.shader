@@ -18,31 +18,38 @@ Shader "Hidden/X-PostProcessing/Glitch/ImageBlockV4"
 	uniform half4 _Params;
 	#define _Speed _Params.x
 	#define _BlockSize _Params.y
-	#define _MaxOffsetX _Params.z
-	#define _MaxOffsetY _Params.w
+	#define _MaxRGBSplitX _Params.z
+	#define _MaxRGBSplitY _Params.w
 
 
 	inline float randomNoise(float2 seed)
 	{
-		return frac(sin(dot(seed * floor(_Time.y * _Speed), float2(127.1, 311.7))) * 43758.5453123);
+		return frac(sin(dot(seed * floor(_Time.y * _Speed), float2(17.13, 3.71))) * 43758.5453123);
 	}
-
 
 	inline float randomNoise(float seed)
 	{
 		return randomNoise(float2(seed, 1.0));
 	}
 
-	float4 Frag(VaryingsDefault i) : SV_Target
+	half4 Frag(VaryingsDefault i) : SV_Target
 	{
-		float2 block = randomNoise(floor(i.texcoord * _BlockSize));
-		float OffsetX = pow(block.x, 8.0) * pow(block.x, 3.0) - pow(randomNoise(7.2341), 17.0) * _MaxOffsetX;
-		float OffsetY = pow(block.x, 8.0) * pow(block.x, 3.0) - pow(randomNoise(7.2341), 17.0) * _MaxOffsetY;
-		float4 r = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord);
-		float4 g = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord + half2(OffsetX * 0.05 * randomNoise(7.0), OffsetY*0.05*randomNoise(12.0)));
-		float4 b = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord - half2(OffsetX * 0.05 * randomNoise(13.0), OffsetY*0.05*randomNoise(12.0)));
+		half2 block = randomNoise(floor(i.texcoord * _BlockSize));
 
-		return half4(r.x, g.g, b.z, (r.a + g.a + b.a));
+		float displaceNoise = pow(block.x, 8.0) * pow(block.x, 3.0);
+		float splitRGBNoise = pow(randomNoise(7.2341), 17.0);
+		float offsetX = displaceNoise - splitRGBNoise * _MaxRGBSplitX;
+		float offsetY = displaceNoise - splitRGBNoise * _MaxRGBSplitY;
+
+		float noiseX = 0.05 * randomNoise(13.0);
+		float noiseY = 0.05 * randomNoise(7.0);
+		float2 offset = float2(offsetX * noiseX, offsetY* noiseY);
+
+		half4 colorR = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord);
+		half4 colorG = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord + offset);
+		half4 colorB = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord - offset);
+
+		return half4(colorR.r , colorG.g, colorB.z, (colorR.a + colorG.a + colorB.a));
 	}
 
 		ENDHLSL
