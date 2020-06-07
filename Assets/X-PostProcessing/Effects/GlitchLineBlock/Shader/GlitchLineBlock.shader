@@ -3,7 +3,7 @@
 // X-PostProcessing Library
 // https://github.com/QianMo/X-PostProcessing-Library
 // Copyright (C) 2020 QianMo. All rights reserved.
-// Licensed under the MIT License 
+// Licensed under the MIT License
 // You may not use this file except in compliance with the License.You may obtain a copy of the License at
 // http://opensource.org/licenses/MIT
 //----------------------------------------------------------------------------------------------------------
@@ -73,19 +73,22 @@ Shader "Hidden/X-PostProcessing/Glitch/LineBlock"
 #endif
 
 		_TimeX *= strength;
-		// [1] 生成随机均匀宽度线条 | Generate Random Uniform Width Block Line
+		//	[1] 生成随机强度梯度线条
 		float truncTime = trunc(_TimeX, 4.0);
 		//基于随机实现均匀宽度的block line线条
 		float uv_trunc = randomNoise(trunc(uv.yy, float2(8, 8)) + 100.0 * truncTime);
+		//生成随机强度梯度线条
 		float uv_randomTrunc = 6.0 * trunc(_TimeX, 24.0 * uv_trunc);
 
-		// [2] 生成随机非均匀宽度线条 | Generate Random inhomogeneous Block Line
+		// [2] 生成随机非均匀宽度线条
+		// 生成随机非均匀宽度线条 | Generate Random inhomogeneous Block Line
 		float blockLine_random = 0.5 * randomNoise(trunc(uv.yy + uv_randomTrunc, float2(8 * _LinesWidth, 8 * _LinesWidth)));
 		blockLine_random += 0.5 * randomNoise(trunc(uv.yy + uv_randomTrunc, float2(7, 7)));
 		blockLine_random = blockLine_random * 2.0 - 1.0;	
 		blockLine_random = sign(blockLine_random) * saturate((abs(blockLine_random) - _Amount) / (0.4));
-		// 轴向偏移
+		//offset偏移
 		blockLine_random = lerp(0, blockLine_random, _Offset);	
+
 
 		// [3] 生成源色调的blockLine Glitch | Generate Source tone blockLine Glitch 
 		float2 uv_blockLine = uv;
@@ -103,9 +106,11 @@ Shader "Hidden/X-PostProcessing/Glitch/LineBlock"
 		blockLineColor_yuv.z += 0.125 * blockLine_random * saturate(blockLine_random - 0.5);
 		float3 blockLineColor_rgb = yuv2rgb(blockLineColor_yuv);
 
+
 		// [5] 与源场景图进行混合 | fianal blending
 		float4 sceneColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord);
 		return lerp(sceneColor, float4(blockLineColor_rgb, blockLineColor.a), _Alpha);
+
 	}
 
 	float4 Frag_Vertical(VaryingsDefault i) : SV_Target

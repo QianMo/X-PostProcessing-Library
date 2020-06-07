@@ -16,26 +16,21 @@ Shader "Hidden/X-PostProcessing/Glitch/ScreenJump"
 	#include "../../../Shaders/StdLib.hlsl"
 	#include "../../../Shaders/XPostProcessing.hlsl"
 	
-	uniform half2 _ScreenJump; // x: indensity , y : time
-	
+	uniform half2 _Params; // x: indensity , y : time
+	#define _JumpIndensity _Params.x
+	#define _JumpTime _Params.y
 	
 	half4 Frag_Horizontal(VaryingsDefault i): SV_Target
-	{
-		
-		float jump = lerp(i.texcoord.x, frac(i.texcoord.x + _ScreenJump.y), _ScreenJump.x);
-		
-		half4 sceneColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, frac(float2(jump, i.texcoord.y)));
-		
+	{		
+		float jump = lerp(i.texcoord.x, frac(i.texcoord.x + _JumpTime), _JumpIndensity);	
+		half4 sceneColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, frac(float2(jump, i.texcoord.y)));		
 		return sceneColor;
 	}
 	
 	half4 Frag_Vertical(VaryingsDefault i): SV_Target
-	{
-		
-		float jump = lerp(i.texcoord.y, frac(i.texcoord.y + _ScreenJump.y), _ScreenJump.x);
-		
-		half4 sceneColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, frac(float2(i.texcoord.x, jump)));
-		
+	{		
+		float jump = lerp(i.texcoord.y, frac(i.texcoord.y + _JumpTime), _JumpIndensity);		
+		half4 sceneColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, frac(float2(i.texcoord.x, jump)));	
 		return sceneColor;
 	}
 	

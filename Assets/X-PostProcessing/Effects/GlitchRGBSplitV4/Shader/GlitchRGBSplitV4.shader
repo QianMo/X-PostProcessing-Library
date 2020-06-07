@@ -29,11 +29,10 @@ Shader "Hidden/X-PostProcessing/Glitch/RGBSplitV4"
 
 	half4 Frag_Horizontal(VaryingsDefault i) : SV_Target
 	{
-
 		float splitAmount = _Indensity * randomNoise(_TimeX, 2);
 
-		half4 ColorR = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord);
-		half4 ColorG = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, float2(i.texcoord.x + splitAmount, i.texcoord.y));
+		half4 ColorR = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, float2(i.texcoord.x + splitAmount, i.texcoord.y));
+		half4 ColorG = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord);
 		half4 ColorB = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, float2(i.texcoord.x - splitAmount, i.texcoord.y));
 
 		return half4(ColorR.r, ColorG.g, ColorB.b, 1);

@@ -38,7 +38,7 @@ Shader "Hidden/X-PostProcessing/Glitch/TileJitter"
 		half strength = 1.0;
 		half pixelSizeX = 1.0 / _ScreenParams.x;
 		
-		//------------------------------prepare jitter uv------------------------------
+		// --------------------------------Prepare Jitter UV--------------------------------
 		#if USING_FREQUENCY_INFINITE
 			strength = 1;
 		#else
@@ -54,9 +54,9 @@ Shader "Hidden/X-PostProcessing/Glitch/TileJitter"
 			#endif
 		}
 
-		//------------------------------final sample-----------------------------------
-		half4 color = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv);
-		return color;
+		// -------------------------------Final Sample------------------------------
+		half4 sceneColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv);
+		return sceneColor;
 	}
 	
 	float4 Frag_Horizontal(VaryingsDefault i): SV_Target
@@ -65,7 +65,7 @@ Shader "Hidden/X-PostProcessing/Glitch/TileJitter"
 		half strength = 1.0;
 		half pixelSizeX = 1.0 / _ScreenParams.x;
 
-		//------------------------------prepare jitter uv------------------------------
+		// --------------------------------Prepare Jitter UV--------------------------------
 		#if USING_FREQUENCY_INFINITE
 			strength = 1;
 		#else
@@ -80,9 +80,9 @@ Shader "Hidden/X-PostProcessing/Glitch/TileJitter"
 			#endif
 		}
 
-		//------------------------------final sample-----------------------------------
-		half3 color = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv).rgb;
-		return half4(color, 1.0);
+		// -------------------------------Final Sample------------------------------
+		half4 sceneColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv);
+		return sceneColor;
 	}
 	
 	ENDHLSL

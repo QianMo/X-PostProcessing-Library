@@ -1,4 +1,4 @@
-
+﻿
 //----------------------------------------------------------------------------------------------------------
 // X-PostProcessing Library
 // https://github.com/QianMo/X-PostProcessing-Library
@@ -35,14 +35,10 @@ Shader "Hidden/X-PostProcessing/Glitch/AnalogNoise"
 	half4 Frag(VaryingsDefault i): SV_Target
 	{
 
-		half4 noiseColor = float4(0, 0, 0, 0);
-		float2 uv = i.texcoord;
-
-		noiseColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv);
+		half4 sceneColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord);
+		half4 noiseColor = sceneColor;
 
 		half luminance = dot(noiseColor.rgb, fixed3(0.22, 0.707, 0.071));
-
-
 		if (randomNoise(float2(_TimeX * _Speed, _TimeX * _Speed)) > _LuminanceJitterThreshold)
 		{
 			noiseColor = float4(luminance, luminance, luminance, luminance);
@@ -54,11 +50,9 @@ Shader "Hidden/X-PostProcessing/Glitch/AnalogNoise"
 
 		noiseColor.rgb += 0.25 * float3(noiseX,noiseY,noiseZ) - 0.125;
 
-		noiseColor = lerp(SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord.xy), noiseColor, _Fading);
+		noiseColor = lerp(sceneColor, noiseColor, _Fading);
 		
 		return noiseColor;
-
-
 	}
 	
 	ENDHLSL

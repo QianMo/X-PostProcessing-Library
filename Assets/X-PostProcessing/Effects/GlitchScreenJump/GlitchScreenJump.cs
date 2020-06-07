@@ -48,7 +48,7 @@ namespace XPostProcessing
 
         static class ShaderIDs
         {
-            internal static readonly int ScreenJumpIndensity = Shader.PropertyToID("_ScreenJump");
+            internal static readonly int Params = Shader.PropertyToID("_Params");
         }
 
         public override void Render(PostProcessRenderContext context)
@@ -59,7 +59,7 @@ namespace XPostProcessing
 
             Vector2 ScreenJumpVector = new Vector2(settings.ScreenJumpIndensity, ScreenJumpTime);
 
-            sheet.properties.SetVector(ShaderIDs.ScreenJumpIndensity, ScreenJumpVector);
+            sheet.properties.SetVector(ShaderIDs.Params, ScreenJumpVector);
 
             context.command.BlitFullscreenTriangle(context.source, context.destination, sheet, (int)settings.ScreenJumpDirection.value);
         }

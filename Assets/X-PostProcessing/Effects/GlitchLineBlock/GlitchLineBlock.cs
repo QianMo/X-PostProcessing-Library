@@ -91,7 +91,7 @@ namespace XPostProcessing
 
             sheet.properties.SetVector(ShaderIDs.Params, new Vector3(
                 settings.intervalType.value == IntervalType.Random ? randomFrequency : settings.frequency,
-                TimeX * settings.Speed * 0.1f, settings.Amount));
+                TimeX * settings.Speed * 0.2f , settings.Amount));
 
             sheet.properties.SetVector(ShaderIDs.Params2, new Vector3(settings.Offset, 1 / settings.LinesWidth, settings.Alpha));
 

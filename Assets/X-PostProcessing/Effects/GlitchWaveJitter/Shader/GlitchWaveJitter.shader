@@ -12,7 +12,6 @@ Shader "Hidden/X-PostProcessing/Glitch/WaveJitter"
 {
 	HLSLINCLUDE
 	
-	#include "../../../Shaders/StdLib.hlsl"
 	#include "../../../Shaders/XPostProcessing.hlsl"
 	#include "../../../Shaders/XNoiseLibrary.hlsl"
 	
@@ -61,7 +60,7 @@ Shader "Hidden/X-PostProcessing/Glitch/WaveJitter"
 			strength = 0.5 + 0.5 * cos(_Time.y * _Frequency);
 		#endif
 
-		// --------------------------------Prepare UV----------------------------
+		// --------------------------------Prepare UV--------------------------------
 		float uv_x = i.texcoord.x * _Resolution.x;
 		float noise_wave_1 = snoise(float2(uv_x * 0.01, _Time.y * _Speed * 20)) * (strength * _Amount * 32.0);
 		float noise_wave_2 = snoise(float2(uv_x * 0.02, _Time.y * _Speed * 10)) * (strength * _Amount * 4.0);
