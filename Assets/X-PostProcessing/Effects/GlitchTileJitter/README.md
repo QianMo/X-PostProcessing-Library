@@ -12,4 +12,12 @@
 
 ## Gallery
 
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchTileJitter/GlitchTileJitter-1.gif)
+
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchTileJitter/GlitchTileJitter-2.gif)
+
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchTileJitter/GlitchTileJitter-3.gif)
+
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchTileJitter/GlitchTileJitter-4.gif)
+
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchTileJitter/GlitchTileJitter.gif)

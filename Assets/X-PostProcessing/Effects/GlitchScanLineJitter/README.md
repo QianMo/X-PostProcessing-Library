@@ -13,3 +13,6 @@
 ## Gallery
 
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchScanLineJitter/GlitchScanLineJitter.gif)
+
+
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchScanLineJitter/GlitchScanLineJitter-2.gif)

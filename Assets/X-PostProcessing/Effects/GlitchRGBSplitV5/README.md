@@ -12,4 +12,6 @@
 
 ## Gallery
 
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchRGBSplitV5/GlitchRGBSplitV5-2.gif)
+
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchRGBSplitV5/GlitchRGBSplitV5.gif)

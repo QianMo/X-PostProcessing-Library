@@ -12,4 +12,8 @@
 
 ## Gallery
 
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchLineBlock/GlitchLineBlock-2.gif)
+
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchLineBlock/GlitchLineBlock-3.gif)
+
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchLineBlock/GlitchLineBlock.gif)

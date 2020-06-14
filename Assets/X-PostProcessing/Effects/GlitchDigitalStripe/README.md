@@ -12,4 +12,8 @@
 
 ## Gallery
 
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchDigitalStripe/GlitchDigitalStripe1.gif)
+
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchDigitalStripe/DigitalStripeGlitch2.gif)
+
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchDigitalStripe/GlitchDigitalStripe.gif)

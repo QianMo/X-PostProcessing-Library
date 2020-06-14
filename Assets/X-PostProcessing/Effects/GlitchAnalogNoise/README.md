@@ -12,4 +12,6 @@
 
 ## Gallery
 
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchAnalogNoise/GlitchAnalogNoise1.gif)
+
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Glitch/GlitchAnalogNoise/GlitchAnalogNoise.gif)
