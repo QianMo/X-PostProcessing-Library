@@ -134,10 +134,8 @@ Shader "Hidden/X-PostProcessing/Glitch/LineBlock"
 		
 		// [3] 生成源色调的blockLine Glitch
 		float2 uv_blockLine = uv;
-		uv_blockLine = saturate(uv_blockLine + float2(0.1 * blockLine_random, 0));
+		uv_blockLine = saturate(uv_blockLine + float2(0, 0.1 * blockLine_random));
 		float4 blockLineColor = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, abs(uv_blockLine));
-		
-		return blockLineColor;
 		
 		// [4] 将RGB转到YUV空间，并做色调偏移
 		// RGB -> YUV
