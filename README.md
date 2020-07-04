@@ -76,7 +76,7 @@ For more gallery , you can enter the specific post-processing effects sub-page i
     - [Edge Detection Scharr](Assets/X-PostProcessing/Effects/EdgeDetectionScharr)
     - [Edge Detection Scharr Neon](Assets/X-PostProcessing/Effects/EdgeDetectionScharrNeon)
     - [Edge Detection Scharr Neon V2](Assets/X-PostProcessing/Effects/EdgeDetectionScharrNeonV2)
-- ## 1.4   故障艺术型后处理 | Glitch Effects
+- ## 1.4 故障艺术型后处理 | Glitch Effects
     - [Glitch Image Block](Assets/X-PostProcessing/Effects/GlitchImageBlock)
     - [Glitch Image Block V2](Assets/X-PostProcessing/Effects/GlitchImageBlockV2)
     - [Glitch Image Block V3](Assets/X-PostProcessing/Effects/GlitchImageBlockV3)
@@ -94,7 +94,18 @@ For more gallery , you can enter the specific post-processing effects sub-page i
     - [Glitch Screen Shake](Assets/X-PostProcessing/Effects/GlitchScreenShake)
     - [Glitch Tile Jitter](Assets/X-PostProcessing/Effects/GlitchTileJitter)
     - [Glitch Wave Jitter](Assets/X-PostProcessing/Effects/GlitchWaveJitter)
-
+- ## 1.5 色彩调整型后处理 | ColorAdjustment Effects
+    - [Color Adjustment BleachBypass](Assets/X-PostProcessing/Effects/ColorAdjustmentBleachBypass)
+    - [Color Adjustment Brightness](Assets/X-PostProcessing/Effects/ColorAdjustmentBrightness)
+    - [Color Adjustment Contrast](Assets/X-PostProcessing/Effects/ColorAdjustmentContrast)
+    - [Color Adjustment ContrastV2](Assets/X-PostProcessing/Effects/ColorAdjustmentContrastV2)
+    - [Color Adjustment ContrastV3](Assets/X-PostProcessing/Effects/ColorAdjustmentContrastV3)
+    - [Color Adjustment Hue](Assets/X-PostProcessing/Effects/ColorAdjustmentHue)
+    - [Color Adjustment LensFilter](Assets/X-PostProcessing/Effects/ColorAdjustmentLensFilter)
+    - [Color Adjustment Saturation](Assets/X-PostProcessing/Effects/ColorAdjustmentSaturation)
+    - [Color Adjustment Technicolor](Assets/X-PostProcessing/Effects/ColorAdjustmentTechnicolor)
+    - [Color Adjustment Tint](Assets/X-PostProcessing/Effects/ColorAdjustmentTint)
+    - [Color Adjustment WhiteBalance](Assets/X-PostProcessing/Effects/ColorAdjustmentWhiteBalance)
 
 - Color Adjustment Effects
 - Stylized Effects
