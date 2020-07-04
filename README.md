@@ -106,8 +106,14 @@ For more gallery , you can enter the specific post-processing effects sub-page i
     - [Color Adjustment Technicolor](Assets/X-PostProcessing/Effects/ColorAdjustmentTechnicolor)
     - [Color Adjustment Tint](Assets/X-PostProcessing/Effects/ColorAdjustmentTint)
     - [Color Adjustment White Balance](Assets/X-PostProcessing/Effects/ColorAdjustmentWhiteBalance)
+- ## 1.6 渐晕型后处理 | Vignette Effects
+    - [Aurora Vignette](Assets/X-PostProcessing/Effects/AuroraVignette)
+    - [Rapid Vignette](Assets/X-PostProcessing/Effects/RapidVignette)
+    - [Rapid Vignette V2](Assets/X-PostProcessing/Effects/RapidVignetteV2)
+    - [Rapid Old TV Vignette](Assets/X-PostProcessing/Effects/RapidOldTVVignette)
+    - [Rapid Old TV Vignette V2](Assets/X-PostProcessing/Effects/RapidOldTVVignetteV2)
 
-- Color Adjustment Effects
+
 - Stylized Effects
 - Painting Effects
 - Image Processing Effects
