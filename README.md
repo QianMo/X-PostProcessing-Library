@@ -94,7 +94,7 @@ For more gallery , you can enter the specific post-processing effects sub-page i
     - [Glitch Screen Shake](Assets/X-PostProcessing/Effects/GlitchScreenShake)
     - [Glitch Tile Jitter](Assets/X-PostProcessing/Effects/GlitchTileJitter)
     - [Glitch Wave Jitter](Assets/X-PostProcessing/Effects/GlitchWaveJitter)
-- ## 1.5 色彩调整型后处理 | ColorAdjustment Effects
+- ## 1.5 色彩调整型后处理 | Color Adjustment Effects
     - [Color Adjustment Bleach Bypass](Assets/X-PostProcessing/Effects/ColorAdjustmentBleachBypass)
     - [Color Adjustment Brightness](Assets/X-PostProcessing/Effects/ColorAdjustmentBrightness)
     - [Color Adjustment Contrast](Assets/X-PostProcessing/Effects/ColorAdjustmentContrast)
