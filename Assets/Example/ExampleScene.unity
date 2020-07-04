@@ -2786,6 +2786,38 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   - assemblyQualifiedName: XPostProcessing.GlitchWaveJitter, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: XPostProcessing.ColorAdjustmentBleachBypass, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: XPostProcessing.ColorAdjustmentBrightness, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: XPostProcessing.ColorAdjustmentContrast, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: XPostProcessing.ColorAdjustmentContrastV2, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: XPostProcessing.ColorAdjustmentContrastV3, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: XPostProcessing.ColorAdjustmentHue, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: XPostProcessing.ColorAdjustmentLensFilter, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: XPostProcessing.ColorAdjustmentSaturation, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: XPostProcessing.ColorAdjustmentTechnicolor, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: XPostProcessing.ColorAdjustmentTint, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: XPostProcessing.ColorAdjustmentWhiteBalance, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: XPostProcessing.AuroraVignette, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: XPostProcessing.RapidOldTVVignette, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: XPostProcessing.RapidOldTVVignetteV2, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: XPostProcessing.RapidVignette, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - assemblyQualifiedName: XPostProcessing.RapidVignetteV2, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!4 &1536011139 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 901490205d4d95e4d8fd461462b7c61a, type: 3}

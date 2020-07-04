@@ -23,6 +23,34 @@ MonoBehaviour:
   - {fileID: 114789630020481822}
   - {fileID: 114320506431503834}
   - {fileID: 114760233488171950}
+  - {fileID: 114240762057880376}
+--- !u!114 &114079023366429692
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b24348132ef15346be9ae6f5fe6e94e, type: 3}
+  m_Name: RapidVignette
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  vignetteType:
+    overrideState: 1
+    value: 1
+  vignetteIndensity:
+    overrideState: 1
+    value: 1
+  vignetteCenter:
+    overrideState: 1
+    value: {x: 0.5, y: 0.5}
+  vignetteColor:
+    overrideState: 1
+    value: {r: 0.1, g: 0.8, b: 1, a: 1}
 --- !u!114 &114186190907686168
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -50,6 +78,24 @@ MonoBehaviour:
   backgroundColor:
     overrideState: 1
     value: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &114240762057880376
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2638595d43b44334d88d398c2ff5a6ad, type: 3}
+  m_Name: ColorAdjustmentBleachBypass
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Indensity:
+    overrideState: 1
+    value: 0.286
 --- !u!114 &114320506431503834
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -61,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b63d2b442ad53ae42b8343f3a6602000, type: 3}
   m_Name: GlitchDigitalStripe
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -100,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6fc311bab7f3714daba3e248900eb31, type: 3}
   m_Name: TiltShiftBlurV2
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -181,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9acc76ac9d8d4e4a8d7294a5bd00c85, type: 3}
   m_Name: GlitchImageBlockV3
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -202,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9ef3f5264488414c87b632cd2509b40, type: 3}
   m_Name: GlitchRGBSplitV5
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
