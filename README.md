@@ -120,7 +120,6 @@ For more gallery , you can enter the specific post-processing effects sub-page i
 
 - Stylized Effects
 - Painting Effects
-- Image Processing Effects
 - ...
 
 More effects and LWRP/URP/HDRP version will arrive soon.
