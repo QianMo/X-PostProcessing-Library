@@ -24,6 +24,7 @@ MonoBehaviour:
   - {fileID: 114320506431503834}
   - {fileID: 114760233488171950}
   - {fileID: 114240762057880376}
+  - {fileID: 114195601342318132}
 --- !u!114 &114079023366429692
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -78,6 +79,30 @@ MonoBehaviour:
   backgroundColor:
     overrideState: 1
     value: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &114195601342318132
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad87ed76c4e75846a28e3a301084ed7, type: 3}
+  m_Name: BoxBlur
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  BlurRadius:
+    overrideState: 0
+    value: 3
+  Iteration:
+    overrideState: 0
+    value: 6
+  RTDownScaling:
+    overrideState: 0
+    value: 2
 --- !u!114 &114240762057880376
 MonoBehaviour:
   m_ObjectHideFlags: 3
