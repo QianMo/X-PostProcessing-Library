@@ -63,7 +63,6 @@ For more gallery , you can enter the specific post-processing effects sub-page i
     - [Pixelize Circle](Assets/X-PostProcessing/Effects/PixelizeCircle)
     - [Pixelize Diamond](Assets/X-PostProcessing/Effects/PixelizeDiamond)
     - [Pixelize Sector](Assets/X-PostProcessing/Effects/PixelizeSector)
-    - [Pixelize Diamond](Assets/X-PostProcessing/Effects/PixelizeDiamond)
     - [Pixelize Triangle](Assets/X-PostProcessing/Effects/PixelizeTriangle)
     - [Pixelize Hexagon](Assets/X-PostProcessing/Effects/PixelizeHexagon)
     - [Pixelize Hexagon Grid](Assets/X-PostProcessing/Effects/PixelizeHexagonGrid)
