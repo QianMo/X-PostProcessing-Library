@@ -95,17 +95,17 @@ For more gallery , you can enter the specific post-processing effects sub-page i
     - [Glitch Tile Jitter](Assets/X-PostProcessing/Effects/GlitchTileJitter)
     - [Glitch Wave Jitter](Assets/X-PostProcessing/Effects/GlitchWaveJitter)
 - ## 1.5 色彩调整型后处理 | ColorAdjustment Effects
-    - [Color Adjustment BleachBypass](Assets/X-PostProcessing/Effects/ColorAdjustmentBleachBypass)
+    - [Color Adjustment Bleach Bypass](Assets/X-PostProcessing/Effects/ColorAdjustmentBleachBypass)
     - [Color Adjustment Brightness](Assets/X-PostProcessing/Effects/ColorAdjustmentBrightness)
     - [Color Adjustment Contrast](Assets/X-PostProcessing/Effects/ColorAdjustmentContrast)
-    - [Color Adjustment ContrastV2](Assets/X-PostProcessing/Effects/ColorAdjustmentContrastV2)
-    - [Color Adjustment ContrastV3](Assets/X-PostProcessing/Effects/ColorAdjustmentContrastV3)
+    - [Color Adjustment Contrast V2](Assets/X-PostProcessing/Effects/ColorAdjustmentContrastV2)
+    - [Color Adjustment Contrast V3](Assets/X-PostProcessing/Effects/ColorAdjustmentContrastV3)
     - [Color Adjustment Hue](Assets/X-PostProcessing/Effects/ColorAdjustmentHue)
-    - [Color Adjustment LensFilter](Assets/X-PostProcessing/Effects/ColorAdjustmentLensFilter)
+    - [Color Adjustment Lens Filter](Assets/X-PostProcessing/Effects/ColorAdjustmentLensFilter)
     - [Color Adjustment Saturation](Assets/X-PostProcessing/Effects/ColorAdjustmentSaturation)
     - [Color Adjustment Technicolor](Assets/X-PostProcessing/Effects/ColorAdjustmentTechnicolor)
     - [Color Adjustment Tint](Assets/X-PostProcessing/Effects/ColorAdjustmentTint)
-    - [Color Adjustment WhiteBalance](Assets/X-PostProcessing/Effects/ColorAdjustmentWhiteBalance)
+    - [Color Adjustment White Balance](Assets/X-PostProcessing/Effects/ColorAdjustmentWhiteBalance)
 
 - Color Adjustment Effects
 - Stylized Effects
