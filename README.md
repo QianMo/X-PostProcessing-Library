@@ -112,6 +112,10 @@ For more gallery , you can enter the specific post-processing effects sub-page i
     - [Rapid Vignette V2](Assets/X-PostProcessing/Effects/RapidVignetteV2)
     - [Rapid Old TV Vignette](Assets/X-PostProcessing/Effects/RapidOldTVVignette)
     - [Rapid Old TV Vignette V2](Assets/X-PostProcessing/Effects/RapidOldTVVignetteV2)
+- ## 1.7 图像处理型后处理 | Image Processing Effects
+    - [SharpenV1](Assets/X-PostProcessing/Effects/SharpenV1)
+    - [SharpenV2](Assets/X-PostProcessing/Effects/SharpenV2)
+    - [SharpenV3](Assets/X-PostProcessing/Effects/SharpenV3)
 
 
 - Stylized Effects
