@@ -8,7 +8,7 @@
 
 
 ## Property
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Vignette/RapidVignetteV2/RapidVignetteV2Property.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Vignette/RapidVignetteV2/RapidVignetteV2Property.png)
 
 ## Gallery
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Vignette/RapidVignetteV2/RapidVignetteV2.png)
