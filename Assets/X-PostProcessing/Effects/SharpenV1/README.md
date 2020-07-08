@@ -8,7 +8,7 @@
 
 
 ## Property
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Sharpen/SharpenV1/SharpenV1Property.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ImageProcessing/SharpenV1/SharpenV1Property.jpg)
 
 ## Gallery
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Sharpen/SharpenV1/SharpenV1.gif)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ImageProcessing/SharpenV1/SharpenV1.gif)
