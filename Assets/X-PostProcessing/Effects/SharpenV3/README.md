@@ -11,4 +11,7 @@
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ImageProcessing/SharpenV3/SharpenV3Property.png)
 
 ## Gallery
+
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ImageProcessing/SharpenV3/SharpenV3.png)
+
 ![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ImageProcessing/SharpenV3/SharpenV3.gif)
