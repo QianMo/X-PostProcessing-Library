@@ -8,9 +8,9 @@
 
 
 ## Property
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/ColorAdjustmentTint/ColorAdjustmentTintProperty.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ColorAdjustment/ColorAdjustmentTint/ColorAdjustmentTintProperty.jpg)
 
 ## Gallery
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/ColorAdjustmentTint/ColorAdjustmentTint.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ColorAdjustment/ColorAdjustmentTint/ColorAdjustmentTint.jpg)
 
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/ColorAdjustmentTint/ColorAdjustmentTint.gif)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ColorAdjustment/ColorAdjustmentTint/ColorAdjustmentTint.gif)

@@ -8,9 +8,9 @@
 
 
 ## Property
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/ColorAdjustmentLensFilter/ColorAdjustmentLensFilterProperty.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ColorAdjustment/ColorAdjustmentLensFilter/ColorAdjustmentLensFilterProperty.jpg)
 
 ## Gallery
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/ColorAdjustmentLensFilter/ColorAdjustmentLensFilter.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ColorAdjustment/ColorAdjustmentLensFilter/ColorAdjustmentLensFilter.jpg)
 
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/ColorAdjustmentLensFilter/ColorAdjustmentLensFilter.gif)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ColorAdjustment/ColorAdjustmentLensFilter/ColorAdjustmentLensFilter.gif)

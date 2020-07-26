@@ -8,9 +8,9 @@
 
 
 ## Property
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/ColorAdjustmentWhiteBalance/ColorAdjustmentWhiteBalanceProperty.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ColorAdjustment/ColorAdjustmentWhiteBalance/ColorAdjustmentWhiteBalanceProperty.jpg)
 
 ## Gallery
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/ColorAdjustmentWhiteBalance/ColorAdjustmentWhiteBalance.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ColorAdjustment/ColorAdjustmentWhiteBalance/ColorAdjustmentWhiteBalance.jpg)
 
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/ColorAdjustmentWhiteBalance/ColorAdjustmentWhiteBalance.gif)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ColorAdjustment/ColorAdjustmentWhiteBalance/ColorAdjustmentWhiteBalance.gif)

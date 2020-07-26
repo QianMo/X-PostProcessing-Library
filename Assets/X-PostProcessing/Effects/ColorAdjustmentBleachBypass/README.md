@@ -8,9 +8,9 @@
 
 
 ## Property
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/ColorAdjustmentBleachBypass/ColorAdjustmentBleachBypassProperty.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ColorAdjustment/ColorAdjustmentBleachBypass/ColorAdjustmentBleachBypassProperty.jpg)
 
 ## Gallery
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/ColorAdjustmentBleachBypass/ColorAdjustmentBleachBypass.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ColorAdjustment/ColorAdjustmentBleachBypass/ColorAdjustmentBleachBypass.jpg)
 
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/ColorAdjustmentBleachBypass/ColorAdjustmentBleachBypass.gif)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ColorAdjustment/ColorAdjustmentBleachBypass/ColorAdjustmentBleachBypass.gif)

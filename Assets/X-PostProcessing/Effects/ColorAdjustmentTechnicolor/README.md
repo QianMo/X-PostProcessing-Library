@@ -8,9 +8,9 @@
 
 
 ## Property
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/ColorAdjustmentTechnicolor/ColorAdjustmentTechnicolorProperty.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ColorAdjustment/ColorAdjustmentTechnicolor/ColorAdjustmentTechnicolorProperty.jpg)
 
 ## Gallery
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/ColorAdjustmentTechnicolor/ColorAdjustmentTechnicolor.jpg)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ColorAdjustment/ColorAdjustmentTechnicolor/ColorAdjustmentTechnicolor.jpg)
 
-![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Pixelize/ColorAdjustmentTechnicolor/ColorAdjustmentTechnicolor.gif)
+![](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/ColorAdjustment/ColorAdjustmentTechnicolor/ColorAdjustmentTechnicolor.gif)
