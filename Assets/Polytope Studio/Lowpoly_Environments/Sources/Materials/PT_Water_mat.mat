@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PT_Water_mat
+  m_Shader: {fileID: 4800000, guid: 39cf68574afc7f248bd78a99c3800e00, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _NormalMapTexture:
+        m_Texture: {fileID: 2800000, guid: a78adb8868cccbe4a92d9d81db916e6e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _normalmap:
+        m_Texture: {fileID: 2800000, guid: a78adb8868cccbe4a92d9d81db916e6e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _Depth: 0.304
+    - _DepthStrength: 0.969
+    - _EnvironmentReflections: 1
+    - _Float1: 0.1
+    - _Float3: 1
+    - _Float4: 10000
+    - _FoamAmount: 0.35
+    - _FoamNoiseScale: 597
+    - _FoamPower: 2.82
+    - _FoamSpeed: 0.5
+    - _GlossyReflections: 1
+    - _Mettalic: 0.755
+    - _NormalMapWavesSpeed: 0.223
+    - _NormalMapsWavesSize: 6.14
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _SMOOTHNESS: 1
+    - _SmallWavesSize: 1
+    - _SmallWavesSize1: 3
+    - _SmallWavesSpeed: 0.5
+    - _Smoothness: 0.702
+    - _Smootness: 0.837
+    - _SpecularHighlights: 1
+    - _Strenght: 0.5
+    - _TRANSPARENCY: 0.73
+    - _TessMax: 10
+    - _TessMin: 1
+    - _TessValue: 5
+    - _WaveAmplitude: 0
+    - _WaveSpeed: 0
+    - _WaveTile: 0
+    - _Wavespeed: 0.5
+    - _Wavetile: 0.37
+    - __dirty: 0
+    - _depth: 0.2869212
+    - _waveamplitude: 0.2
+    - _wavedirectionx: 0.23
+    - _wavedirectiony: -0.8
+    m_Colors:
+    - _DeepColor: {r: 0.21440013, g: 0.6108907, b: 0.6226415, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FoamColor: {r: 0.2971698, g: 1, b: 0.91264254, a: 0}
+    - _ShallowColor: {r: 0.21960782, g: 0.46475953, b: 0.5372549, a: 0}
+    - _Shallowcolor: {r: 0.4890531, g: 0.6480994, b: 0.6603774, a: 0}
+    - _deepcolor: {r: 0.3301887, g: 0.1712053, b: 0.07631721, a: 0}
+    - _foamcolor: {r: 0.3066038, g: 1, b: 0.9145772, a: 0}
+  m_BuildTextureStacks: []

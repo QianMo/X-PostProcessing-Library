@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PT_Rocks_mat
+  m_Shader: {fileID: 4800000, guid: cd18bd550ff6630468660d0150eed511, type: 3}
+  m_ShaderKeywords: _ANIMATEDECALEMISSIONONOFF_ON _ANIMATEEMISSIONONOFF_ON _ANIMATEOREEMISSIONONOFF_ON
+    _DECALEMISSIONONOFF_ON _DECALSONOFF_ON _DETAILTEXTUREONOFF1_ON _DETAILTEXTUREONOFF_ON
+    _GRADIENTONOFF_ON _OREEMISSIONONOFF_ON _SNOWNOISEONOFF_ON
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseTexture:
+        m_Texture: {fileID: 2800000, guid: a195a893970f3ab4990bd06e18a0b308, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DecalsTexture:
+        m_Texture: {fileID: 2800000, guid: d329461fd2714384088c78ea5f4c2765, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailTexture:
+        m_Texture: {fileID: 2800000, guid: 3b5961066e60bbe45a9ed0e091a6863a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TopProjectionTexture:
+        m_Texture: {fileID: 2800000, guid: 156ea07b03c16924ab629ae8749a4c9e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ANIMATEDECALEMISSIONONOFF: 1
+    - _ANIMATEEMISSIONONOFF: 1
+    - _ANIMATEOREEMISSIONONOFF: 1
+    - _DECALEMISSIONONOFF: 1
+    - _DECALSONOFF: 1
+    - _DETAILTEXTUREONOFF: 1
+    - _DecalEmissionIntensity: 4.44
+    - _DecalsOnOff: 1
+    - _DetailTextureONOFF: 1
+    - _DetailTextureONOFF1: 1
+    - _DetailTextureTiling: 0.39
+    - _Float0: 10
+    - _Float2: 0.3
+    - _Float5: 0.5
+    - _GRADIENTONOFF: 1
+    - _Gradient: 0.182
+    - _Gradient1: 1.206
+    - _GradientONOFF: 1
+    - _GradientPower: 5.98
+    - _GradientPower1: 4.57
+    - _OREEMISSIONONOFF: 1
+    - _OreEmissionIntensity: 7.23
+    - _SNOWONOFF: 0
+    - _Smoothness: 0.321
+    - _SnowAmount: 0.215
+    - _SnowCoverage: 0.23
+    - _SnowFade: 0.736
+    - _SnowNoiseContrast: 0.223
+    - _SnowNoiseOnOff: 1
+    - _SnowNoiseScale: 4.9
+    - _SnowONOFF: 0
+    - _TOPPROJECTIONONOFF: 0
+    - _TopProjectionONOFF: 0
+    - _TopProjectionTextureCoverage: 0.578
+    - _TopProjectionTextureTiling: 0.8
+    - _WorldObjectGradient: 0
+    - __dirty: 0
+    m_Colors:
+    - _Color3: {r: 0.81960785, g: 0.060962733, b: 0, a: 0}
+    - _DecakEmissionColor: {r: 0, g: 0.84665537, b: 2.4117067, a: 0}
+    - _DecalsColor: {r: 0.008939266, g: 0, b: 1, a: 0}
+    - _GroundColor: {r: 0.26415092, g: 0.23300104, b: 0.23300104, a: 1}
+    - _GroundColor1: {r: 0.17009956, g: 0.1484069, b: 0.21698111, a: 1}
+    - _OreColor: {r: 2, g: 0.4804064, b: 0, a: 0}
+    - _OreColor1: {r: 0.0078125, g: 0, b: 0.000778351, a: 0}
+    - _OreEmissionColor: {r: 7.999999, g: 1.3359382, b: 0, a: 0}
+    - _SnowDirection: {r: 0.1, g: 1, b: 0.1, a: 0}
+    - _TopColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
+    - _TopColor1: {r: 0.59574103, g: 0.51699895, b: 0.6981132, a: 1}
+    - _Vector1: {r: 0.1, g: 1, b: 0.1, a: 0}

@@ -1,0 +1,23 @@
+{
+  "name": "com.qianmo.com.qianmo.x-postprocessing-library",
+  "version": "1.0.0",
+  "displayName": "X-PostProcessing-Library",
+  "description": "X-PostProcessing Library (XPL) is a high quality post processing library for for Unity Post Processing Stack.",
+  "unity": "2019.1",
+  "documentationUrl": "https://example.com/",
+  "license": "LICENSE.md",
+  "licensesUrl": "./LICENSE.md",
+  "dependencies": {
+    "com.unity.test-framework": "1.1.33"
+  },
+  "keywords": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "author": {
+    "name": "Unity",
+    "email": "unity@example.com",
+    "url": "https://www.unity3d.com"
+  }
+}
