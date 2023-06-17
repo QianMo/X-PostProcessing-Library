@@ -63,43 +63,39 @@ namespace XPL.Runtime
             if (renderingData.cameraData.isPreviewCamera)
                 return;
 
-            CommandBuffer cmd = CommandBufferPool.Get("X-Processing-Library");
+            VolumeStack volumes = VolumeManager.instance.stack;
+            AuroraVignette settings = volumes.GetComponent<AuroraVignette>();
 
+            if (settings == null) return;
+            if (settings.IsActive() == false) return;
+
+            CommandBuffer cmd = CommandBufferPool.Get("X-Processing-Library");
             var cameraData = renderingData.cameraData;
 
             using (new ProfilingScope(cmd, new ProfilingSampler("AuroraVignetteRendererFeature")))
             {
                 var source = cameraData.renderer.cameraColorTargetHandle;
 
-                MaterialSetup(cmd, source, _mat);
+                TimeX += Time.deltaTime;
+                if (TimeX > 100)
+                {
+                    TimeX = 0;
+                }
+
+                _mat.SetFloat(ShaderIDs.vignetteArea, settings.vignetteArea.value);
+                _mat.SetFloat(ShaderIDs.vignetteSmothness, settings.vignetteSmothness.value);
+                _mat.SetFloat(ShaderIDs.colorChange, settings.colorChange.value * 10f);
+                _mat.SetVector(ShaderIDs.colorFactor, new Vector3(settings.colorFactorR.value, settings.colorFactorG.value, settings.colorFactorB.value));
+                _mat.SetFloat(ShaderIDs.TimeX, TimeX * settings.flowSpeed.value);
+                _mat.SetFloat(ShaderIDs.vignetteFading, settings.intensity.value);
+                _mat.SetTexture(ShaderIDs.mainTex, source);
+
                 Blitter.BlitCameraTexture(cmd, source, m_ColorHandle, _mat, 0);
                 Blitter.BlitCameraTexture(cmd, m_ColorHandle, m_CameraColorHandle);
             }
 
             context.ExecuteCommandBuffer(cmd);
             cmd.Clear();
-        }
-
-        private void MaterialSetup(CommandBuffer cmd, RTHandle maintex, Material mat)
-        {
-            VolumeStack volumes = VolumeManager.instance.stack;
-            AuroraVignette settings = volumes.GetComponent<AuroraVignette>();
-
-            if (settings == null) return;
-
-            TimeX += Time.deltaTime;
-            if (TimeX > 100)
-            {
-                TimeX = 0;
-            }
-
-            _mat.SetFloat(ShaderIDs.vignetteArea, settings.vignetteArea.value);
-            _mat.SetFloat(ShaderIDs.vignetteSmothness, settings.vignetteSmothness.value);
-            _mat.SetFloat(ShaderIDs.colorChange, settings.colorChange.value * 10f);
-            _mat.SetVector(ShaderIDs.colorFactor, new Vector3(settings.colorFactorR.value, settings.colorFactorG.value, settings.colorFactorB.value));
-            _mat.SetFloat(ShaderIDs.TimeX, TimeX * settings.flowSpeed.value);
-            _mat.SetFloat(ShaderIDs.vignetteFading, settings.intensity.value);
-            _mat.SetTexture(ShaderIDs.mainTex, maintex);
         }
     }
 }
