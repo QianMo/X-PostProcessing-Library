@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "com.qianmo.com.qianmo.x-postprocessing-library": {
-      "version": "file:UnityPackageTemplate",
+    "com.qianmo.x-postprocessing-library": {
+      "version": "file:com.qianmo.x-postprocessing-library",
       "depth": 0,
       "source": "embedded",
       "dependencies": {
