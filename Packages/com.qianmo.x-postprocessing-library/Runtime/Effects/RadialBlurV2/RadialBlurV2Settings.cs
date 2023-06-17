@@ -50,37 +50,5 @@ namespace XPL.Runtime
         public bool IsTileCompatible() => true;
 
     }
-
-    //public sealed class RadialBlurV2Renderer : PostProcessEffectRenderer<RadialBlurV2>
-    //{
-    //    private Shader shader;
-    //    private const string PROFILER_TAG = "X-RadialBlurV2";
-    //    public override void Init()
-    //    {
-    //        shader = Shader.Find("Hidden/X-PostProcessing/RadialBlurV2");
-    //    }
-
-    //    public override void Release()
-    //    {
-    //        base.Release();
-    //    }
-
-    //    static class ShaderIDs
-    //    {
-    //        internal static readonly int Params = Shader.PropertyToID("_Params");
-    //    }
-
-    //    public override void Render(PostProcessRenderContext context)
-    //    {
-    //        CommandBuffer cmd = context.command;
-    //        PropertySheet sheet = context.propertySheets.Get(shader);
-    //        cmd.BeginSample(PROFILER_TAG);
-
-    //        sheet.properties.SetVector(ShaderIDs.Params, new Vector3(settings.BlurRadius * 0.02f, settings.RadialCenterX, settings.RadialCenterY));
-
-    //        context.command.BlitFullscreenTriangle(context.source, context.destination, sheet, (int)settings.QualityLevel.value);
-    //        cmd.EndSample(PROFILER_TAG);
-    //    }
-    //}
 }
 
