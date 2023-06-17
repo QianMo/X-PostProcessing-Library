@@ -17,7 +17,7 @@ namespace XPL.Runtime
 {
     [Serializable]
     [VolumeComponentMenuForRenderPipeline("X-PostProcessing/Vignette/AuroraVignette", typeof(UniversalRenderPipeline))]
-    public class AuroraVignette : VolumeComponent, IPostProcessComponent
+    public class AuroraVignetteSettings : VolumeComponent, IPostProcessComponent
     {
         public ClampedFloatParameter intensity = new ClampedFloatParameter(0f, 0.0f, 1.0f);
 
