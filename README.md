@@ -1,15 +1,15 @@
 
 ![XPL-Title-v2.jpg](https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/XPL-Title-v2.jpg)
 <p>
-<a href="https://github.com/QianMo/X-PostProcessing-Library/blob/master/LICENSE">
-    <img alt="GitHub license" src ="https://img.shields.io/github/license/QianMo/X-PostProcessing-Library" />
+<a href="https://github.com/Shaun-Fong/X-PostProcessing-Library/blob/master/LICENSE">
+    <img alt="GitHub license" src ="https://img.shields.io/github/license/Shaun-Fong/X-PostProcessing-Library" />
 </a>
     <img alt="Version" src ="https://img.shields.io/badge/version-1.1.6-blue" />
-<a href="https://github.com/QianMo/X-PostProcessing-Library/issues">
-    <img alt="GitHub issues" src="https://img.shields.io/github/issues/QianMo/X-PostProcessing-Library">
+<a href="https://github.com/Shaun-Fong/X-PostProcessing-Library/issues">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/Shaun-Fong/X-PostProcessing-Library">
 </a>
-<a href="https://github.com/QianMo/X-PostProcessing-Library/pulls">
-    <img alt="GitHub pull requests" src ="https://img.shields.io/github/issues-pr/QianMo/X-PostProcessing-Library" />
+<a href="https://github.com/Shaun-Fong/X-PostProcessing-Library/pulls">
+    <img alt="GitHub pull requests" src ="https://img.shields.io/github/issues-pr/Shaun-Fong/X-PostProcessing-Library" />
 </a>
 
 # XPL: Unity引擎的高品质后处理库
@@ -19,6 +19,9 @@ X-PostProcessing Libray，简称XPL，是针对Unity引擎的高品质开源后�
 
 **X-PostProcessing Library (XPL)** is a high quality post processing library for for Unity Post Processing Stack v2/LWRP/URP/HDRP
 
+# 毛星云
+毛星云（1991年—2021年12月11日），湖北宜昌人，程序员、专栏作家，网名“浅墨”。生前任腾讯游戏引擎组组长。南京航空航天大学硕士毕业，2014年微软最有价值专家奖得主。出版有书籍《OpenCV3编程入门》，《逐梦旅程：Windows游戏编程之从零开始》。
+RIP.
 
 <img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/GlitchRGBSplitV5-2.gif"  align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/GlitchLineBlock-2.gif" align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/GlitchWaveJitter-2.gif" align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/GlitchScanLineJitter-2.gif"  align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/GlitchImageBlock-2.gif"  align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/GlitchTileJitter-2.gif"  align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/ColorReplace.gif"  align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/ColorAdjustmentContrast.gif"  align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/ColorAdjustmentTechnicolor.gif"  align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/ColorAdjustmentContrastV3.gif"  align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/ColorAdjustmentContrastV2.gif"  align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/ColorAdjustmentHue.gif"  align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/BokehBlur.gif" align="middle" /><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/RadialBlurV2.gif" align="middle"/><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/GaussianBlur.gif" align="middle"/><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/DirectionalBlur-3.gif" align="middle"/><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/EdgeDetectionSobel2.gif" align="middle"/><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/EdgeDetectionRoberts1.gif" align="middle"/><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/PixelizeLed.gif" align="middle"/><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/PixelizeDiamond.gif" align="middle"/><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/PixelizeLeaf.gif" align="middle"/><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/PixelizeHexagon.gif" align="middle"/><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/PixelizeQuad.gif" align="middle"/><img src="https://raw.githubusercontent.com/QianMo/X-PostProcessing-Gallery/master/Media/Title/PixelizeHexagonGrid.gif" align="middle"/>
 
