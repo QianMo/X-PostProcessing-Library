@@ -11,35 +11,12 @@
 Shader "Hidden/X-PostProcessing/GaussianBlur"
 {
 	HLSLINCLUDE
-
-	#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
-	#include "Packages/com.unity.render-pipelines.core/Runtime/Utilities/Blit.hlsl"
-
+	
+	#include "../../../Shaders/StdLib.hlsl"
+	#include "../../../Shaders/XPostProcessing.hlsl"
+	
 	half4 _BlurOffset;
-	float _RenderViewportScaleFactor;
-
-	TEXTURE2D_X(_MainTex);
-	SAMPLER(sampler_MainTex);
-
-	struct AttributesDefault
-	{
-		float3 vertex : POSITION;
-	};
 	
-	// Vertex manipulation
-	float2 TransformTriangleVertexToUV(float2 vertex)
-	{
-		float2 uv = (vertex + 1.0) * 0.5;
-		return uv;
-	}
-	
-	float2 TransformStereoScreenSpaceTex(float2 uv, float w)
-	{
-		float4 scaleOffset = unity_StereoScaleOffset[unity_StereoEyeIndex];
-		scaleOffset.xy *= _RenderViewportScaleFactor;
-		return uv.xy * scaleOffset.xy + scaleOffset.zw * w;
-	}
-
 	struct v2f
 	{
 		float4 pos: POSITION;
@@ -84,9 +61,9 @@ Shader "Hidden/X-PostProcessing/GaussianBlur"
 	}
 	
 	
-	float4 FragCombine(Varyings i): SV_Target
+	float4 FragCombine(VaryingsDefault i): SV_Target
 	{
-		return SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord);
+		return SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoordStereo);
 	}
 	
 	
@@ -95,6 +72,17 @@ Shader "Hidden/X-PostProcessing/GaussianBlur"
 	SubShader
 	{
 		Cull Off ZWrite Off ZTest Always
+
+		Pass
+		{
+			HLSLPROGRAM
+
+			#pragma vertex VertGaussianBlur
+			#pragma fragment FragGaussianBlur
+
+			ENDHLSL
+
+		}
 		
 		Pass
 		{
@@ -111,7 +99,7 @@ Shader "Hidden/X-PostProcessing/GaussianBlur"
 		{
 			HLSLPROGRAM
 			
-			#pragma vertex Vert
+			#pragma vertex VertDefault
 			#pragma fragment FragCombine
 			
 			ENDHLSL

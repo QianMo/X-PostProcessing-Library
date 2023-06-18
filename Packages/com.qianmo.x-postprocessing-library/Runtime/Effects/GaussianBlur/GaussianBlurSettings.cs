@@ -21,14 +21,11 @@ namespace XPostProcessing
 
         public ClampedFloatParameter intensity = new ClampedFloatParameter(0f, 0.0f, 1.0f);
 
-        [Range(0f, 5f)]
         public ClampedFloatParameter BlurRadius = new ClampedFloatParameter(3f, 0.0f, 5.0f);
 
-        [Range(1, 15)]
-        public ClampedFloatParameter Iteration = new ClampedFloatParameter(6f, 1.0f, 15.0f);
+        public ClampedIntParameter Iteration = new ClampedIntParameter(6, 1, 15);
 
-        [Range(1, 8)]
-        public ClampedFloatParameter RTDownScaling = new ClampedFloatParameter(2f, 1.0f, 8.0f);
+        public ClampedIntParameter RTDownScaling = new ClampedIntParameter(2, 1, 8);
 
         public bool IsActive() => intensity.value > 0;
 

@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using XPostProcessing;
 
 namespace XPL.Runtime
 {
-    public class GaussianBlurPass : ScriptableRenderPass
+    public class GaussianBlurPass : XPostProcessingPass
     {
         private Material _mat;
 
@@ -17,17 +18,15 @@ namespace XPL.Runtime
         {
             internal static readonly int mainTex = Shader.PropertyToID("_MainTex");
             internal static readonly int BlurRadius = Shader.PropertyToID("_BlurOffset");
-            internal static readonly int BufferRT1 = Shader.PropertyToID("_BufferRT1");
-            internal static readonly int BufferRT2 = Shader.PropertyToID("_BufferRT2");
         }
 
-        internal void Setup(Material material, RenderingData renderingData)
+        internal override void Setup(Material material, RenderingData renderingData)
         {
+            base.Setup(material, renderingData);
+
             _mat = material;
-            var colorCopyDescriptor = renderingData.cameraData.cameraTargetDescriptor;
-            colorCopyDescriptor.depthBufferBits = (int)DepthBits.None;
-            RenderingUtils.ReAllocateIfNeeded(ref m_BufferRT1, colorCopyDescriptor, FilterMode.Bilinear, TextureWrapMode.Clamp, name: "_GaussianBlurPassHandle");
-            RenderingUtils.ReAllocateIfNeeded(ref m_BufferRT2, colorCopyDescriptor, FilterMode.Bilinear, TextureWrapMode.Clamp, name: "_GaussianBlurPassHandle");
+            //RenderingUtils.ReAllocateIfNeeded(ref m_BufferRT2, colorCopyDescriptor, FilterMode.Bilinear, TextureWrapMode.Clamp, name: "_GaussianBlurPassHandle");
+
         }
 
         internal void SetTarget(RTHandle cameraColorTargetHandle, RTHandle cameraDepthTargetHandle)
@@ -53,6 +52,7 @@ namespace XPL.Runtime
             ExecutePass(ref renderingData, ref context);
         }
 
+
         private void ExecutePass(ref RenderingData renderingData, ref ScriptableRenderContext context)
         {
             if (_mat == null)
@@ -74,14 +74,20 @@ namespace XPL.Runtime
             {
                 var source = cameraData.renderer.cameraColorTargetHandle;
 
-
                 int RTWidth = (int)(source.rt.width / settings.RTDownScaling.value);
                 int RTHeight = (int)(source.rt.height / settings.RTDownScaling.value);
 
-                Blitter.BlitCameraTexture(cmd, source, m_BufferRT2);
+                //downsample
+                var desc = GetCompatibleDescriptor(RTWidth, RTHeight, GraphicsFormat.B8G8R8A8_UNorm);
+                RenderingUtils.ReAllocateIfNeeded(ref m_BufferRT1, desc, FilterMode.Bilinear, TextureWrapMode.Clamp, name: "BufferRT1");
+                RenderingUtils.ReAllocateIfNeeded(ref m_BufferRT2, desc, FilterMode.Bilinear, TextureWrapMode.Clamp, name: "BufferRT2");
+
+                _mat.SetTexture(ShaderIDs.mainTex, source);
+                Blitter.BlitCameraTexture(cmd, source, m_BufferRT1);
 
                 for (int i = 0; i < settings.Iteration.value; i++)
                 {
+
                     // horizontal blur
                     _mat.SetVector(ShaderIDs.BlurRadius, new Vector4(settings.BlurRadius.value / source.rt.width, 0, 0, 0));
                     Blitter.BlitCameraTexture(cmd, m_BufferRT1, m_BufferRT2, _mat, 0);
