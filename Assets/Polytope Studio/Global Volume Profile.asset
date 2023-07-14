@@ -53,7 +53,7 @@ MonoBehaviour:
   QualityLevel:
     m_OverrideState: 0
     m_Value: 0
-  intensity:
+  Intensity:
     m_OverrideState: 1
     m_Value: 1
   BlurRadius:
@@ -83,10 +83,10 @@ MonoBehaviour:
     m_Value: 1
   BlurRadius:
     m_OverrideState: 1
-    m_Value: 3
+    m_Value: 3.02
   Iteration:
     m_OverrideState: 1
-    m_Value: 6
+    m_Value: 1
   RTDownScaling:
     m_OverrideState: 1
     m_Value: 8
@@ -106,8 +106,8 @@ MonoBehaviour:
   - {fileID: -3169645779228258390}
   - {fileID: -2972329981189399210}
   - {fileID: -2765797137587086486}
-  - {fileID: 7381634502173761131}
---- !u!114 &7381634502173761131
+  - {fileID: 1352267073880208308}
+--- !u!114 &1352267073880208308
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,41 +116,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
-  m_Name: Bloom
+  m_Script: {fileID: 11500000, guid: 2a72da51b6f0fd143ab34916aecdc8d9, type: 3}
+  m_Name: RadialBlurV1Settings
   m_EditorClassIdentifier: 
-  active: 1
-  skipIterations:
-    m_OverrideState: 0
-    m_Value: 1
-  threshold:
-    m_OverrideState: 0
-    m_Value: 0.9
-  intensity:
-    m_OverrideState: 0
+  active: 0
+  Intensity:
+    m_OverrideState: 1
     m_Value: 0
-  scatter:
+  Iteration:
     m_OverrideState: 0
-    m_Value: 0.7
-  clamp:
+    m_Value: 8
+  BlurRadius:
     m_OverrideState: 0
-    m_Value: 65472
-  tint:
+    m_Value: 0.719
+  RadialCenterX:
     m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
-  highQualityFiltering:
+    m_Value: 0.5
+  RadialCenterY:
     m_OverrideState: 0
-    m_Value: 0
-  downscale:
-    m_OverrideState: 0
-    m_Value: 0
-  maxIterations:
-    m_OverrideState: 0
-    m_Value: 6
-  dirtTexture:
-    m_OverrideState: 0
-    m_Value: {fileID: 0}
-    dimension: 1
-  dirtIntensity:
-    m_OverrideState: 0
-    m_Value: 0
+    m_Value: 0.5

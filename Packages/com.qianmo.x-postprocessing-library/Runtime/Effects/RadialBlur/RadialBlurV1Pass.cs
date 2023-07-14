@@ -7,7 +7,7 @@ using UnityEngine.Rendering.Universal;
 
 namespace XPL.Runtime
 {
-    public class RadialBlurV2Pass : ScriptableRenderPass
+    public class RadialBlurV1Pass : ScriptableRenderPass
     {
         private Material _mat;
 
@@ -24,7 +24,7 @@ namespace XPL.Runtime
             _mat = material;
             var colorCopyDescriptor = renderingData.cameraData.cameraTargetDescriptor;
             colorCopyDescriptor.depthBufferBits = (int)DepthBits.None;
-            RenderingUtils.ReAllocateIfNeeded(ref m_ColorHandle, colorCopyDescriptor, FilterMode.Bilinear, TextureWrapMode.Clamp, name: "_RadialBlurV2PassHandle");
+            RenderingUtils.ReAllocateIfNeeded(ref m_ColorHandle, colorCopyDescriptor, FilterMode.Bilinear, TextureWrapMode.Clamp, name: "_RadialBlurV1PassHandle");
         }
 
         internal void SetTarget(RTHandle cameraColorTargetHandle, RTHandle cameraDepthTargetHandle)
@@ -56,7 +56,7 @@ namespace XPL.Runtime
                 return;
 
             VolumeStack volumes = VolumeManager.instance.stack;
-            RadialBlurV2Settings settings = volumes.GetComponent<RadialBlurV2Settings>();
+            RadialBlurV1Settings settings = volumes.GetComponent<RadialBlurV1Settings>();
 
             if (settings == null) return;
             if (settings.IsActive() == false) return;
@@ -64,11 +64,11 @@ namespace XPL.Runtime
             CommandBuffer cmd = CommandBufferPool.Get("X-Processing-Library");
             var cameraData = renderingData.cameraData;
 
-            using (new ProfilingScope(cmd, new ProfilingSampler("X-RadialBlurV2")))
+            using (new ProfilingScope(cmd, new ProfilingSampler("X-RadialBlurV1")))
             {
                 var source = cameraData.renderer.cameraColorTargetHandle;
 
-                _mat.SetVector(ShaderIDs.Params, new Vector3(settings.BlurRadius.value * 0.02f * settings.Intensity.value, settings.RadialCenterX.value, settings.RadialCenterY.value));
+                _mat.SetVector(ShaderIDs.Params, new Vector4(settings.BlurRadius.value * 0.02f * settings.Intensity.value, settings.Iteration.value, settings.RadialCenterX.value, settings.RadialCenterY.value));
                 _mat.SetTexture(ShaderIDs.mainTex, source);
 
                 Blitter.BlitCameraTexture(cmd, source, m_ColorHandle, _mat, 0);

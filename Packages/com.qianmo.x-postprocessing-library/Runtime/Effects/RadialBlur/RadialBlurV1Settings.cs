@@ -17,27 +17,13 @@ using UnityEngine.Rendering.Universal;
 namespace XPL.Runtime
 {
 
-    public enum RadialBlurQuality
-    {
-        RadialBlur_4Tap_Fatest = 0,
-        RadialBlur_6Tap = 1,
-        RadialBlur_8Tap_Balance = 2,
-        RadialBlur_10Tap = 3,
-        RadialBlur_12Tap = 4,
-        RadialBlur_20Tap_Quality = 5,
-        RadialBlur_30Tap_Extreme = 6,
-    }
-
     [Serializable]
-    public sealed class RadialBlurQualityParameter : VolumeParameter<RadialBlurQuality> { }
-
-    [Serializable]
-    [VolumeComponentMenuForRenderPipeline("X-PostProcessing/Blur/RadialBlur/RadialBlurV2", typeof(UniversalRenderPipeline))]
-    public class RadialBlurV2Settings : VolumeComponent, IPostProcessComponent
+    [VolumeComponentMenuForRenderPipeline("X-PostProcessing/Blur/RadialBlur/RadialBlurV1", typeof(UniversalRenderPipeline))]
+    public class RadialBlurV1Settings : VolumeComponent, IPostProcessComponent
     {
-        public RadialBlurQualityParameter QualityLevel = new RadialBlurQualityParameter { value = RadialBlurQuality.RadialBlur_8Tap_Balance };
-
         public ClampedFloatParameter Intensity = new ClampedFloatParameter(0f, 0.0f, 1.0f);
+
+        public ClampedIntParameter Iteration = new ClampedIntParameter(10, 1, 20);
 
         public ClampedFloatParameter BlurRadius = new ClampedFloatParameter(0.6f, -1f, 1f);
 

@@ -16,11 +16,13 @@ namespace XPL.Runtime
 
         private AuroraVignettePass m_AuroraVignettePass;
 
+        private RadialBlurV1Pass m_RadialBlurV1Pass;
+
         private RadialBlurV2Pass m_RadialBlurV2Pass;
 
         private GaussianBlurPass m_GaussianBlurPass;
 
-        private Material m_AuroraVignetteMaterial, m_RadialBlurV2Material, m_GaussianBlurMaterial;
+        private Material m_AuroraVignetteMaterial, m_RadialBlurV1Material, m_RadialBlurV2Material, m_GaussianBlurMaterial;
 
         private VolumeStack m_VolumeStack;
 
@@ -31,6 +33,10 @@ namespace XPL.Runtime
             m_AuroraVignettePass = new AuroraVignettePass();
             m_AuroraVignettePass.renderPassEvent = InjectionPoint;
             m_AuroraVignettePass.ConfigureInput(ScriptableRenderPassInput.Color);
+
+            m_RadialBlurV1Pass = new RadialBlurV1Pass();
+            m_RadialBlurV1Pass.renderPassEvent = InjectionPoint;
+            m_RadialBlurV1Pass.ConfigureInput(ScriptableRenderPassInput.Color);
 
             m_RadialBlurV2Pass = new RadialBlurV2Pass();
             m_RadialBlurV2Pass.renderPassEvent = InjectionPoint;
@@ -48,6 +54,10 @@ namespace XPL.Runtime
                 CoreUtils.Destroy(m_AuroraVignetteMaterial);
             m_AuroraVignettePass.Dispose();
 
+            if (m_RadialBlurV1Material)
+                CoreUtils.Destroy(m_RadialBlurV1Material);
+            m_RadialBlurV1Pass.Dispose();
+
             if (m_RadialBlurV2Material)
                 CoreUtils.Destroy(m_RadialBlurV2Material);
             m_RadialBlurV2Pass.Dispose();
@@ -60,6 +70,7 @@ namespace XPL.Runtime
         public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
         {
             AuroraVignetteSetup(renderer, ref renderingData);
+            RadialBlurV1Setup(renderer, ref renderingData);
             RadialBlurV2Setup(renderer, ref renderingData);
             GaussianBlurSetup(renderer, ref renderingData);
         }
@@ -67,6 +78,7 @@ namespace XPL.Runtime
         public override void SetupRenderPasses(ScriptableRenderer renderer, in RenderingData renderingData)
         {
             m_AuroraVignettePass.SetTarget(renderer.cameraColorTargetHandle, renderer.cameraDepthTargetHandle);
+            m_RadialBlurV1Pass.SetTarget(renderer.cameraColorTargetHandle, renderer.cameraDepthTargetHandle);
             m_RadialBlurV2Pass.SetTarget(renderer.cameraColorTargetHandle, renderer.cameraDepthTargetHandle);
             m_GaussianBlurPass.SetTarget(renderer.cameraColorTargetHandle, renderer.cameraDepthTargetHandle);
         }
@@ -88,6 +100,25 @@ namespace XPL.Runtime
 
             m_AuroraVignettePass.Setup(m_AuroraVignetteMaterial, renderingData);
             renderer.EnqueuePass(m_AuroraVignettePass);
+        }
+
+        private void RadialBlurV1Setup(ScriptableRenderer renderer, ref RenderingData renderingData)
+        {
+            RadialBlurV1Settings settings = m_VolumeStack.GetComponent<RadialBlurV1Settings>();
+
+            if (settings == null || settings.IsActive() == false)
+                return;
+
+            m_RadialBlurV1Material = CoreUtils.CreateEngineMaterial("Hidden/X-PostProcessing/RadialBlurV1");
+
+            if (!m_RadialBlurV1Material)
+            {
+                Debug.LogWarningFormat("Missing Post Processing effect Material. {0} Fullscreen pass will not execute. Check for missing reference in the assigned renderer.", m_RadialBlurV1Pass.GetType().Name);
+                return;
+            }
+
+            m_RadialBlurV1Pass.Setup(m_RadialBlurV1Material, renderingData);
+            renderer.EnqueuePass(m_RadialBlurV1Pass);
         }
 
         private void RadialBlurV2Setup(ScriptableRenderer renderer, ref RenderingData renderingData)
