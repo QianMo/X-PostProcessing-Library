@@ -72,7 +72,7 @@ namespace XPL.Runtime
             AuroraVignetteSetup(renderer, ref renderingData);
             RadialBlurV1Setup(renderer, ref renderingData);
             RadialBlurV2Setup(renderer, ref renderingData);
-            GaussianBlurSetup(renderer, ref renderingData);
+            //GaussianBlurSetup(renderer, ref renderingData);
         }
 
         public override void SetupRenderPasses(ScriptableRenderer renderer, in RenderingData renderingData)
