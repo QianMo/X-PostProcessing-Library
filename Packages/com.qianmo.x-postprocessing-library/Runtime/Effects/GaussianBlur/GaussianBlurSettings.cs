@@ -19,7 +19,7 @@ namespace XPostProcessing
     public class GaussianBlurSettings : VolumeComponent, IPostProcessComponent
     {
 
-        public ClampedFloatParameter intensity = new ClampedFloatParameter(0f, 0.0f, 1.0f);
+        public ClampedFloatParameter Intensity = new ClampedFloatParameter(0f, 0.0f, 1.0f);
 
         public ClampedFloatParameter BlurRadius = new ClampedFloatParameter(3f, 0.0f, 5.0f);
 
@@ -27,7 +27,7 @@ namespace XPostProcessing
 
         public ClampedIntParameter RTDownScaling = new ClampedIntParameter(2, 1, 8);
 
-        public bool IsActive() => intensity.value > 0;
+        public bool IsActive() => Intensity.value > 0;
 
         public bool IsTileCompatible() => true;
     }

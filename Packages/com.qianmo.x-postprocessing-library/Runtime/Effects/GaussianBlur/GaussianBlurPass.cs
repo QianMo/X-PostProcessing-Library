@@ -12,7 +12,7 @@ namespace XPL.Runtime
     {
         private Material _mat;
 
-        RTHandle m_CameraColorHandle, m_BufferRT1, m_BufferRT2;
+        RTHandle m_CameraColorHandle, m_DestHandle, m_BufferRT1, m_BufferRT2;
 
         static class ShaderIDs
         {
@@ -25,7 +25,9 @@ namespace XPL.Runtime
             base.Setup(material, renderingData);
 
             _mat = material;
-            //RenderingUtils.ReAllocateIfNeeded(ref m_BufferRT2, colorCopyDescriptor, FilterMode.Bilinear, TextureWrapMode.Clamp, name: "_GaussianBlurPassHandle");
+            var colorCopyDescriptor = renderingData.cameraData.cameraTargetDescriptor;
+            colorCopyDescriptor.depthBufferBits = (int)DepthBits.None;
+            RenderingUtils.ReAllocateIfNeeded(ref m_DestHandle, colorCopyDescriptor, FilterMode.Bilinear, TextureWrapMode.Clamp, name: "_GaussianBlurPassHandle");
 
         }
 
@@ -87,7 +89,6 @@ namespace XPL.Runtime
 
                 for (int i = 0; i < settings.Iteration.value; i++)
                 {
-
                     // horizontal blur
                     _mat.SetVector(ShaderIDs.BlurRadius, new Vector4(settings.BlurRadius.value / source.rt.width, 0, 0, 0));
                     Blitter.BlitCameraTexture(cmd, m_BufferRT1, m_BufferRT2, _mat, 0);
@@ -97,7 +98,8 @@ namespace XPL.Runtime
                     Blitter.BlitCameraTexture(cmd, m_BufferRT2, m_BufferRT1, _mat, 0);
                 }
 
-                Blitter.BlitCameraTexture(cmd, m_BufferRT1, m_CameraColorHandle, _mat, 1);
+                Blitter.BlitCameraTexture(cmd, m_BufferRT1, m_DestHandle, _mat, 1);
+                Blitter.BlitCameraTexture(cmd, m_DestHandle, m_CameraColorHandle);
             }
 
             context.ExecuteCommandBuffer(cmd);

@@ -11,10 +11,14 @@
 Shader "Hidden/X-PostProcessing/GaussianBlur"
 {
 	HLSLINCLUDE
-	
-	#include "../../../Shaders/StdLib.hlsl"
-	#include "../../../Shaders/XPostProcessing.hlsl"
-	
+
+	#define UNITY_SINGLE_PASS_STEREO
+	#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+	#include "Packages/com.unity.render-pipelines.core/Runtime/Utilities/Blit.hlsl"
+
+
+	TEXTURE2D_X(_MainTex);
+	SAMPLER(sampler_MainTex);
 	half4 _BlurOffset;
 	
 	struct v2f
@@ -25,6 +29,24 @@ Shader "Hidden/X-PostProcessing/GaussianBlur"
 		float4 uv23: TEXCOORD2;
 		float4 uv45: TEXCOORD3;
 	};
+
+	struct AttributesDefault
+	{
+		float3 vertex : POSITION;
+	};
+
+	struct VaryingsDefault
+	{
+		float4 vertex : SV_POSITION;
+		float2 texcoord : TEXCOORD0;
+		float2 texcoordStereo : TEXCOORD1;
+	};
+
+	float2 TransformTriangleVertexToUV(float2 vertex)
+	{
+		float2 uv = (vertex + 1.0) * 0.5;
+		return uv;
+	}
 	
 	v2f VertGaussianBlur(AttributesDefault v)
 	{
@@ -72,23 +94,12 @@ Shader "Hidden/X-PostProcessing/GaussianBlur"
 	SubShader
 	{
 		Cull Off ZWrite Off ZTest Always
-
-		Pass
-		{
-			HLSLPROGRAM
-
-			#pragma vertex VertGaussianBlur
-			#pragma fragment FragGaussianBlur
-
-			ENDHLSL
-
-		}
 		
 		Pass
 		{
 			HLSLPROGRAM
 			
-			#pragma vertex VertGaussianBlur
+			#pragma vertex Vert
 			#pragma fragment FragGaussianBlur
 			
 			ENDHLSL
@@ -99,7 +110,7 @@ Shader "Hidden/X-PostProcessing/GaussianBlur"
 		{
 			HLSLPROGRAM
 			
-			#pragma vertex VertDefault
+			#pragma vertex Vert
 			#pragma fragment FragCombine
 			
 			ENDHLSL

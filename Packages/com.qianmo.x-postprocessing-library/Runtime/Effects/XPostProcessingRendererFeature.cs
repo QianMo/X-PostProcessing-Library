@@ -30,6 +30,10 @@ namespace XPL.Runtime
         {
             m_VolumeStack = VolumeManager.instance.stack;
 
+            //m_GaussianBlurPass = new GaussianBlurPass();
+            //m_GaussianBlurPass.renderPassEvent = InjectionPoint;
+            //m_GaussianBlurPass.ConfigureInput(ScriptableRenderPassInput.Color);
+
             m_AuroraVignettePass = new AuroraVignettePass();
             m_AuroraVignettePass.renderPassEvent = InjectionPoint;
             m_AuroraVignettePass.ConfigureInput(ScriptableRenderPassInput.Color);
@@ -42,14 +46,14 @@ namespace XPL.Runtime
             m_RadialBlurV2Pass.renderPassEvent = InjectionPoint;
             m_RadialBlurV2Pass.ConfigureInput(ScriptableRenderPassInput.Color);
 
-            m_GaussianBlurPass = new GaussianBlurPass();
-            m_GaussianBlurPass.renderPassEvent = InjectionPoint;
-            m_GaussianBlurPass.ConfigureInput(ScriptableRenderPassInput.Color);
-
         }
 
         protected override void Dispose(bool disposing)
         {
+            //if (m_GaussianBlurMaterial)
+            //    CoreUtils.Destroy(m_GaussianBlurMaterial);
+            //m_GaussianBlurPass.Dispose();
+
             if (m_AuroraVignetteMaterial)
                 CoreUtils.Destroy(m_AuroraVignetteMaterial);
             m_AuroraVignettePass.Dispose();
@@ -61,26 +65,41 @@ namespace XPL.Runtime
             if (m_RadialBlurV2Material)
                 CoreUtils.Destroy(m_RadialBlurV2Material);
             m_RadialBlurV2Pass.Dispose();
-
-            if (m_GaussianBlurMaterial)
-                CoreUtils.Destroy(m_GaussianBlurMaterial);
-            m_GaussianBlurPass.Dispose();
         }
 
         public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
         {
+            //GaussianBlurSetup(renderer, ref renderingData);
             AuroraVignetteSetup(renderer, ref renderingData);
             RadialBlurV1Setup(renderer, ref renderingData);
             RadialBlurV2Setup(renderer, ref renderingData);
-            //GaussianBlurSetup(renderer, ref renderingData);
         }
 
         public override void SetupRenderPasses(ScriptableRenderer renderer, in RenderingData renderingData)
         {
+            //m_GaussianBlurPass.SetTarget(renderer.cameraColorTargetHandle, renderer.cameraDepthTargetHandle);
             m_AuroraVignettePass.SetTarget(renderer.cameraColorTargetHandle, renderer.cameraDepthTargetHandle);
             m_RadialBlurV1Pass.SetTarget(renderer.cameraColorTargetHandle, renderer.cameraDepthTargetHandle);
             m_RadialBlurV2Pass.SetTarget(renderer.cameraColorTargetHandle, renderer.cameraDepthTargetHandle);
-            m_GaussianBlurPass.SetTarget(renderer.cameraColorTargetHandle, renderer.cameraDepthTargetHandle);
+        }
+
+        private void GaussianBlurSetup(ScriptableRenderer renderer, ref RenderingData renderingData)
+        {
+            GaussianBlurSettings settings = m_VolumeStack.GetComponent<GaussianBlurSettings>();
+
+            if (settings == null || settings.IsActive() == false)
+                return;
+
+            m_GaussianBlurMaterial = CoreUtils.CreateEngineMaterial("Hidden/X-PostProcessing/GaussianBlur");
+
+            if (!m_GaussianBlurMaterial)
+            {
+                Debug.LogWarningFormat("Missing Post Processing effect Material. {0} Fullscreen pass will not execute. Check for missing reference in the assigned renderer.", m_GaussianBlurPass.GetType().Name);
+                return;
+            }
+
+            m_GaussianBlurPass.Setup(m_GaussianBlurMaterial, renderingData);
+            renderer.EnqueuePass(m_GaussianBlurPass);
         }
 
         private void AuroraVignetteSetup(ScriptableRenderer renderer, ref RenderingData renderingData)
@@ -138,25 +157,6 @@ namespace XPL.Runtime
 
             m_RadialBlurV2Pass.Setup(m_RadialBlurV2Material, renderingData);
             renderer.EnqueuePass(m_RadialBlurV2Pass);
-        }
-
-        private void GaussianBlurSetup(ScriptableRenderer renderer, ref RenderingData renderingData)
-        {
-            GaussianBlurSettings settings = m_VolumeStack.GetComponent<GaussianBlurSettings>();
-
-            if (settings == null || settings.IsActive() == false)
-                return;
-
-            m_GaussianBlurMaterial = CoreUtils.CreateEngineMaterial("Hidden/X-PostProcessing/GaussianBlur");
-
-            if (!m_GaussianBlurMaterial)
-            {
-                Debug.LogWarningFormat("Missing Post Processing effect Material. {0} Fullscreen pass will not execute. Check for missing reference in the assigned renderer.", m_GaussianBlurPass.GetType().Name);
-                return;
-            }
-
-            m_GaussianBlurPass.Setup(m_GaussianBlurMaterial, renderingData);
-            renderer.EnqueuePass(m_GaussianBlurPass);
         }
     }
 }

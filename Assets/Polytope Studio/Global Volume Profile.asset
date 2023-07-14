@@ -81,6 +81,7 @@ MonoBehaviour:
   - {fileID: -3169645779228258390}
   - {fileID: -2972329981189399210}
   - {fileID: 1352267073880208308}
+  - {fileID: 1543880477629010016}
 --- !u!114 &1352267073880208308
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -96,10 +97,10 @@ MonoBehaviour:
   active: 0
   Intensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.224
   Iteration:
-    m_OverrideState: 0
-    m_Value: 8
+    m_OverrideState: 1
+    m_Value: 20
   BlurRadius:
     m_OverrideState: 0
     m_Value: 0.719
@@ -109,3 +110,28 @@ MonoBehaviour:
   RadialCenterY:
     m_OverrideState: 0
     m_Value: 0.5
+--- !u!114 &1543880477629010016
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824ef16946450f94186364308f3d1eaf, type: 3}
+  m_Name: GaussianBlurSettings
+  m_EditorClassIdentifier: 
+  active: 0
+  Intensity:
+    m_OverrideState: 1
+    m_Value: 1
+  BlurRadius:
+    m_OverrideState: 1
+    m_Value: 5
+  Iteration:
+    m_OverrideState: 1
+    m_Value: 1
+  RTDownScaling:
+    m_OverrideState: 1
+    m_Value: 8
